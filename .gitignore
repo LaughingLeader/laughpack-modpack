@@ -2,10 +2,13 @@
 !.gitignore
 
 *.bak
+*.cache
+*.zip
 
 !config
 # !defaultconfigs/*.toml
 !kubejs/
 kubejs/exported
 kubejs/README.txt
-# !openloader/
+# !/openloader/data/laughpack/
+# !/openloader/resources/laughpack/

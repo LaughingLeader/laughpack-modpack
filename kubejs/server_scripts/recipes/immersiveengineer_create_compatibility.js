@@ -84,6 +84,15 @@ onEvent("recipes", event => {
 	milling("9x #forge:dusts/coal_coke", ["#forge:storage_blocks/coal_coke"])
 	crushing(["1x #forge:dusts/coal_coke"], "#forge:coal_coke")
 	crushing(["9x #forge:dusts/coal_coke"], "#forge:storage_blocks/coal_coke")
+
+	// Disabling the Crude Blast Furnace
+	event.shaped(Item.of("1x immersiveengineering:hammer").withNBT({multiblockInterdiction: ["IE:BlastFurnace"]}), 
+	[" if", " si", "s  "],{
+        s: "#forge:rods/wooden",
+        i: "#forge:ingots/iron",
+        f: "#forge:string"
+    })
+	
 	
 	//console.info("[LaughPack] Plate Recipes")
 	//"type:": "minecraft:crafting_shapeless"
