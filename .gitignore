@@ -5,5 +5,7 @@
 
 !config
 # !defaultconfigs/*.toml
-# !kubejs/
+!kubejs/
+kubejs/exported
+kubejs/README.txt
 # !openloader/
