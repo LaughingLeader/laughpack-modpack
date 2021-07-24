@@ -12,14 +12,14 @@
 	"Funny Rat Flute Sound" = true
 	#A seperate random roll that only spawns rats if a one-out-of-X chance, x being this number. raise this number to make them more rare.
 	#Range: > 0
-	"Rat Spawn Decrease" = 5
+	"Rat Spawn Decrease" = 7
 	#True if plague rats are to spawn naturally
 	"Plague Rats" = true
 	#True if Pied Pipers are to spawn naturally
 	"Spawn Piper" = true
 	#A seperate random roll that only spawns pipers if a one-out-of-X chance, x being this number. raise this number to make them more rare.
 	#Range: > 0
-	"Piper Spawn Decrease" = 5
+	"Piper Spawn Decrease" = 7
 	#The weight of rats in vanilla's spawn rate
 	#Range: 1 ~ 300
 	"Rat Spawn Weight" = 80

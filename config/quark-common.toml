@@ -438,7 +438,7 @@
 		Display = "[  ]"
 
 	[tweaks.improved_sleeping]
-		"Enable Afk" = true
+		"Enable Afk" = false
 		#Allowed values: (0,)
 		"Afk Time" = 2400
 		#Allowed values: (0,1]
@@ -488,7 +488,7 @@
 		"Max Bounces" = 1
 
 [world]
-	"New Stone Types" = true
+	"New Stone Types" = false
 	"Lush Underground Biome" = true
 	"Big Dungeon" = true
 	Speleothems = true
