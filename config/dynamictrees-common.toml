@@ -16,9 +16,9 @@
 #Mod Integration Settings
 [integration]
 	#If enabled, seed drop rates will be multiplied based on the current season (requires serene seasons).
-	enableSeasonalSeedDropFactor = false
+	enableSeasonalSeedDropFactor = true
 	#If enabled, growth rates will be multiplied based on the current season (requires serene seasons).
-	enableSeasonalGrowthFactor = false
+	enableSeasonalGrowthFactor = true
 	#If enabled, fruit production rates will be multiplied based on the current season (requires serene seasons).
-	enableSeasonalFruitProductionFactor = false
+	enableSeasonalFruitProductionFactor = true
 
