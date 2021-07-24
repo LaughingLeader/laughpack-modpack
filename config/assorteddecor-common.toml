@@ -1,0 +1,30 @@
+
+[Wallpaper]
+	#Set this to true if you want to be able to dye wallpaper.
+	dyeWallpaper = true
+	#Set this to true if you want wallpaper to be able to copy dye colors from adjacent wallpaper.
+	copyDye = true
+	#Set this to true if you want wallpaper to be able to get burnt.
+	burnWallpaper = true
+	#Set this to the amount of wallpapers currently defined on the texture.
+	#Range: 1 ~ 256
+	numWallpapers = 24
+
+[Frames]
+	#Set this to true if you want to be able to dye Frames.
+	dyeFrames = true
+	#Set this to true if you want frames to be able to get burnt.
+	burnFrames = true
+
+[Colorizer]
+	#Set this to the amount of blocks that a brush will be able to colorize after grabbing a block.
+	#Range: 1 ~ 400
+	brushChargeCount = 16
+	#Set this to true if the colorizer brush should consume a block when using them
+	consumeBlock = true
+	#Set this to determine how smooth all of the different slopes collision boxes should be.
+	#Range: 1 ~ 10
+	smoothness = 2
+	#A list of blocks that the brush is unable to break / use the texture of.
+	brushDisallowedBlocks = ["block|minecraft:spawner"]
+

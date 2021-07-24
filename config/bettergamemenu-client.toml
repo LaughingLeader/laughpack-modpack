@@ -1,0 +1,11 @@
+
+[General]
+	"Remove feedback and report bugs button" = true
+	"Hide unnecessary share lan button" = true
+	"Enable rejoin button" = true
+
+	[General."Mod Options Button"]
+		"Enable mod options button" = true
+		"Show notification mod update" = true
+		"Render mod list background" = true
+

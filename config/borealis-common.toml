@@ -1,0 +1,35 @@
+
+[borealisPort]
+	#Borealis Webserver Port. Default: 48574
+	#Range: 1025 ~ 65534
+	borealisPort = 48574
+
+[modListPage]
+	#Enable/Disable ModList Page.
+	#Allowed Values: ENABLED, REQUIRES_AUTH, DISABLED
+	modListPage = "ENABLED"
+	#List of modids to blacklist from the mod list page.
+	#Example of hiding minecraft and forge on the mod list:
+	#blacklistedMods = ["minecraft","forge"]
+	blacklistedMods = []
+
+[playerListPage]
+	#Enable/Disable PlayerList Page.
+	#Allowed Values: ENABLED, REQUIRES_AUTH, DISABLED
+	playerListPage = "ENABLED"
+
+[jsonUtilPage]
+	#Enable/Disable jsonUtil Page.
+	#Allowed Values: ENABLED, REQUIRES_AUTH, DISABLED
+	jsonUtilPage = "ENABLED"
+
+[playerListJSON]
+	#Enable/Disable PlayerList JSON.
+	#Allowed Values: ENABLED, REQUIRES_AUTH, DISABLED
+	playerListJSON = "ENABLED"
+
+[worldInfoJSON]
+	#Enable/Disable worldInfo JSON.
+	#Allowed Values: ENABLED, REQUIRES_AUTH, DISABLED
+	worldInfoJSON = "ENABLED"
+

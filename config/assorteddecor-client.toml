@@ -1,0 +1,6 @@
+
+[Wallpaper]
+	#Set this to determine how much the wallpaper will stick off of the wall.
+	#Range: 0.1 ~ 5.0
+	widthWallpaper = 1.0
+

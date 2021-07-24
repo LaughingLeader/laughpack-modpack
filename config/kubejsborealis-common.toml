@@ -1,0 +1,31 @@
+
+[kubejsDocumentation]
+	#Enable/Disable KubeJS Documentation Homepage
+	#Allowed Values: ENABLED, REQUIRES_AUTH, DISABLED
+	documentationHomePage = "ENABLED"
+	#Enable/Disable All KubeJS Class Pages
+	#Allowed Values: ENABLED, REQUIRES_AUTH, DISABLED
+	classPage = "ENABLED"
+
+	[kubejsDocumentation.classPageSpecifics]
+		#Should every ClassPage include inherited Constructors as well defined ones?
+		includeInheritedConstructors = false
+		#Should every ClassPage include inherited Fields as well defined ones?
+		includeInheritedFields = false
+		#Should every ClassPage include inherited Methods as well defined ones?
+		includeInheritedMethods = false
+		#Should every ClassPage include inherited Classes as well defined ones?
+		includeInheritedClasses = false
+
+[customPages]
+	#Enable customPages event for KJS?
+	customPages = true
+
+[experimental]
+	#(Experimental Feature can JVM in some instances and not produce a crash report)
+	reflectionHandler = false
+	#The package should be added to the blacklisted packages config.
+	printAllClasses = false
+	#If you have AE2 installed and experiencing crashing, try adding "appeng".
+	blacklistedPackages = []
+
