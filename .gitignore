@@ -1,14 +1,27 @@
-/*
-!.gitignore
-
-*.bak
-*.cache
-*.zip
+/**
+!/.gitignore
 
 !config
 # !defaultconfigs/*.toml
 !kubejs/
 kubejs/exported
 kubejs/README.txt
-# !/openloader/data/laughpack/
-# !/openloader/resources/laughpack/
+
+###############################
+# Datapacks/resources
+# Nightmare to get git to track the laughpack folders
+!/openloader/
+/openloader/**
+!/openloader/data/
+/openloader/data/**
+!/openloader/resources/
+/openloader/resources/**
+!/openloader/data/laughpack/**
+!/openloader/resources/laughpack/**
+!**/data/laughpack/
+!**/resources/laughpack/
+###############################
+
+*.bak
+*.cache
+*.zip

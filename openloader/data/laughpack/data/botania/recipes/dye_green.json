@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "botania:dye",
+  "ingredients": [
+    {
+      "tag": "botania:petals/green"
+    },
+    {
+      "tag": "laughpack:grinding_tool"
+    }
+  ],
+  "result": {
+    "item": "minecraft:green_dye"
+  }
+}
