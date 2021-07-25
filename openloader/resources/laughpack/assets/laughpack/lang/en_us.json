@@ -9,5 +9,6 @@
 	"biome.mining_dimension.mining": "Mining Dimension",
 	"item.kubejs.paper_vellum": "Paper Vellum",
 	"item.kubejs.bark_fiber": "Tree Bark Fiber",
+	"desc.immersiveengineering.info.multiblock.immersiveengineering.multiblocks/blastfurnace": "Crude Blast Furnace",
 	"entity.minecraft.villager.immersiveengineering:machinist": "Machinist"
 }

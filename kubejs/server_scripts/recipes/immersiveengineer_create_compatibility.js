@@ -35,6 +35,7 @@ let disabled_recipes = [
 	"immersiveengineering:crafting/windmill",
 	"immersiveengineering:crafting/windmill_blade",
 	"immersiveengineering:crafting/windmill_sail",
+	"immersiveengineering:crafting/hammer",
 ]
 
 const plates_support = new Map()
@@ -86,7 +87,7 @@ onEvent("recipes", event => {
 	crushing(["9x #forge:dusts/coal_coke"], "#forge:storage_blocks/coal_coke")
 
 	// Disabling the Crude Blast Furnace
-	event.shaped(Item.of("1x immersiveengineering:hammer").withNBT({multiblockInterdiction: ["IE:BlastFurnace"]}), 
+	event.shaped(Item.of("1x immersiveengineering:hammer").withNBT({multiblockInterdiction: ["immersiveengineering:multiblocks/blast_furnace"]}), 
 	[" if", " si", "s  "],{
         s: "#forge:rods/wooden",
         i: "#forge:ingots/iron",
