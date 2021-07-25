@@ -1,4 +1,7 @@
 events.listen("item.tags", (event) => {
-    //event.add("forge:ingots/silver", "oreganized:silver_ingot")
-    //event.add("forge:ingots/silver", "oreganized:lead_ingot")
+    event.add("curios:createplus.goggle_slot", [
+        "botania:cosmetic_engineer_goggles",
+        "botania:monocle",
+        "advancedperipherals:ar_goggles"
+    ]);
 });
