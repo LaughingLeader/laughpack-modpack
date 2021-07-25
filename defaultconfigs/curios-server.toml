@@ -1,0 +1,8 @@
+#List of curio slot type settings
+[[curiosSettings]]
+  identifier = "createplus.goggle_slot"
+  override = false
+  priority = 3
+  locked = false
+  size = 1
+  hasCosmetic = true

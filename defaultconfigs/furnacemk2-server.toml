@@ -1,0 +1,16 @@
+
+#Furnace settings
+[furnace]
+
+	#FirstBlock settings
+	[furnace.furnacemk2]
+		#Maximum efficiency multiplier for the FurnaceMk2
+		#Range: 0.0 ~ 5.0
+		maxEfficiency = 2.0
+		#Maximum experience multiplier for the FurnaceMk2
+		#Range: 0.0 ~ 5.0
+		maxExperience = 2.0
+		#Maximum speed multiplier for the FurnaceMk2
+		#Range: 0.0 ~ 5.0
+		maxSpeed = 2.0
+

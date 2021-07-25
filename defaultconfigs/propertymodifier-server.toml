@@ -1,0 +1,89 @@
+
+#Dumps all corresponding values into the logs.
+[dump]
+	#Dump composter inputs BEFORE applying the changes.
+	dump_composter = false
+	#Dump composter inputs AFTER applying the changes.
+	dump_composter_after = false
+	#Dump stripping transitions BEFORE applying the changes.
+	dump_stripping = false
+	#Dump stripping transitions AFTER applying the changes.
+	dump_stripping_after = false
+	#Dump pathing transitions BEFORE applying the changes.
+	dump_pathing = false
+	#Dump pathing transitions AFTER applying the changes.
+	dump_pathing_after = false
+	#Dump tilling transitions BEFORE applying the changes.
+	dump_tilling = false
+	#Dump tilling transitions AFTER applying the changes.
+	dump_tilling_after = false
+
+[composter]
+	#Define additional composter inputs. Format is "itemid;chance", with item id being in the modid:itemid format and chance being a percentage between 0.0 and 1.0.
+	inputs = []
+	#Whether to clear the default composter inputs and have the composter inputs only contain the stuff defined here.
+	clear = false
+
+[stripping]
+	#Define additional stripping transitions. Format is "fromid;toid", with both of them being in the modid:blockid format.
+	transitions = []
+	#Whether to clear the default stripping transitions and have the stripping transitions only contain the stuff defined here.
+	clear = false
+
+[pathing]
+	#Define additional pathing transitions. Format is "fromid;toid", with both of them being in the modid:blockid format.
+	transitions = []
+	#Whether to clear the default pathing transitions and have the pathing transitions only contain the stuff defined here.
+	clear = false
+
+[tilling]
+	#Define additional tilling transitions. Format is "fromid;toid", with both of them being in the modid:blockid format.
+	transitions = []
+	#Whether to clear the default tilling transitions and have the tilling transitions only contain the stuff defined here.
+	clear = false
+
+[entities]
+	#Apply entity attribute modifiers on spawning. To get the default value of an attribute, make a superflat world without mob spawning, spawn the desired mob, and run "/attribute @e[type=<entityid>,limit=1] <attributeid> get". Format is "entity;attribute;amount;operation":
+	#entity: the entity id (e.g. minecraft:rabbit)
+	#attribute: the attribute id (e.g. minecraft:generic.max_health)
+	#amount: the amount of the modifier (e.g. 5)
+	#operation: 0 for addition, 1 for multiply base, 2 for multiply total. See https://minecraft.fandom.com/wiki/Attribute to see what they each do
+	modifiers = []
+
+[villager_trading]
+	#Adds new villager trades. villager_x_trades defines the villager level (1-5). Due to technical reasons, if you add trades for a specific profession for a specific level, you need to re-add all trades for that profession level. E. g. if you wanted to add an enchanted book trade to a level 5 librarian, you need to re-add all other trades for a level 5 librarian as well. See https://minecraft.fandom.com/wiki/Trading for the vanilla defaults
+	#Format is profession;uses;xp;pricemultiplier;tradetype;tradetype-specific-args
+	#profession: villager profession (e. g. minecraft:librarian)
+	#uses: how often the trade can be traded before it is locked
+	#xp: the amount of villager xp given to the villager
+	#price multiplier: every time you trade with a villager, the selling price is multiplied with 1 - this value (e. g. 0.1 means that every time you use the trade, the price is lowered by 10%)
+	#tradetype and corresponding tradetype-specific args can take the following values (values in [] are optional):
+	#  normal: buyItem1;buyItemCount1;[buyItem2;buyItemCount2;]sellItem;sellItemCount - a normal trade that takes 1 or 2 stacks in and gives 1 stack out. The items are item ids (e. g. minecraft:emerald), the item counts are numbers between 1 and 64
+	#  dyed: buyItem1;buyItemCount1;[buyItem2;buyItemCount2;]sellItem" - the sell item (e. g. leather armor) will be randomly dyed
+	#  map: buyItem1;buyItemCount1;[buyItem2;buyItemCount2;]structure;mapdecoration" - structure is a structure id (e. g. minecraft:stronghold), mapdecoration can be one of the following: "player", "frame", "red_marker", "blue_marker", "target_x", "target_point", "player_off_map", "player_off_limits", "mansion", "monument", "red_x", "banner_black", "banner_blue", "banner_brown", "banner_cyan", "banner_gray", "banner_green", "banner_light_blue", "banner_light_gray", "banner_lime", "banner_magenta", "banner_orange", "banner_pink", "banner_purple", "banner_red", "banner_white", "banner_yellow"
+	#  enchantedbook: buyItem1;[buyItem2;buyItemCount2;]enchantment;level - enchantment to use (e. g. minecraft:sharpness, or "any" for random enchantments), level for the level. Outputs an enchanted book, at which the amount of buyItem1 is scaled - a lvl 5 book costs approx. 5 times more than a lvl 1 book. It's currently impossible to add more than one enchantment
+	#  enchanteditem: buyItem1;[buyItem2;buyItemCount2;]sellItem;enchantment;level - enchantment to use (e. g. minecraft:sharpness, or "any" for random enchantments), level for the level. Outputs an enchanted book, at which the amount of buyItem1 is scaled - a lvl 5 helmet costs approx. 5 times more than a lvl 1 helmet. It's currently impossible to add more than one enchantment
+	#  potion: buyItem1;buyItemCount1;[buyItem2;buyItemCount2;]sellItem;potion - the potion (using "any" will randomly select one) is applied to the sell item, so unless you have additional potion-like items added by other mods, this should only be minecraft:potion, minecraft:splash_potion, minecraft:lingering_potion or minecraft:tipped_arrow
+	#  stew: buyItem1;buyItemCount1;[buyItem2;buyItemCount2;]effect;duration - effect is an effect id (e. g. minecraft:strength), duration is an integer determining the amount of ticks the effect lasts
+	villager_1_trades = []
+	villager_2_trades = []
+	villager_3_trades = []
+	villager_4_trades = []
+	villager_5_trades = []
+
+[wandering_trader_trading]
+	#Adds new wandering trader trades. Due to how the wandering trader works, there are two lists: normal and last trades. When the trader spawns, five normal trades and one last trade are each randomly chosen from their corresponding lists. Note that as soon as you add anything in any of the lists, it removes all other trades (including the ones from the other list), and only this mod's added trades remain, so you need to re-add most things if you only want to add one trade. See https://minecraft.fandom.com/wiki/Trading for the vanilla defaults
+	#Format is uses;pricemultiplier;tradetype;tradetype-specific-args
+	#uses: how often the trade can be traded before it is locked
+	#price multiplier: every time you trade with a villager, the selling price is multiplied with 1 - this value (e. g. 0.1 means that every time you use the trade, the price is lowered by 10%)
+	#tradetype and corresponding tradetype-specific args can take the following values (values in [] are optional):
+	#  normal: buyItem1;buyItemCount1;[buyItem2;buyItemCount2;]sellItem;sellItemCount - a normal trade that takes 1 or 2 stacks in and gives 1 stack out. The items are item ids (e. g. minecraft:emerald), the item counts are numbers between 1 and 64
+	#  dyed: buyItem1;buyItemCount1;[buyItem2;buyItemCount2;]sellItem" - the sell item (e. g. leather armor) will be randomly dyed
+	#  map: buyItem1;buyItemCount1;[buyItem2;buyItemCount2;]structure;mapdecoration" - structure is a structure id (e. g. minecraft:stronghold), mapdecoration can be one of the following: "player", "frame", "red_marker", "blue_marker", "target_x", "target_point", "player_off_map", "player_off_limits", "mansion", "monument", "red_x", "banner_black", "banner_blue", "banner_brown", "banner_cyan", "banner_gray", "banner_green", "banner_light_blue", "banner_light_gray", "banner_lime", "banner_magenta", "banner_orange", "banner_pink", "banner_purple", "banner_red", "banner_white", "banner_yellow"
+	#  enchantedbook: buyItem1;[buyItem2;buyItemCount2;]enchantment;level - enchantment to use (e. g. minecraft:sharpness, or "any" for random enchantments), level for the level. Outputs an enchanted book, at which the amount of buyItem1 is scaled - a lvl 5 book costs approx. 5 times more than a lvl 1 book. It's currently impossible to add more than one enchantment
+	#  enchanteditem: buyItem1;[buyItem2;buyItemCount2;]sellItem;enchantment;level - enchantment to use (e. g. minecraft:sharpness, or "any" for random enchantments), level for the level. Outputs an enchanted book, at which the amount of buyItem1 is scaled - a lvl 5 helmet costs approx. 5 times more than a lvl 1 helmet. It's currently impossible to add more than one enchantment
+	#  potion: buyItem1;buyItemCount1;[buyItem2;buyItemCount2;]sellItem;potion - the potion (using "any" will randomly select one) is applied to the sell item, so unless you have additional potion-like items added by other mods, this should only be minecraft:potion, minecraft:splash_potion, minecraft:lingering_potion or minecraft:tipped_arrow
+	#  stew: buyItem1;buyItemCount1;[buyItem2;buyItemCount2;]effect;duration - effect is an effect id (e. g. minecraft:strength), duration is an integer determining the amount of ticks the effect lasts
+	trader_normal_trades = []
+	trader_last_trades = []
+

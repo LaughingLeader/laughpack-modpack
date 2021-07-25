@@ -2,7 +2,9 @@
 !/.gitignore
 
 !config
-# !defaultconfigs/*.toml
+!config/*
+!defaultconfigs
+!defaultconfigs/*
 !kubejs/
 kubejs/exported
 kubejs/README.txt
