@@ -3,9 +3,13 @@
 
 !config
 !config/*
+!config/**/*
 !defaultconfigs
 !defaultconfigs/*
-!kubejs/
+!defaultconfigs/**/*
+!kubejs
+!kubejs/*
+!kubejs/**/*
 kubejs/exported
 kubejs/README.txt
 
