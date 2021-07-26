@@ -36,6 +36,8 @@ let disabled_recipes = [
 	"immersiveengineering:crafting/windmill_blade",
 	"immersiveengineering:crafting/windmill_sail",
 	"immersiveengineering:crafting/hammer",
+	//Engineer's Tools Ore Crushing Hammer is too easy
+	"engineerstools:independent/crushing_hammer_recipe",
 ]
 
 const plates_support = new Map()
@@ -80,7 +82,7 @@ onEvent("recipes", event => {
 		*/
 	}
 
-	mixing("1x #forge:ingots/steel", ["#forge:dusts/coal_coke", "#forge:ingots/iron"]).heated()
+	mixing("1x #forge:dusts/steel", ["#forge:dusts/coal_coke", "#forge:dusts/iron"]).heated()
 	milling("1x #forge:dusts/coal_coke", ["#forge:coal_coke"])
 	milling("9x #forge:dusts/coal_coke", ["#forge:storage_blocks/coal_coke"])
 	crushing(["1x #forge:dusts/coal_coke"], "#forge:coal_coke")
