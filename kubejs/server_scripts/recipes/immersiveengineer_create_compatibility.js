@@ -36,8 +36,24 @@ let disabled_recipes = [
 	"immersiveengineering:crafting/windmill_blade",
 	"immersiveengineering:crafting/windmill_sail",
 	"immersiveengineering:crafting/hammer",
-	//Engineer's Tools Ore Crushing Hammer is too easy
+	//Engineer"s Tools Ore Crushing Hammer is too easy
 	"engineerstools:independent/crushing_hammer_recipe",
+	"engineerstools:crushing/aluminium_grit_crushing_recipe",
+	"engineerstools:crushing/copper_grit_crushing_recipe",
+	"engineerstools:crushing/gold_grit_crushing_recipe",
+	"engineerstools:crushing/iron_grit_crushing_recipe",
+	"engineerstools:crushing/lead_grit_crushing_recipe",
+	"engineerstools:crushing/nickel_grit_crushing_recipe",
+	"engineerstools:crushing/osmium_grit_crushing_recipe",
+	"engineerstools:crushing/silver_grit_crushing_recipe",
+	"engineerstools:crushing/tin_grit_crushing_recipe",
+	"engineerstools:crushing/uranium_grit_crushing_recipe",
+	//Create Washing replacement, since we"re making this output dust instead
+	"create:splashing/crushed_iron_ore",
+	"create:splashing/crushed_gold_ore",
+	"create:splashing/crushed_copper_ore",
+	"create:splashing/crushed_zinc_ore",
+	//"create:splashing/crushed_brass",
 ]
 
 const plates_support = new Map()
@@ -82,11 +98,41 @@ onEvent("recipes", event => {
 		*/
 	}
 
+	const splashing = (outputArray, input) => {
+		//event.recipes.create.splashing([Item.of("mekanism:nugget_copper", 10), Item.of("mekanism:nugget_copper", 5).withChance(0.5)], "create:crushed_copper_ore")
+		event.recipes.create.splashing(outputArray, input)
+	}
+
+	const smelting = (output, input, name, xp) => {
+		if (xp != undefined) {
+			event.recipes.minecraft.smelting(output, input).xp(xp).id("kubejs:minecraft/smelting/" + name)
+			event.recipes.minecraft.blasting(output, input).xp(xp).id("kubejs:minecraft/blasting/" + name)
+		} else {
+			event.recipes.minecraft.smelting(output, input).id("kubejs:minecraft/smelting/" + name)
+			event.recipes.minecraft.blasting(output, input).id("kubejs:minecraft/blasting/" + name)
+		}
+	}
+
 	mixing("1x #forge:dusts/steel", ["#forge:dusts/coal_coke", "#forge:dusts/iron"]).heated()
 	milling("1x #forge:dusts/coal_coke", ["#forge:coal_coke"])
 	milling("9x #forge:dusts/coal_coke", ["#forge:storage_blocks/coal_coke"])
 	crushing(["1x #forge:dusts/coal_coke"], "#forge:coal_coke")
 	crushing(["9x #forge:dusts/coal_coke"], "#forge:storage_blocks/coal_coke")
+	
+	crushing(["1x kubejs:dust_zinc"], "#forge:ingots/zinc")
+	smelting("create:zinc_ingot", "#forge:dusts/zinc", "dust_zinc")
+
+	const splashingWithBonus = (output, input) => {
+		//event.recipes.create.splashing([Item.of("mekanism:nugget_copper", 10), Item.of("mekanism:nugget_copper", 5).withChance(0.5)], "create:crushed_copper_ore")
+		event.recipes.create.splashing([Item.of(output, 1), Item.of(output, 1).withChance(0.35), Item.of(output, 1).withChance(0.10)], input)
+	}
+
+	//Replacing nugget output with dust that has to be smelted, but has more chances for bonus dust.
+	splashingWithBonus("#forge:dusts/iron", "create:crushed_iron_ore")
+	splashingWithBonus("#forge:dusts/gold", "create:crushed_gold_ore")
+	splashingWithBonus("#forge:dusts/copper", "create:crushed_copper_ore")
+	splashingWithBonus("#forge:dusts/zinc", "create:crushed_zinc_ore")
+	//splashing(["1x #forge:dusts/brass", Item.of("#forge:dusts/brass", 1).withChance(0.35)], "create:splashing/crushed_brass",)
 
 	// Disabling the Crude Blast Furnace
 	event.shaped(Item.of("1x immersiveengineering:hammer").withNBT({multiblockInterdiction: ["immersiveengineering:multiblocks/blast_furnace"]}), 

@@ -5,6 +5,7 @@ onEvent("item.registry", event => {
 	let items = [
         "bark_fiber",
         "paper_vellum",
+        "dust_zinc",
     ];
 
 	items.forEach((item) => {

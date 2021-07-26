@@ -7,6 +7,7 @@ let blacklist_ids = [
 	"immersiveengineering:watermill",
 	"immersiveengineering:wheel_segment",
 	"immersiveengineering:bannerpattern_windmill",
+	"engineerstools:crushing_hammer",
 ]
 
 let blacklist_wood_tags = [

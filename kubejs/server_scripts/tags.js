@@ -4,4 +4,7 @@ events.listen("item.tags", (event) => {
         "botania:monocle",
         "advancedperipherals:ar_goggles"
     ]);
+    event.add("forge:dusts/zinc", [
+        "kubejs:dust_zinc"
+    ]);
 });
