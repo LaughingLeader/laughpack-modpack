@@ -134,8 +134,8 @@ events.listen("item.tags", (e) => {
 		"immersiveengineering:slab_concrete",
 		"immersiveengineering:slab_concrete_tile",
 		"immersiveengineering:slab_concrete_leaded",
-		"astralsorcery:marble_slab",
-		"astralsorcery:black_marble_slab",
+		//"astralsorcery:marble_slab",
+		//"astralsorcery:black_marble_slab",
 	]).add(woodenSlabs)
 	
 	e.get("minecraft:wooden_slabs").add(woodenSlabs)
@@ -295,7 +295,7 @@ events.listen("item.tags", (e) => {
 	
 	// Beacon Payment Items
 	let beaconPaymentItems = [
-		"aquaculture:neptunium_ingot",
+		//"aquaculture:neptunium_ingot",
 		"botania:manasteel_ingot",
 		"botania:terrasteel_ingot",
 		"botania:elementium_ingot",

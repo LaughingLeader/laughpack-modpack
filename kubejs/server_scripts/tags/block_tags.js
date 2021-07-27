@@ -157,15 +157,6 @@ onEvent("block.tags", e => {
 	
 	e.get("forge:sandstone/soul").add(soulSandstones)
 	
-	
-	let soullessSandstones = [
-		"forbidden_arcanus:soulless_sandstone",
-		"forbidden_arcanus:cut_soulless_sandstone",
-		"forbidden_arcanus:polished_soulless_sandstone"
-	]
-	
-	e.get("forge:sandstone/soulless").add(soullessSandstones)
-	
 	e.add("forge:sandstone/colorless", "quark:sandstone_bricks")
 	e.add("forge:sandstone/red", "quark:red_sandstone_bricks")
 	
@@ -222,9 +213,6 @@ onEvent("block.tags", e => {
 		"#botania:enchanter_flowers",
 		//"astralsorcery:glow_flower"
 	])
-	
-	// Misc Missing Block Tags
-	e.add("forbidden_arcanus:edelwood_logs", "forbidden_arcanus:edelwood_log")
 	
 	// Missing Glass Panes Tags
 	e.get("forge:glass_panes").add([
