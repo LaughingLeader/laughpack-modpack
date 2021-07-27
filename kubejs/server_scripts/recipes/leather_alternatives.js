@@ -1,3 +1,5 @@
+// priority: 9
+
 onEvent("recipes", event => {
 	event.shaped("1x minecraft:book", ["AA ", "AB ", "   "], {
         A: "minecraft:paper",

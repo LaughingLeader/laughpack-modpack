@@ -1,3 +1,4 @@
+// priority: 80
 events.listen("item.tags", (e) => {
 	e.add("curios:createplus.goggle_slot", [
 		"botania:cosmetic_engineer_goggles",
