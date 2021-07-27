@@ -7,7 +7,7 @@ alwaysShowUnfinishedFrontiers = true
 nameVisibility = "Manual"
 #Transparency of the frontier polygons. 0.0 is fully transparent and 1.0 is no transparency.
 #Range: 0.0 ~ 1.0
-polygonsOpacity = 0.4
+polygonsOpacity = 0.3
 #Distance at which vertices are attached to nearby vertices.
 #Range: 0 ~ 16
 snapDistance = 8

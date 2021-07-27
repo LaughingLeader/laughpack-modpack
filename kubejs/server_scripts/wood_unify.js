@@ -2,7 +2,7 @@
 let updateWood = function(event){
 	
 	//Removing all plank recipes
-	event.remove({type: "crafting_shapeless", output: "#minecraft:planks"})
+	event.remove({type: "minecraft:crafting_shapeless", output: "#minecraft:planks"})
 	event.remove({type: "immersiveengineering:sawmill", result: {item: "#minecraft:planks"}})
 	event.remove({type: "create:cutting", output: "#minecraft:planks"})
 
@@ -124,7 +124,7 @@ let updateWood = function(event){
 	
 	for (let i = 0; i < all_wood.length; i++) {
 		let mod_entry = all_wood[i]
-		if (Platform.isLoaded(mod_entry.Mod)) {
+		if (mod_entry.Mod == "minecraft" || Platform.isLoaded(mod_entry.Mod)) {
 			for (let j=0; j < mod_entry.Entries.length; j++) {
 				let entry = mod_entry.Entries[j]
 		
