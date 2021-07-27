@@ -31,3 +31,4 @@ kubejs/README.txt
 *.bak
 *.cache
 *.zip
+config/worldedit/worldedit.properties
