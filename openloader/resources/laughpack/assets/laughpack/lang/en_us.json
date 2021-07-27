@@ -8,5 +8,6 @@
 	"biome.hyperbox.hyperbox": "Hyperbox Dimension",
 	"biome.mining_dimension.mining": "Mining Dimension",
 	"desc.immersiveengineering.info.multiblock.immersiveengineering.multiblocks/blastfurnace": "Crude Blast Furnace",
+	"entity.minecraft.villager.carpenter": "Carpenter",
 	"entity.minecraft.villager.immersiveengineering:machinist": "Machinist"
 }

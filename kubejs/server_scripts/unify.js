@@ -85,10 +85,12 @@ onEvent("recipes", event => {
         if (ingr) {
             let stacks = ingr.getStacks().toArray()
             for (let mod of global["unifypriorities"]) {
-                for (let stack of stacks) {
-                    if (stack.getMod() == mod) {
-                        tagitems[tag] = stack.getId()
-                        continue tagLoop
+                if(Platform.isLoaded(mod)) {
+                    for (let stack of stacks) {
+                        if (stack.getMod() == mod) {
+                            tagitems[tag] = stack.getId()
+                            continue tagLoop
+                        }
                     }
                 }
             }

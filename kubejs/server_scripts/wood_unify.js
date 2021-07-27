@@ -1,15 +1,17 @@
 
-onEvent("recipes", event => {
+let updateWood = function(event){
 	
 	//Removing all plank recipes
-	event.remove({output: "#minecraft:planks"})
+	event.remove({type: "crafting_shapeless", output: "#minecraft:planks"})
+	event.remove({type: "immersiveengineering:sawmill", result: {item: "#minecraft:planks"}})
+	event.remove({type: "create:cutting", output: "#minecraft:planks"})
 
 	/**
 	 * @param {string} namespace The mod namespace.
 	 * @param {string} name Base block name (oak).
 	 * @param {string} tag Oredict tag
 	 */
-	const WoodEntry = function(namespace, name, tag) {
+	 const WoodEntry = function(namespace, name, tag) {
 		let entry = {
 			Log: `${namespace}:${name}_log`,
 			Plank: `${namespace}:${name}_planks`,
@@ -97,9 +99,24 @@ onEvent("recipes", event => {
 			WoodEntry("environmental", "willow", "#environmental:willow_logs"),
 			WoodEntry("environmental", "wisteria", "#environmental:wisteria_logs"),
 		]},
+		{Mod:"naturesaura", Entries:[
+			{Log: "naturesaura:ancient_log", Plank: "naturesaura:ancient_planks", Wood: "naturesaura:ancient_bark"},
+		]},
 		{Mod:"upgrade_aquatic", Entries:[
 			{ Log: "upgrade_aquatic:driftwood_log", Plank: "upgrade_aquatic:driftwood_planks", Wood: "upgrade_aquatic:driftwood", StrippedLog: "upgrade_aquatic:stripped_driftwood_log", StrippedWood: "upgrade_aquatic:stripped_driftwood", Tag: "#upgrade_aquatic:driftwood_logs"},
 			WoodEntry("upgrade_aquatic", "river", "#upgrade_aquatic:river_logs"),
+		]},
+		{Mod:"twilightforest", Entries:[
+			WoodEntry("twilightforest", "canopy", "#twilightforest:canopy_logs"),
+			//{Log: "twilightforest:cinder_log", Wood: "twilightforest:cinder_wood"},
+			WoodEntry("twilightforest", "dark", "#twilightforest:dark_logs"),
+			{Log: "twilightforest:giant_log", Plank:"minecraft:oak_planks", Amount:64},
+			WoodEntry("twilightforest", "mangrove", "#twilightforest:mangrove_logs"),
+			WoodEntry("twilightforest", "time", "#twilightforest:time_logs"),
+			WoodEntry("twilightforest", "twilight_oak", "#twilightforest:twilight_oak_logs"),
+			{Log: "twilightforest:transformation_log", Plank: "twilightforest:trans_planks", Wood: "twilightforest:transformation_wood", StrippedLog: "twilightforest:stripped_transformation_log", StrippedWood: "twilightforest:stripped_transformation_wood", Tag: "#twilightforest:transwood_logs"},
+			{Log: "twilightforest:mining_log", Plank: "twilightforest:mine_planks", Wood: "twilightforest:mining_wood", StrippedLog: "twilightforest:stripped_mining_log", StrippedWood: "twilightforest:stripped_mining_wood", Tag: "#twilightforest:mining_logs"},
+			{Log: "twilightforest:sorting_log", Plank: "twilightforest:sort_planks", Wood: "twilightforest:sorting_wood", StrippedLog: "twilightforest:stripped_sorting_log", StrippedWood: "twilightforest:stripped_sorting_wood", Tag: "#twilightforest:sortwood_logs"},
 		]}
 	]
 
@@ -114,31 +131,38 @@ onEvent("recipes", event => {
 				if(entry.Plank !== undefined) {
 					if(entry.Tag !== undefined && entry.Tag !== "") {
 						if(addedPlankTags[entry.Tag] !== entry.Plank) {
-							event.shapeless(Item.of(entry.Plank, 4), entry.Tag)
+							event.shapeless(Item.of(entry.Plank, entry.Amount || 4), entry.Tag)
 							addedPlankTags[entry.Tag] = entry.Plank
 						}
+					} else {
+						event.shapeless(Item.of(entry.Plank, entry.Amount || 4), entry.Log)
 					}
 					if (entry.StrippedLog !== undefined) {
+						event.recipes.create.cutting(entry.StrippedLog, entry.Log)
 						event.recipes.create.cutting(Item.of(entry.Plank, 4), entry.StrippedLog)
 						event.recipes.immersiveengineering.sawmill(Item.of(entry.Plank, 6), entry.Log, [{ stripping: false, output: "1x immersiveengineering:dust_wood" },{ stripping: true, output: "1x immersiveengineering:dust_wood" }], entry.StrippedLog)
 						event.recipes.immersiveengineering.sawmill(Item.of(entry.Plank, 6), entry.StrippedLog, [{ stripping: false, output: "immersiveengineering:dust_wood" }])
-		
-						if (entry.Mod !== "minecraft") {
-							event.recipes.create.cutting(entry.StrippedLog, entry.Log)
-						}
+
+					} else if (entry.Log !== undefined) {
+						event.recipes.create.cutting(Item.of(entry.Plank, 4), entry.Log)
+						event.recipes.immersiveengineering.sawmill(Item.of(entry.Plank, 6), entry.Log, [{stripping: false, output: "1x immersiveengineering:dust_wood" }])
 					}
 			
 					if (entry.StrippedWood !== undefined) {
+						event.recipes.create.cutting(entry.StrippedWood, entry.Wood)
 						event.recipes.create.cutting(Item.of(entry.Plank, 4), entry.StrippedWood)
 						event.recipes.immersiveengineering.sawmill(Item.of(entry.Plank, 6), entry.Wood, [{ stripping: false, output: "1x immersiveengineering:dust_wood" },{ stripping: true, output: "1x immersiveengineering:dust_wood" }], entry.StrippedWood)
 						event.recipes.immersiveengineering.sawmill(Item.of(entry.Plank, 6), entry.StrippedWood, [{ stripping: false, output: "immersiveengineering:dust_wood" }])
-		
-						if (entry.Mod !== "minecraft") {
-							event.recipes.create.cutting(entry.StrippedWood, entry.Wood)
-						}
+					} else if (entry.Wood !== undefined) {
+						event.recipes.create.cutting(Item.of(entry.Plank, 4), entry.Wood)
+						event.recipes.immersiveengineering.sawmill(Item.of(entry.Plank, 6), entry.Wood, [{stripping: false, output: "1x immersiveengineering:dust_wood" }])
 					}
 				}
 			}
 		}
 	}
+}
+
+onEvent("recipes", event => {
+	updateWood(event)
 })
