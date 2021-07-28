@@ -1,10 +1,10 @@
 
-let updateWood = function(event){
+let updateWood = function(e){
 	
 	//Removing all plank recipes
-	event.remove({type: "minecraft:crafting_shapeless", output: "#minecraft:planks"})
-	event.remove({type: "immersiveengineering:sawmill", result: {item: "#minecraft:planks"}})
-	event.remove({type: "create:cutting", output: "#minecraft:planks"})
+	e.remove({type: "minecraft:crafting_shapeless", output: "#minecraft:planks"})
+	e.remove({type: "immersiveengineering:sawmill", result: {item: "#minecraft:planks"}})
+	e.remove({type: "create:cutting", output: "#minecraft:planks"})
 
 	/**
 	 * @param {string} namespace The mod namespace.
@@ -49,7 +49,7 @@ let updateWood = function(event){
 			{Log:"betterendforge:tenanea_log", Plank:"betterendforge:tenanea_planks", Wood:"betterendforge:tenanea_bark", StrippedWood:"betterendforge:tenanea_stripped_bark", StrippedLog:"betterendforge:tenanea_stripped_log", Tag:"#betterendforge:tenanea_logs"},
 			{Log:"betterendforge:helix_tree_log", Plank:"betterendforge:helix_tree_planks", Wood:"betterendforge:helix_tree_bark", StrippedWood:"betterendforge:helix_tree_stripped_bark", StrippedLog:"betterendforge:helix_tree_stripped_log", Tag:"#betterendforge:helix_tree_logs"},
 			{Log:"betterendforge:umbrella_tree_log", Plank:"betterendforge:umbrella_tree_planks", Wood:"betterendforge:umbrella_tree_bark", StrippedWood:"betterendforge:umbrella_tree_stripped_bark", StrippedLog:"betterendforge:umbrella_tree_stripped_log", Tag:"#betterendforge:umbrella_tree_logs"},
-			{Log:"betterendforge:jellyshroom_log", Plank:"betterendforge:jellyshroom_planks", Wood:"betterendforge:jellyshroom_bark", StrippedWood:"betterendforge:jellyshroom_stripped_bark", StrippedLog:"betterendforge:jellyshroom_stripped_log", Tag:"#betterendforge:jellyshroom_log"}
+			{Log:"betterendforge:jellyshroom_log", Plank:"betterendforge:jellyshroom_planks", Wood:"betterendforge:jellyshroom_bark", StrippedWood:"betterendforge:jellyshroom_stripped_bark", StrippedLog:"betterendforge:jellyshroom_stripped_log", Tag:"#betterendforge:jellyshroom_logs"}
 		]},
 		{Mod:"ars_nouveau", Entries:[
 			{Log:"ars_nouveau:blue_archwood_log", Plank:"ars_nouveau:archwood_planks", Wood:"ars_nouveau:blue_archwood_wood", StrippedWood:"ars_nouveau:stripped_blue_archwood_wood", StrippedLog:"ars_nouveau:stripped_blue_archwood_log", Tag:"#betterendforge:jellyshroom_logs"},
@@ -109,10 +109,10 @@ let updateWood = function(event){
 		{Mod:"twilightforest", Entries:[
 			WoodEntry("twilightforest", "canopy", "#twilightforest:canopy_logs"),
 			//{Log: "twilightforest:cinder_log", Wood: "twilightforest:cinder_wood"},
-			WoodEntry("twilightforest", "dark", "#twilightforest:dark_logs"),
+			WoodEntry("twilightforest", "dark", "#twilightforest:darkwood_logs"),
 			{Log: "twilightforest:giant_log", Plank:"minecraft:oak_planks", Amount:64},
 			WoodEntry("twilightforest", "mangrove", "#twilightforest:mangrove_logs"),
-			WoodEntry("twilightforest", "time", "#twilightforest:time_logs"),
+			WoodEntry("twilightforest", "time", "#twilightforest:timewood_logs"),
 			WoodEntry("twilightforest", "twilight_oak", "#twilightforest:twilight_oak_logs"),
 			{Log: "twilightforest:transformation_log", Plank: "twilightforest:trans_planks", Wood: "twilightforest:transformation_wood", StrippedLog: "twilightforest:stripped_transformation_log", StrippedWood: "twilightforest:stripped_transformation_wood", Tag: "#twilightforest:transwood_logs"},
 			{Log: "twilightforest:mining_log", Plank: "twilightforest:mine_planks", Wood: "twilightforest:mining_wood", StrippedLog: "twilightforest:stripped_mining_log", StrippedWood: "twilightforest:stripped_mining_wood", Tag: "#twilightforest:mining_logs"},
@@ -131,31 +131,31 @@ let updateWood = function(event){
 				if(entry.Plank !== undefined) {
 					if(entry.Tag !== undefined && entry.Tag !== "") {
 						if(addedPlankTags[entry.Tag] !== entry.Plank) {
-							event.shapeless(Item.of(entry.Plank, entry.Amount || 4), entry.Tag)
+							e.shapeless(Item.of(entry.Plank, entry.Amount || 4), entry.Tag)
 							addedPlankTags[entry.Tag] = entry.Plank
 						}
 					} else {
-						event.shapeless(Item.of(entry.Plank, entry.Amount || 4), entry.Log)
+						e.shapeless(Item.of(entry.Plank, entry.Amount || 4), entry.Log)
 					}
 					if (entry.StrippedLog !== undefined) {
-						event.recipes.create.cutting(entry.StrippedLog, entry.Log)
-						event.recipes.create.cutting(Item.of(entry.Plank, 4), entry.StrippedLog)
-						event.recipes.immersiveengineering.sawmill(Item.of(entry.Plank, 6), entry.Log, [{ stripping: false, output: "1x immersiveengineering:dust_wood" },{ stripping: true, output: "1x immersiveengineering:dust_wood" }], entry.StrippedLog)
-						event.recipes.immersiveengineering.sawmill(Item.of(entry.Plank, 6), entry.StrippedLog, [{ stripping: false, output: "immersiveengineering:dust_wood" }])
+						e.recipes.create.cutting(entry.StrippedLog, entry.Log)
+						e.recipes.create.cutting(Item.of(entry.Plank, 4), entry.StrippedLog)
+						e.recipes.immersiveengineering.sawmill(Item.of(entry.Plank, 6), entry.Log, [{ stripping: false, output: "1x immersiveengineering:dust_wood" },{ stripping: true, output: "1x immersiveengineering:dust_wood" }], entry.StrippedLog)
+						e.recipes.immersiveengineering.sawmill(Item.of(entry.Plank, 6), entry.StrippedLog, [{ stripping: false, output: "immersiveengineering:dust_wood" }])
 
 					} else if (entry.Log !== undefined) {
-						event.recipes.create.cutting(Item.of(entry.Plank, 4), entry.Log)
-						event.recipes.immersiveengineering.sawmill(Item.of(entry.Plank, 6), entry.Log, [{stripping: false, output: "1x immersiveengineering:dust_wood" }])
+						e.recipes.create.cutting(Item.of(entry.Plank, 4), entry.Log)
+						e.recipes.immersiveengineering.sawmill(Item.of(entry.Plank, 6), entry.Log, [{stripping: false, output: "1x immersiveengineering:dust_wood" }])
 					}
 			
 					if (entry.StrippedWood !== undefined) {
-						event.recipes.create.cutting(entry.StrippedWood, entry.Wood)
-						event.recipes.create.cutting(Item.of(entry.Plank, 4), entry.StrippedWood)
-						event.recipes.immersiveengineering.sawmill(Item.of(entry.Plank, 6), entry.Wood, [{ stripping: false, output: "1x immersiveengineering:dust_wood" },{ stripping: true, output: "1x immersiveengineering:dust_wood" }], entry.StrippedWood)
-						event.recipes.immersiveengineering.sawmill(Item.of(entry.Plank, 6), entry.StrippedWood, [{ stripping: false, output: "immersiveengineering:dust_wood" }])
+						e.recipes.create.cutting(entry.StrippedWood, entry.Wood)
+						e.recipes.create.cutting(Item.of(entry.Plank, 4), entry.StrippedWood)
+						e.recipes.immersiveengineering.sawmill(Item.of(entry.Plank, 6), entry.Wood, [{ stripping: false, output: "1x immersiveengineering:dust_wood" },{ stripping: true, output: "1x immersiveengineering:dust_wood" }], entry.StrippedWood)
+						e.recipes.immersiveengineering.sawmill(Item.of(entry.Plank, 6), entry.StrippedWood, [{ stripping: false, output: "immersiveengineering:dust_wood" }])
 					} else if (entry.Wood !== undefined) {
-						event.recipes.create.cutting(Item.of(entry.Plank, 4), entry.Wood)
-						event.recipes.immersiveengineering.sawmill(Item.of(entry.Plank, 6), entry.Wood, [{stripping: false, output: "1x immersiveengineering:dust_wood" }])
+						e.recipes.create.cutting(Item.of(entry.Plank, 4), entry.Wood)
+						e.recipes.immersiveengineering.sawmill(Item.of(entry.Plank, 6), entry.Wood, [{stripping: false, output: "1x immersiveengineering:dust_wood" }])
 					}
 				}
 			}
@@ -163,6 +163,34 @@ let updateWood = function(event){
 	}
 }
 
-onEvent("recipes", event => {
-	updateWood(event)
+onEvent("recipes", e => {
+	updateWood(e)
+
+	
+	let recipe = global.recipeHelpers(e)
+	recipe.shaped("1x kubejs:wood_converter", ["E  ", " I ", "  I"],
+	{
+		E: "minecraft:emerald",
+		I: "minecraft:gold_ingot"
+	})
+	recipe.crafting_extended_shapeless({
+        item: "minecraft:oak_log",
+        count: 1
+    },[
+		{ tag: "forge:logs" },
+		{ item: "kubejs:wood_converter"}
+	],{
+        tool: "kubejs:wood_converter",
+        tool_damage: 0
+	})
+	recipe.crafting_extended_shapeless({
+        item: "minecraft:oak_planks",
+        count: 1
+    },[
+		{ tag: "forge:planks" },
+		{ item: "kubejs:wood_converter"}
+	],{
+        tool: "kubejs:wood_converter",
+        tool_damage: 0
+	})
 })

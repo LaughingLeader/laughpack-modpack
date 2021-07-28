@@ -7,6 +7,7 @@ onEvent("item.registry", event => {
         "paper_vellum",
         "dust_zinc",
         "worldedit_wand",
+        "wood_converter",
     ];
 
 	items.forEach((item) => {

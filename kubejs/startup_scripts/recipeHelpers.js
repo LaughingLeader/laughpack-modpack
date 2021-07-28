@@ -100,7 +100,32 @@ global.recipeHelpers = function(e) {
 		 */
 		shaped: function(output, pattern, patternMap) {
 			e.shaped(output, pattern, patternMap)
-		}
+		},
+
+		/**
+		 * Minecraft shapeless crafting recipe.
+		 * @param {string} output The item the recipe creates.
+		 * @param {string|string[]} input Single item, or an array of input items.
+		 * @return {RecipeFunction}
+		 */
+		shapeless: function(output, input) {
+			e.shapeless(output, input)
+		},
+		/**
+		 * Shapeless crafting recipe using Engineer's Tools.
+		 * @param {Object} output Resulting item.
+		 * @param {Object[]} ingredients Array of objects to use for ingredients.
+		 * @param {Object} aspects Damage to a tool.
+		 * @return {RecipeFunction}
+		 */
+		crafting_extended_shapeless: function(output, ingredients, aspects) {
+			e.custom({
+				type: "engineerstools:crafting_extended_shapeless",
+				ingredients: ingredients,
+				result: output,
+				aspects: aspects
+			})
+		},
 	}
 	return helperTable
 }
