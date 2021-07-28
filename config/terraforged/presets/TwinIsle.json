@@ -12,7 +12,7 @@
     "vanillaSprings": true,
     "vanillaLavaLakes": true,
     "vanillaLavaSprings": false,
-    "mountainBiomeUsage": 0.852,
+    "mountainBiomeUsage": 0.851,
     "volcanoBiomeUsage": 0.855
   },
   "dimensions": {
@@ -23,8 +23,7 @@
     },
     "dimensions": {
       "nether": "minecraft:biomesoplenty",
-      "end": "minecraft:biomesoplenty",
-      "overworld_mirror": "terraforged:terraforged",
+      "end": "betterendforge:world_type",
       "includeExtraDimensions": true
     }
   },
@@ -48,6 +47,48 @@
         "spacing": 32,
         "separation": 8,
         "salt": 56181420,
+        "disabled": false
+      },
+      "betterendforge:eternal_portal_structure": {
+        "spacing": 16,
+        "separation": 6,
+        "salt": 1289052416,
+        "disabled": false
+      },
+      "betterendforge:giant_ice_star_structure": {
+        "spacing": 16,
+        "separation": 8,
+        "salt": 128954,
+        "disabled": false
+      },
+      "betterendforge:giant_mossy_glowshroom_structure": {
+        "spacing": 16,
+        "separation": 8,
+        "salt": 1234560,
+        "disabled": false
+      },
+      "betterendforge:megalake_small_structure": {
+        "spacing": 4,
+        "separation": 1,
+        "salt": 1223462144,
+        "disabled": false
+      },
+      "betterendforge:megalake_structure": {
+        "spacing": 4,
+        "separation": 1,
+        "salt": 1237890,
+        "disabled": false
+      },
+      "betterendforge:mountain_structure": {
+        "spacing": 3,
+        "separation": 2,
+        "salt": 1234567936,
+        "disabled": false
+      },
+      "betterendforge:painted_mountain_structure": {
+        "spacing": 3,
+        "separation": 2,
+        "salt": 12890,
         "disabled": false
       },
       "bettermineshafts:mineshaft": {
@@ -222,6 +263,24 @@
         "spacing": 15,
         "separation": 5,
         "salt": 123555792,
+        "disabled": false
+      },
+      "paraglider:nether_horned_statue": {
+        "spacing": 32,
+        "separation": 8,
+        "salt": 1973135488,
+        "disabled": false
+      },
+      "paraglider:tarrey_town_goddess_statue": {
+        "spacing": 32,
+        "separation": 8,
+        "salt": 850796608,
+        "disabled": false
+      },
+      "paraglider:underground_horned_statue": {
+        "spacing": 16,
+        "separation": 8,
+        "salt": 49788928,
         "disabled": false
       },
       "quark:big_dungeon": {

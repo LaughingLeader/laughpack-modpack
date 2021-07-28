@@ -1,0 +1,10 @@
+{
+  "type": "laughpack:overworld_disposable",
+  "generator": {
+    "type": "terraforged:terraforged",
+    "biome_source": {
+      "large_biomes": false,
+      "type": "minecraft:vanilla_layered"
+    }
+  }
+}
