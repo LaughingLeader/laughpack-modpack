@@ -2,7 +2,7 @@
   "miscellaneous": {
     "smoothLayerDecorator": true,
     "strataRegionSize": 684,
-    "strataDecorator": true,
+    "strataDecorator": false,
     "oreCompatibleStoneOnly": true,
     "erosionDecorator": true,
     "plainStoneErosion": false,
@@ -12,7 +12,7 @@
     "vanillaSprings": true,
     "vanillaLavaLakes": true,
     "vanillaLavaSprings": false,
-    "mountainBiomeUsage": 0.853,
+    "mountainBiomeUsage": 0.852,
     "volcanoBiomeUsage": 0.855
   },
   "dimensions": {
@@ -24,6 +24,7 @@
     "dimensions": {
       "nether": "minecraft:biomesoplenty",
       "end": "minecraft:biomesoplenty",
+      "overworld_mirror": "terraforged:terraforged",
       "includeExtraDimensions": true
     }
   },
@@ -50,8 +51,8 @@
         "disabled": false
       },
       "bettermineshafts:mineshaft": {
-        "spacing": 1,
-        "separation": 0,
+        "spacing": 8,
+        "separation": 4,
         "salt": 593751808,
         "disabled": false
       },
@@ -146,8 +147,8 @@
         "disabled": false
       },
       "minecraft:mineshaft": {
-        "spacing": 1,
-        "separation": 0,
+        "spacing": 8,
+        "separation": 4,
         "salt": 0,
         "disabled": false
       },
