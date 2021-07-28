@@ -1,11 +1,14 @@
 // priority: 80
-events.listen("item.tags", (e) => {
+onEvent("item.tags", (e) => {
 	e.add("curios:createplus.goggle_slot", [
 		"botania:cosmetic_engineer_goggles",
 		"botania:monocle",
 		"advancedperipherals:ar_goggles"
 	]);
 	e.add("forge:dusts/zinc", [
+		"kubejs:dust_zinc"
+	]);
+	e.add("forge:dusts", [
 		"kubejs:dust_zinc"
 	]);
 

@@ -4,6 +4,7 @@
 !config
 !config/*
 !config/**/*
+config/worldedit
 !defaultconfigs
 !defaultconfigs/*
 !defaultconfigs/**/*

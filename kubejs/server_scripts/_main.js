@@ -6,10 +6,3 @@ settings.logSkippedRecipes = true
 settings.logErroringRecipes = true
 
 console.info("===[LaughPack] KubeJS Scripts Startup===")
-
-function printObject(obj)
-{
-	for (key in obj) {
-		console.info(String(key))
-	}
-}
