@@ -7,11 +7,11 @@ onEvent("item.registry", event => {
         "paper_vellum",
         "dust_zinc",
         "worldedit_wand",
-        "wood_converter",
+        "wood_converter"
     ];
 
 	items.forEach((item) => {
-        event.create(item).group("kubejs").texture(`kubejs:item/${item}`);
+        event.create(item).group("kubejs").texture(`kubejs:item/${item}`)
     });
 })
 

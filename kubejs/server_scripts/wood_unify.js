@@ -173,24 +173,4 @@ onEvent("recipes", e => {
 		E: "minecraft:emerald",
 		I: "minecraft:gold_ingot"
 	})
-	recipe.crafting_extended_shapeless({
-        item: "minecraft:oak_log",
-        count: 1
-    },[
-		{ tag: "forge:logs" },
-		{ item: "kubejs:wood_converter"}
-	],{
-        tool: "kubejs:wood_converter",
-        tool_damage: 0
-	})
-	recipe.crafting_extended_shapeless({
-        item: "minecraft:oak_planks",
-        count: 1
-    },[
-		{ tag: "forge:planks" },
-		{ item: "kubejs:wood_converter"}
-	],{
-        tool: "kubejs:wood_converter",
-        tool_damage: 0
-	})
 })

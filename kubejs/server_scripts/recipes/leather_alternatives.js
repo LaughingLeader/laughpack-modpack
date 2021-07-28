@@ -10,6 +10,6 @@ onEvent("recipes", event => {
         event.blasting(output, input)
     }
 	multiSmelt("1x kubejs:paper_vellum", "kubejs:bark_fiber")
-	//event.shapeless("2x kubejs:bark_fiber", ["#minecraft:logs", {ingredient: "druidcraft:knife", type: "damage"}])
 	event.recipes.create.milling("2x kubejs:bark_fiber", ["#minecraft:logs"])
+	//event.shapeless("2x kubejs:bark_fiber", ["#minecraft:logs", {ingredient: "druidcraft:knife", type: "damage"}])
 })

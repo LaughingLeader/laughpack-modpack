@@ -13,6 +13,9 @@ config/worldedit
 !kubejs/**/*
 kubejs/exported
 kubejs/README.txt
+!scripts
+!scripts/*
+!scripts/**/*
 
 ###############################
 # Datapacks/resources
