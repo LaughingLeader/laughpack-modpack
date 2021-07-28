@@ -1,1 +1,6 @@
-[]
+[
+	{
+		"dimension": "laughpack:void",
+		"result": "deny"
+	}
+]
