@@ -1,8 +1,8 @@
 // priority: 0
 
-settings.logAddedRecipes = true
-settings.logRemovedRecipes = true
-settings.logSkippedRecipes = true
+settings.logAddedRecipes = false
+settings.logRemovedRecipes = false
+settings.logSkippedRecipes = false
 settings.logErroringRecipes = true
 
 console.info("===[LaughPack] KubeJS Scripts Startup===")
