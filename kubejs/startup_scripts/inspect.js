@@ -12,7 +12,7 @@ global.printObject = function(obj)
 }
 
 let stripNamespace = function(input) {
-	var lastDot = input.lastIndexOf(".")
+	let lastDot = input.lastIndexOf(".")
 	if (lastDot < 0) {
 		return input
 	}
@@ -23,35 +23,55 @@ let stripNamespace = function(input) {
  * Print out an object and it"s properties/functions.
  * @param {obj} output
  */
-global.inspect = function(obj) {
+global.inspect = function(obj, forJSDoc) {
 	if (typeof obj !== "undefined") {
-		var resultArray = []
+		let resultArray = []
 		resultArray.push("Inspecting: " + obj)
 		
-		var propertiesArray = []
-		var functionsArray = []
+		let propertiesArray = []
+		let functionsArray = []
 		Object.keys(obj).forEach(key => {
-			var keyType = typeof obj[key]
+			let keyType = typeof obj[key]
 			if (keyType === "string" || keyType === "number" || keyType === "object") {
-				propertiesArray.push("  " + key + ": " + obj[key])
+				if(forJSDoc == true) {
+					propertiesArray.push(` * @property {${typeof(obj[key])}} ${key}`)
+				} else {
+					propertiesArray.push("  " + key + ": " + obj[key])
+				}
 			} else if (keyType === "function" && !key.startsWith("func_")) {
 				if (obj[key] == null) return;
-				var rawString = obj[key].toString().match(/\/\*\n(.*) .*\((.*)\)/)
-				if (rawString == undefined || rawString === "") return;
-				var returnType = stripNamespace(rawString[1])
-				var rawParameters = []
-				if (rawString[2] !== "undefined") {
-					rawParameters = rawString[2].split(",")
+				let rawString = obj[key].toString().match(/\/\*\n(.*) .*\((.*)\)/)
+				console.info(`rawString: ${rawString} ${String(obj[key])}`)
+				if (rawString == null || rawString == undefined) {
+					if(forJSDoc == true) {
+						functionsArray.push(` * @property {function} ${key}`)
+					} else {
+						functionsArray.push("  " + key)
+					}
+				} else {
+					let returnType = stripNamespace(rawString[1])
+					let rawParameters = []
+					if (rawString[2] !== "undefined") {
+						rawParameters = rawString[2].split(",")
+					}
+					let parameterTypes = []
+					let i
+					for (i = 0; i < rawParameters.length; i++) {
+						parameterTypes.push(stripNamespace(rawParameters[i]))
+					}
+					
+					if(forJSDoc == true) {
+						propertiesArray.push(` * @property {function(${parameterTypes.join(", ")}):${returnType}} ${key}`)
+					} else {
+						functionsArray.push("  " + key + "(" + parameterTypes.join(", ") + ") : " + returnType)
+					}
 				}
-				var parameterTypes = []
-				var i
-				for (i = 0; i < rawParameters.length; i++) {
-					parameterTypes.push(stripNamespace(rawParameters[i]))
-				}
-				
-				functionsArray.push("  " + key + "(" + parameterTypes.join(", ") + ") : " + returnType)
 			} else if (keyType === "undefined") {
-				propertiesArray.push("  " + key + ": undefined")
+				if(forJSDoc == true) {
+					propertiesArray.push(` * @property {undefined} ${key}`)
+				} else {
+					propertiesArray.push("  " + key + ": undefined")
+				}
 			}
 		})
 		
