@@ -50,13 +50,14 @@ let onLoggedIn = function(e)
 */
 global.customCommands.spawntest = function (player, cmdParts, e) {
 	let username = e.parseResults.context.source.func_197011_j()[0]
-	//console.info(`${user} (${typeof(user)})`)
-	//global.inspect(user)
-	//global.inspect(e.parseResults.context.source)
-	//global.inspect(e.parseResults.context.source, true)
-	//console.info(`Player name: ${player.entity.getName()}`)
 	e.server.runCommandSilent(teleportCommand(username))
 	e.cancel()
 }
 
 onEvent("player.logged_in", onLoggedIn)
+
+//console.info(`${user} (${typeof(user)})`)
+//global.inspect(user)
+//global.inspect(e.parseResults.context.source)
+//global.inspect(e.parseResults.context.source, true)
+//console.info(`Player name: ${player.entity.getName()}`)
