@@ -1,6 +1,10 @@
 /**
  * @typedef ServerJS
  * @type {Object}
+ * @property {boolean} dedicated
+ * @property {boolean} hardcore
+ * @property {boolean} running
+ * @property {boolean} singlePlayer
  * @property {object} class
  * @property {object} data
  * @property {object} displayName

@@ -4,12 +4,23 @@ onEvent("player.chat", e => {
 })
 
 let test = true
+/** @param {LoggedInEventJS} e */
 onEvent("player.tick", e => {
 	if (test) {
 		test = false
 		console.info("player.tick")
-		global.inspect(e)
-		console.info(`Is operator: ${e.player.OP}`)
-		global.printObject(e.player)
+		console.info(`getSpawnLocation: ${e.player.getSpawnLocation()}`)
+		global.inspect(e.server, true)
+		//global.inspect(e.player, true)
+		let i = 0
+		e.server.worlds.forEach(world => {
+			if(i == 0) {
+				global.inspect(world, true)
+				i++
+			}
+		})
+		//let world = e.server.getWorld()
+		//console.info(`getWorld: ${world}`)
+		//global.printObject(world)
 	}
 })

@@ -32,7 +32,7 @@ global.inspect = function(obj, forJSDoc) {
 		let functionsArray = []
 		Object.keys(obj).forEach(key => {
 			let keyType = typeof obj[key]
-			if (keyType === "string" || keyType === "number" || keyType === "object") {
+			if (keyType !== "undefined" && keyType !== "function") {
 				if(forJSDoc == true) {
 					propertiesArray.push(` * @property {${typeof(obj[key])}} ${key}`)
 				} else {
@@ -41,7 +41,7 @@ global.inspect = function(obj, forJSDoc) {
 			} else if (keyType === "function" && !key.startsWith("func_")) {
 				if (obj[key] == null) return;
 				let rawString = obj[key].toString().match(/\/\*\n(.*) .*\((.*)\)/)
-				console.info(`rawString: ${rawString} ${String(obj[key])}`)
+				//console.info(`rawString: ${rawString} ${String(obj[key])}`)
 				if (rawString == null || rawString == undefined) {
 					if(forJSDoc == true) {
 						functionsArray.push(` * @property {function} ${key}`)

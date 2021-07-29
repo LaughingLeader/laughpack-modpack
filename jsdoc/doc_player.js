@@ -2,71 +2,162 @@
  * @typedef ServerPlayerJS
  * @type {Object}
  * @property {boolean} OP
+ * @property {boolean} alive
+ * @property {boolean} ambientCreature
+ * @property {boolean} animal
+ * @property {boolean} boss
+ * @property {boolean} child
+ * @property {boolean} creativeMode
+ * @property {boolean} crouching
+ * @property {boolean} customNameAlwaysVisible
+ * @property {boolean} elytraFlying
+ * @property {boolean} fake
+ * @property {boolean} frame
+ * @property {boolean} glowing
+ * @property {boolean} hasClientMod
+ * @property {boolean} hasCustomName
+ * @property {boolean} inWater
+ * @property {boolean} invisible
+ * @property {boolean} living
+ * @property {boolean} miningBlock
+ * @property {boolean} monster
+ * @property {boolean} noClip
+ * @property {boolean} noGravity
+ * @property {boolean} onGround
+ * @property {boolean} onLadder
+ * @property {boolean} op
+ * @property {boolean} peacefulCreature
+ * @property {boolean} player
+ * @property {boolean} silent
+ * @property {boolean} sleeping
+ * @property {boolean} spectator
+ * @property {boolean} sprinting
+ * @property {boolean} swimming
+ * @property {boolean} undead
+ * @property {boolean} underWater
+ * @property {boolean} waterCreature
  * @property {number} absorptionAmount
+ * @property {number} airSupply
+ * @property {number} eyeHeight
+ * @property {number} fallDistance
+ * @property {number} foodLevel
+ * @property {number} health
+ * @property {number} idleTime
+ * @property {number} lastAttackedEntityTime
+ * @property {number} maxAirSupply
+ * @property {number} maxHealth
+ * @property {number} motionX
+ * @property {number} motionY
+ * @property {number} motionZ
+ * @property {number} movementSpeed
+ * @property {number} pitch
+ * @property {number} reachDistance
+ * @property {number} revengeTimer
+ * @property {number} selectedSlot
+ * @property {number} stepHeight
+ * @property {number} ticksExisted
+ * @property {number} x
+ * @property {number} xp
+ * @property {number} xpLevel
+ * @property {number} y
+ * @property {number} yaw
+ * @property {number} z
+ * @property {object} attackingEntity
+ * @property {object} block
+ * @property {object} chestArmorItem
+ * @property {object} class
+ * @property {object} customName
+ * @property {object} data
+ * @property {object} displayName
+ * @property {object} facing
+ * @property {object} feetArmorItem
+ * @property {object} fullNBT
+ * @property {object} headArmorItem
+ * @property {object} horizontalFacing
+ * @property {object} id
+ * @property {object} inventory
+ * @property {object} item
+ * @property {object} lastAttackedEntity
+ * @property {object} lastDamageSource
+ * @property {object} legsArmorItem
+ * @property {object} mainHandItem
+ * @property {object} minecraftEntity
+ * @property {object} minecraftLivingEntity
+ * @property {object} minecraftPlayer
+ * @property {object} mouseItem
+ * @property {object} name
+ * @property {object} nbt
+ * @property {object} offHandItem
+ * @property {object} openInventory
+ * @property {object} passengers
+ * @property {object} potionEffects
+ * @property {object} profile
+ * @property {object} recursivePassengers
+ * @property {object} revengeTarget
+ * @property {object} ridingEntity
+ * @property {object} server
+ * @property {object} spawnLocation
+ * @property {object} stages
+ * @property {object} stats
+ * @property {object} tags
+ * @property {object} teamId
+ * @property {object} type
+ * @property {object} world
+ * @property {undefined} advancementDone
+ * @property {undefined} equipment
+ * @property {undefined} gameMode
+ * @property {undefined} heldItem
+ * @property {undefined} holdingInAnyHand
+ * @property {undefined} motion
+ * @property {undefined} onFire
+ * @property {undefined} onSameTeam
+ * @property {undefined} onScoreboardTeam
+ * @property {undefined} passenger
+ * @property {undefined} position
+ * @property {undefined} positionAndRotation
+ * @property {undefined} rotation
+ * @property {undefined} statusMessage
  * @property {function} addExhaustion
+ * @property {function} addFood
  * @property {function} addItemCooldown
  * @property {function} addMotion
  * @property {function} addXP
- * @property {undefined} advancementDone
- * @property {number} airSupply
- * @property {boolean} alive
- * @property {function} addFood
- * @property {boolean} animal
+ * @property {function} addXPLevels
  * @property {function} attack
- * @property {object} attackingEntity
  * @property {function} ban
- * @property {object} block
  * @property {function} boostElytraFlight
- * @property {boolean} boss
  * @property {function} canEntityBeSeen
- * @property {object} chestArmorItem
- * @property {boolean} child
- * @property {object} class
  * @property {function} closeInventory
  * @property {function} closeOverlay
- * @property {boolean} creativeMode
- * @property {boolean} crouching
- * @property {object} customName
- * @property {boolean} customNameAlwaysVisible
  * @property {function} damageEquipment
  * @property {function} damageHeldItem
- * @property {object} data
  * @property {function} dismountRidingEntity
- * @property {object} displayName
- * @property {boolean} elytraFlying
  * @property {function} equals
- * @property {undefined} equipment
- * @property {number} eyeHeight
- * @property {object} facing
- * @property {boolean} fake
- * @property {number} fallDistance
- * @property {object} feetArmorItem
- * @property {number} foodLevel
- * @property {boolean} frame
- * @property {function} addXPLevels
- * @property {boolean} ambientCreature
- * @property {object} fullNBT
- * @property {undefined} gameMode
+ * @property {function} extinguish
  * @property {function} getAbsorptionAmount
  * @property {function} getAirSupply
  * @property {function} getAttackingEntity
+ * @property {function} getBlock
  * @property {function} getChestArmorItem
  * @property {function} getClass
- * @property {function} getBlock
+ * @property {function} getCustomName
  * @property {function} getCustomNameAlwaysVisible
- * @property {function} getDisplayName
  * @property {function} getData
- * @property {function} getEyeHeight
+ * @property {function} getDisplayName
  * @property {function} getEquipment
+ * @property {function} getEyeHeight
+ * @property {function} getFacing
+ * @property {function} getFallDistance
  * @property {function} getFeetArmorItem
  * @property {function} getFoodLevel
- * @property {function} getFallDistance
- * @property {function} getFacing
+ * @property {function} getFullNBT
+ * @property {function} getHasClientMod
  * @property {function} getHasCustomName
  * @property {function} getHeadArmorItem
  * @property {function} getHealth
  * @property {function} getHeldItem
  * @property {function} getHorizontalFacing
+ * @property {function} getId
  * @property {function} getIdleTime
  * @property {function} getInventory
  * @property {function} getItem
@@ -90,10 +181,11 @@
  * @property {function} getOpenInventory
  * @property {function} getPassengers
  * @property {function} getPitch
- * @property {function} getProfile
  * @property {function} getPotionEffects
+ * @property {function} getProfile
  * @property {function} getReachDistance
  * @property {function} getRecursivePassengers
+ * @property {function} getRevengeTarget
  * @property {function} getRevengeTimer
  * @property {function} getRidingEntity
  * @property {function} getSelectedSlot
@@ -115,21 +207,8 @@
  * @property {function} getZ
  * @property {function} give
  * @property {function} giveInHand
- * @property {boolean} glowing
- * @property {boolean} hasClientMod
- * @property {boolean} hasCustomName
  * @property {function} hashCode
- * @property {object} headArmorItem
  * @property {function} heal
- * @property {number} health
- * @property {undefined} heldItem
- * @property {undefined} holdingInAnyHand
- * @property {object} horizontalFacing
- * @property {object} id
- * @property {number} idleTime
- * @property {boolean} inWater
- * @property {object} inventory
- * @property {boolean} invisible
  * @property {function} isAdvancementDone
  * @property {function} isAlive
  * @property {function} isAmbientCreature
@@ -145,21 +224,16 @@
  * @property {function} isHoldingInAnyHand
  * @property {function} isInWater
  * @property {function} isInvisible
- * @property {function} extinguish
  * @property {function} isLiving
  * @property {function} isMiningBlock
  * @property {function} isMonster
  * @property {function} isOP
  * @property {function} isOnGround
- * @property {function} getHasClientMod
  * @property {function} isOnLadder
- * @property {function} getId
- * @property {function} isOnScoreboardTeam
  * @property {function} isOnSameTeam
+ * @property {function} isOnScoreboardTeam
  * @property {function} isOp
  * @property {function} isPassenger
- * @property {function} getCustomName
- * @property {function} getFullNBT
  * @property {function} isPeacefulCreature
  * @property {function} isPlayer
  * @property {function} isSilent
@@ -170,69 +244,19 @@
  * @property {function} isUndead
  * @property {function} isUnderWater
  * @property {function} isWaterCreature
- * @property {object} item
  * @property {function} kick
  * @property {function} kill
- * @property {object} lastAttackedEntity
- * @property {number} lastAttackedEntityTime
- * @property {object} lastDamageSource
- * @property {object} legsArmorItem
- * @property {boolean} living
- * @property {object} mainHandItem
- * @property {number} maxAirSupply
- * @property {number} maxHealth
- * @property {function} getRevengeTarget
- * @property {object} minecraftEntity
- * @property {object} minecraftPlayer
- * @property {object} minecraftLivingEntity
- * @property {boolean} miningBlock
- * @property {boolean} monster
- * @property {undefined} motion
- * @property {number} motionX
- * @property {number} motionY
- * @property {number} motionZ
- * @property {object} mouseItem
- * @property {number} movementSpeed
- * @property {object} name
- * @property {object} nbt
- * @property {boolean} noClip
- * @property {boolean} noGravity
  * @property {function} notify
  * @property {function} notifyAll
- * @property {object} offHandItem
- * @property {boolean} onGround
- * @property {undefined} onFire
- * @property {boolean} onLadder
- * @property {undefined} onSameTeam
- * @property {undefined} onScoreboardTeam
- * @property {boolean} op
- * @property {object} openInventory
  * @property {function} openOverlay
- * @property {undefined} passenger
- * @property {object} passengers
- * @property {boolean} peacefulCreature
- * @property {number} pitch
  * @property {function} playSound
- * @property {boolean} player
- * @property {undefined} position
- * @property {undefined} positionAndRotation
- * @property {object} potionEffects
- * @property {object} profile
  * @property {function} rayTrace
- * @property {number} reachDistance
- * @property {object} recursivePassengers
  * @property {function} removePassengers
- * @property {object} revengeTarget
- * @property {number} revengeTimer
  * @property {function} revokeAdvancement
- * @property {object} ridingEntity
- * @property {undefined} rotation
  * @property {function} runCommand
  * @property {function} runCommandSilent
- * @property {number} selectedSlot
  * @property {function} sendData
  * @property {function} sendInventoryUpdate
- * @property {object} server
  * @property {function} setAbsorptionAmount
  * @property {function} setAirSupply
  * @property {function} setChestArmorItem
@@ -279,35 +303,11 @@
  * @property {function} setY
  * @property {function} setYaw
  * @property {function} setZ
- * @property {boolean} silent
- * @property {boolean} sleeping
  * @property {function} spawn
- * @property {object} spawnLocation
- * @property {boolean} spectator
- * @property {boolean} sprinting
- * @property {object} stages
  * @property {function} startRiding
- * @property {object} stats
- * @property {undefined} statusMessage
- * @property {number} stepHeight
- * @property {boolean} swimming
  * @property {function} swingArm
- * @property {object} tags
- * @property {object} teamId
  * @property {function} tell
- * @property {number} ticksExisted
  * @property {function} toString
- * @property {object} type
- * @property {boolean} undead
- * @property {boolean} underWater
  * @property {function} unlockAdvancement
  * @property {function} wait
- * @property {boolean} waterCreature
- * @property {object} world
- * @property {number} x
- * @property {number} xp
- * @property {number} xpLevel
- * @property {number} y
- * @property {number} yaw
- * @property {number} z
  */

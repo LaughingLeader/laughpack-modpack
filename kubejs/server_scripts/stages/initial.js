@@ -3,7 +3,8 @@
 /**
  * @typedef LoggedInEventJS
  * @type {Object}
- * @property {ServerPlayer} player
+ * @property {ServerJS} server
+ * @property {ServerPlayerJS} player
  */
 
 /**

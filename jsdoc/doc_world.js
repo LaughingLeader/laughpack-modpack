@@ -1,6 +1,10 @@
 /**
  * @typedef WorldJS
  * @type {Object}
+ * @property {boolean} daytime
+ * @property {boolean} overworld
+ * @property {boolean} raining
+ * @property {boolean} thundering
  * @property {number} localTime
  * @property {number} seed
  * @property {number} time
