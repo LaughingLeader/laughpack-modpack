@@ -1,13 +1,7 @@
 {
   "type": "laughpack:overworld",
   "generator": {
-    "type": "minecraft:noise",
-    "seed": 0,
-    "settings": "minecraft:overworld",
-    "biome_source": {
-      "seed": 0,
-      "large_biomes": false,
-      "type": "minecraft:vanilla_layered"
-    }
+    "type": "terraforged:generator",
+    "seed": 0
   }
 }
