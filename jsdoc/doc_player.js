@@ -81,7 +81,7 @@
  * @property {object} lastDamageSource
  * @property {object} legsArmorItem
  * @property {object} mainHandItem
- * @property {object} minecraftEntity
+ * @property {ServerPlayerEntityJS} minecraftEntity
  * @property {object} minecraftLivingEntity
  * @property {object} minecraftPlayer
  * @property {object} mouseItem
@@ -310,4 +310,150 @@
  * @property {function} toString
  * @property {function} unlockAdvancement
  * @property {function} wait
- */
+
+ * @typedef ServerPlayerEntityJS
+ * @type {Object}
+ * @property {boolean} addedToWorld
+ * @property {boolean} culledFast
+ * @property {boolean} culledShadowPass
+ * @property {boolean} culledSlow
+ * @property {boolean} dirty
+ * @property {boolean} multipartEntity
+ * @property {boolean} queryInitialized
+ * @property {boolean} queryResultDirty
+ * @property {boolean} visible
+ * @property {number} fire
+ * @property {number} query
+ * @property {object} citadelEntityData
+ * @property {object} class
+ * @property {object} dataMap
+ * @property {object} dirtyEntries
+ * @property {ServerPlayerEntityJS} entity
+ * @property {object} forcedPose
+ * @property {object} language
+ * @property {object} parts
+ * @property {object} persistentData
+ * @property {object} prefixes
+ * @property {object} stages
+ * @property {object} stagesRawKJS
+ * @property {object} suffixes
+ * @property {undefined} activeItemStackUseCount
+ * @property {undefined} capability
+ * @property {undefined} classification
+ * @property {undefined} digSpeed
+ * @property {undefined} entries
+ * @property {undefined} eyeHeightAccess
+ * @property {undefined} pickedResult
+ * @property {undefined} value
+ * @property {function} an_getExperienceReward
+ * @property {function} an_shouldDropExperience
+ * @property {function} areCapsCompatible
+ * @property {function} asKJS
+ * @property {function} beCanTeleport
+ * @property {function} beGetCooldown
+ * @property {function} beGetExitPos
+ * @property {function} beResetExitPos
+ * @property {function} beSetCooldown
+ * @property {function} beSetExitPos
+ * @property {function} canBeRiddenInWater
+ * @property {function} canRiderInteract
+ * @property {function} canTrample
+ * @property {function} canUpdate
+ * @property {function} captureDrops
+ * @property {function} changeDimension
+ * @property {function} clean
+ * @property {function} curePotionEffects
+ * @property {function} deleteQuery
+ * @property {function} deserializeNBT
+ * @property {function} equals
+ * @property {function} foodEatenKJS
+ * @property {function} getCapability
+ * @property {function} getCitadelEntityData
+ * @property {function} getClass
+ * @property {function} getClassification
+ * @property {function} getDataMap
+ * @property {function} getDigSpeed
+ * @property {function} getDirtyEntries
+ * @property {function} getEntity
+ * @property {function} getEntries
+ * @property {function} getEyeHeightAccess
+ * @property {function} getFire
+ * @property {function} getForcedPose
+ * @property {function} getLanguage
+ * @property {function} getParts
+ * @property {function} getPersistentData
+ * @property {function} getPickedResult
+ * @property {function} getPrefixes
+ * @property {function} getQuery
+ * @property {function} getStages
+ * @property {function} getStagesRawKJS
+ * @property {function} getSuffixes
+ * @property {function} getValue
+ * @property {function} handler$zdp000$baseTick
+ * @property {function} handler$zdp000$changeDimension
+ * @property {function} handler$zkp001$read
+ * @property {function} hasCooldown
+ * @property {function} hashCode
+ * @property {function} initQuery
+ * @property {function} isAddedToWorld
+ * @property {function} isCulledFast
+ * @property {function} isCulledShadowPass
+ * @property {function} isCulledSlow
+ * @property {function} isDirty
+ * @property {function} isMultipartEntity
+ * @property {function} isQueryInitialized
+ * @property {function} isQueryResultDirty
+ * @property {function} isVisible
+ * @property {function} modify$zge000$_caelus_setFlag
+ * @property {function} notify
+ * @property {function} notifyAll
+ * @property {function} onAddedToWorld
+ * @property {function} onRemovedFromWorld
+ * @property {function} redirect$zjg001$elytraOverride
+ * @property {function} redirect$zjh000$eytraValidOverride
+ * @property {function} redirect$zjh002$elytraOverride
+ * @property {function} refreshDisplayName
+ * @property {function} refreshTabListName
+ * @property {function} remove
+ * @property {function} revive
+ * @property {function} serializeNBT
+ * @property {function} setActiveItemStackUseCount
+ * @property {function} setCitadelEntityData
+ * @property {function} setCulledFast
+ * @property {function} setCulledShadowPass
+ * @property {function} setCulledSlow
+ * @property {function} setDataMap
+ * @property {function} setFire
+ * @property {function} setForcedPose
+ * @property {function} setQuery
+ * @property {function} setQueryInitialized
+ * @property {function} setQueryResultDirty
+ * @property {function} setValue
+ * @property {function} shouldRiderFaceForward
+ * @property {function} shouldRiderSit
+ * @property {function} toString
+ * @property {function} wait
+ * @property {function():ResourceKeyJS} func_241141_L_ The player's spawnpoint dimension.
+ * @property {function():BlockPos} func_241140_K_ The player's spawnpoint position.
+ * @property {function():number} func_242109_L The player's spawnpoint angle.
+ * @property {function(WorldJS,number,number,boolean,boolean):Vector3d} func_242374_a The player's bed position.
+
+ * @typedef ResourceKeyJS
+ * @type {Object}
+ * @property {object} class
+ * @property {object} namespace
+ * @property {object} path
+ * @property {object} registryName
+ * @property {function} compareTo
+ * @property {function} equals
+ * @property {function} getClass
+ * @property {function} getNamespace
+ * @property {function} getPath
+ * @property {function} getRegistryName
+ * @property {function} hashCode
+ * @property {function} notify
+ * @property {function} notifyAll
+ * @property {function} specialEquals
+ * @property {function} toString
+ * @property {function} wait
+**/

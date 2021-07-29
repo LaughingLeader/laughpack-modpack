@@ -19,6 +19,20 @@ let stripNamespace = function(input) {
 	return input.substring(lastDot+1)
 }
 
+let ignoredKeys = [
+	"func_",
+	"field_",
+]
+
+let tryGetFunctionValue = function(obj, key) {
+	try{
+		let value = obj[key]()
+		return `[${typeof(value)}] = ${value}`
+	} catch(ex) {
+		return "unknown"
+	}
+}
+
 /**
  * Print out an object and it"s properties/functions.
  * @param {obj} output
@@ -31,46 +45,52 @@ global.inspect = function(obj, forJSDoc) {
 		let propertiesArray = []
 		let functionsArray = []
 		Object.keys(obj).forEach(key => {
-			let keyType = typeof obj[key]
-			if (keyType !== "undefined" && keyType !== "function") {
-				if(forJSDoc == true) {
-					propertiesArray.push(` * @property {${typeof(obj[key])}} ${key}`)
-				} else {
-					propertiesArray.push("  " + key + ": " + obj[key])
-				}
-			} else if (keyType === "function" && !key.startsWith("func_")) {
-				if (obj[key] == null) return;
-				let rawString = obj[key].toString().match(/\/\*\n(.*) .*\((.*)\)/)
-				//console.info(`rawString: ${rawString} ${String(obj[key])}`)
-				if (rawString == null || rawString == undefined) {
+			if(forJSDoc != true || !ignoredKeys.some((x) => key.startsWith(x)))
+			{
+				let keyType = typeof obj[key]
+				if (keyType !== "undefined" && keyType !== "function") {
+					if (keyType == "object" && Array.isArray(obj[key])) {
+						keyType = "Array"
+					}
 					if(forJSDoc == true) {
-						functionsArray.push(` * @property {function} ${key}`)
+						propertiesArray.push(` * @property {${keyType}} ${key}`)
 					} else {
-						functionsArray.push("  " + key)
+						propertiesArray.push("  " + key + ": " + obj[key])
 					}
-				} else {
-					let returnType = stripNamespace(rawString[1])
-					let rawParameters = []
-					if (rawString[2] !== "undefined") {
-						rawParameters = rawString[2].split(",")
+				} else if (keyType === "function") {
+					if (obj[key] == null) return;
+					let rawString = obj[key].toString().match(/\/\*\n(.*) .*\((.*)\)/)
+					//console.info(`rawString: ${rawString} ${String(obj[key])}`)
+					if (rawString == null || rawString == undefined) {
+						if(forJSDoc == true) {
+							functionsArray.push(` * @property {function} ${key}`)
+						} else {
+							functionsArray.push(`  ${key}: ${tryGetFunctionValue(obj, key)}`)
+						}
+					} else {
+						let returnType = stripNamespace(rawString[1])
+						let rawParameters = []
+						if (rawString[2] !== "undefined") {
+							rawParameters = rawString[2].split(",")
+						}
+						let parameterTypes = []
+						let i
+						for (i = 0; i < rawParameters.length; i++) {
+							parameterTypes.push(stripNamespace(rawParameters[i]))
+						}
+						
+						if(forJSDoc == true) {
+							propertiesArray.push(` * @property {function(${parameterTypes.join(", ")}):${returnType}} ${key}`)
+						} else {
+							functionsArray.push("  " + key + "(" + parameterTypes.join(", ") + ") : " + returnType)
+						}
 					}
-					let parameterTypes = []
-					let i
-					for (i = 0; i < rawParameters.length; i++) {
-						parameterTypes.push(stripNamespace(rawParameters[i]))
-					}
-					
+				} else if (keyType === "undefined") {
 					if(forJSDoc == true) {
-						propertiesArray.push(` * @property {function(${parameterTypes.join(", ")}):${returnType}} ${key}`)
+						propertiesArray.push(` * @property {undefined} ${key}`)
 					} else {
-						functionsArray.push("  " + key + "(" + parameterTypes.join(", ") + ") : " + returnType)
+						propertiesArray.push("  " + key + ": undefined")
 					}
-				}
-			} else if (keyType === "undefined") {
-				if(forJSDoc == true) {
-					propertiesArray.push(` * @property {undefined} ${key}`)
-				} else {
-					propertiesArray.push("  " + key + ": undefined")
 				}
 			}
 		})

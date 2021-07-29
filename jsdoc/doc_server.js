@@ -9,7 +9,7 @@
  * @property {object} data
  * @property {object} displayName
  * @property {object} entities
- * @property {object} minecraftServer
+ * @property {MinecraftServerJS} minecraftServer
  * @property {object} motd
  * @property {object} name
  * @property {WorldJS} overworld
@@ -26,7 +26,7 @@
  * @property {function} getDisplayName
  * @property {function} getEntities
  * @property {function} getHardcore
- * @property {function} getMinecraftServer
+ * @property {function():MinecraftServerJS} getMinecraftServer
  * @property {function} getMotd
  * @property {function} getName
  * @property {function} getOverworld
@@ -41,7 +41,7 @@
  * @property {function} notify
  * @property {function} notifyAll
  * @property {function} release
- * @property {function} runCommand
+ * @property {function(string|string[])} runCommand
  * @property {function} runCommandSilent
  * @property {function} schedule
  * @property {function} scheduleInTicks
@@ -52,5 +52,35 @@
  * @property {function} tell
  * @property {function} toString
  * @property {function} updateWorldList
+ * @property {function} wait
+
+ * @typedef MinecraftServerJS
+ * @type {Object}
+ * @property {object} class
+ * @property {object} dataPackRegistries
+ * @property {object} difficultyLast
+ * @property {object} difficultyUpdatePos
+ * @property {object} difficultyUpdateWorld
+ * @property {object} serverModName
+ * @property {object} serverResourcesKJS
+ * @property {undefined} crashNextTick
+ * @property {undefined} difficultyAsync
+ * @property {undefined} tickTime
+ * @property {function} close
+ * @property {function} equals
+ * @property {function} execute
+ * @property {function} forgeGetWorldMap
+ * @property {function} getClass
+ * @property {function} getDataPackRegistries
+ * @property {function} getDifficultyAsync
+ * @property {function} getServerModName
+ * @property {function} getServerResourcesKJS
+ * @property {function} getTickTime
+ * @property {function} hashCode
+ * @property {function} markWorldsDirty
+ * @property {function} notify
+ * @property {function} notifyAll
+ * @property {function} setCrashNextTick
+ * @property {function} toString
  * @property {function} wait
 **/
