@@ -1,0 +1,52 @@
+/**
+ * @typedef ServerJS
+ * @type {Object}
+ * @property {object} class
+ * @property {object} data
+ * @property {object} displayName
+ * @property {object} entities
+ * @property {object} minecraftServer
+ * @property {object} motd
+ * @property {object} name
+ * @property {WorldJS} overworld
+ * @property {ServerPlayerJS[]} players
+ * @property {WorldJS[]} worlds
+ * @property {undefined} advancement
+ * @property {undefined|ServerPlayerJS} player
+ * @property {undefined} statusMessage
+ * @property {undefined|WorldJS} world
+ * @property {function} equals
+ * @property {function} getAdvancement
+ * @property {function} getClass
+ * @property {function} getData
+ * @property {function} getDisplayName
+ * @property {function} getEntities
+ * @property {function} getHardcore
+ * @property {function} getMinecraftServer
+ * @property {function} getMotd
+ * @property {function} getName
+ * @property {function} getOverworld
+ * @property {function} getPlayer
+ * @property {function} getPlayers
+ * @property {function} getWorld
+ * @property {function} getWorlds
+ * @property {function} hashCode
+ * @property {function} isDedicated
+ * @property {function} isRunning
+ * @property {function} isSinglePlayer
+ * @property {function} notify
+ * @property {function} notifyAll
+ * @property {function} release
+ * @property {function} runCommand
+ * @property {function} runCommandSilent
+ * @property {function} schedule
+ * @property {function} scheduleInTicks
+ * @property {function} sendDataToAll
+ * @property {function} setMotd
+ * @property {function} setStatusMessage
+ * @property {function} stop
+ * @property {function} tell
+ * @property {function} toString
+ * @property {function} updateWorldList
+ * @property {function} wait
+**/

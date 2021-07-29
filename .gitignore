@@ -17,6 +17,9 @@ kubejs/README.txt
 !scripts
 !scripts/*
 !scripts/**/*
+!jsdoc
+!jsdoc/*
+!jsdoc/**/*
 
 ###############################
 # Datapacks/resources

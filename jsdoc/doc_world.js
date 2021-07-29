@@ -1,0 +1,56 @@
+/**
+ * @typedef WorldJS
+ * @type {Object}
+ * @property {number} localTime
+ * @property {number} seed
+ * @property {number} time
+ * @property {object} class
+ * @property {object} data
+ * @property {object} dimension
+ * @property {object} entities
+ * @property {object} gameRules
+ * @property {object} minecraftWorld
+ * @property {ServerPlayerJS[]} players
+ * @property {ServerJS} server
+ * @property {object} side
+ * @property {undefined} block
+ * @property {undefined} entity
+ * @property {undefined} livingEntity
+ * @property {ServerPlayerJS|undefined} player
+ * @property {undefined} playerData
+ * @property {undefined} rainStrength
+ * @property {function} createEntity
+ * @property {function} createEntityList
+ * @property {function} createExplosion
+ * @property {function} equals
+ * @property {function} getBlock
+ * @property {function} getClass
+ * @property {function} getData
+ * @property {function} getDimension
+ * @property {function} getEntities
+ * @property {function} getEntity
+ * @property {function} getGameRules
+ * @property {function} getLivingEntity
+ * @property {function} getLocalTime
+ * @property {function} getPlayer
+ * @property {function} getPlayerData
+ * @property {function} getPlayers
+ * @property {function} getSeed
+ * @property {function} getServer
+ * @property {function} getSide
+ * @property {function} getTime
+ * @property {function} hashCode
+ * @property {function} isDaytime
+ * @property {function} isOverworld
+ * @property {function} isRaining
+ * @property {function} isThundering
+ * @property {function} notify
+ * @property {function} notifyAll
+ * @property {function} setLocalTime
+ * @property {function} setRainStrength
+ * @property {function} setTime
+ * @property {function} spawnFireworks
+ * @property {function} spawnLightning
+ * @property {function} toString
+ * @property {function} wait
+**/

@@ -1,5 +1,5 @@
 /**
- * @typedef ServerPlayer
+ * @typedef ServerPlayerJS
  * @type {Object}
  * @property {boolean} OP
  * @property {number} absorptionAmount
