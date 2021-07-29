@@ -1,16 +1,3 @@
-function printObject(obj)
-{
-	let names = []
-	for (let key in obj) {
-		//console.info(String(key))
-		names.push(String(key))
-	}
-	names.sort()
-	for (let name in names) {
-		console.info(names[name])
-	}
-}
-
 var customCommands = {
 	"dump_recipes": function (player, cmdParts, event) {
 		const filter = global.recipes.customFilter(r => { console.info(r); return true; })
@@ -19,8 +6,6 @@ var customCommands = {
 			recipes_dump.add(r)
 		})
 		json.write("dumps/recipes.json", global.recipes_dump)
-		//printObject(utils.server.instance)
-		//printObject(global.recipes_dump)
 		console.info("Wrote dumps/recipes.json")
 		event.cancel()
 	}

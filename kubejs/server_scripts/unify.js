@@ -20,13 +20,13 @@ global["unifypriorities"] = [
 ]
 
 // Add oredictionary tags here to unify (or use javascript to generate it!)
-var tags = [
+let tags = [
     "forge:plates/iron",
     "forge:gears/iron",
     "forge:silicon"
 ]
 // Block tags for ore gen unification (DOES NOT WORK CURRENTLY)
-/*var btags = [
+/*let btags = [
     "forge:ores/copper",
     "forge:ores/tin",
     "forge:ores/aluminum",
@@ -41,7 +41,7 @@ var tags = [
     "forge:ores/sulfur",
 ]*/
 // Easier way to add multiple tags (feel free to add empty extra tags, this will ignore them)
-var tagGen = [
+let tagGen = [
     "gold=gears,plates",
     "diamond=gears,plates",
     "copper=storage_blocks,ingots,nuggets,dusts,ores,gears,plates",
@@ -78,7 +78,7 @@ function tryTag(tag) {
 // Replace input and output of recipes (and iterate over tags!)
 onEvent("recipes", event => {
     // Iterate over tags (they should be loaded)
-    var tagitems = new Map()
+    let tagitems = new Map()
     tagLoop:
     for (let tag of tags) {
         let ingr = tryTag(tag)
@@ -122,7 +122,7 @@ onEvent("recipes", event => {
 onEvent("player.inventory.changed", event => {
     if (global["INVENTORY_UNIFY"] && event.getEntity().getOpenInventory().getClass().getName() == "net.minecraft.inventory.container.PlayerContainer") {
         // Get held item
-        var heldItem = event.getItem()
+        let heldItem = event.getItem()
         
         // Check for every tag in the list
         for (let tag of global["unifytags"]) {
@@ -148,9 +148,9 @@ onEvent("player.inventory.changed", event => {
 // Items on ground
 onEvent("entity.spawned", event => {
     if (global["ITEM_UNIFY"]) {
-        var entity = event.getEntity()
+        let entity = event.getEntity()
         if (entity.getType() == "minecraft:item") {
-            var gItem = entity.getItem()
+            let gItem = entity.getItem()
             if (gItem) {
                 // Check for every tag in the list
                 for (let tag of global["unifytags"]) {

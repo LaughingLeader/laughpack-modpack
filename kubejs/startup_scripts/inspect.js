@@ -1,3 +1,16 @@
+global.printObject = function(obj)
+{
+	let names = []
+	for (let key in obj) {
+		//console.info(String(key))
+		names.push(String(key))
+	}
+	names.sort()
+	for (let name in names) {
+		console.info(`* @property {${typeof(obj[names[name]])}} ${names[name]}`)
+	}
+}
+
 let stripNamespace = function(input) {
 	var lastDot = input.lastIndexOf(".")
 	if (lastDot < 0) {
