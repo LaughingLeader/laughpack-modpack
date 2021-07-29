@@ -1,6 +1,8 @@
 [
 	{
 		"dimension": "laughpack:void",
+		"gamestage": "void_guest",
+		"message": "§cBlock placement is restricted in the Void!",
 		"result": "deny"
 	}
 ]

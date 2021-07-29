@@ -1,6 +1,6 @@
 [
 	{
 		"dimension": "laughpack:void",
-		"potion": "minecraft:swiftness,90,2"
+		"potion": ["minecraft:speed,450,3", "minecraft:jump_boost,450,3"]
 	}
 ]
