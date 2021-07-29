@@ -59,4 +59,4 @@ global.customCommands.spawntest = function (player, cmdParts, e) {
 	e.cancel()
 }
 
-events.listen("player.logged_in", onLoggedIn)
+onEvent("player.logged_in", onLoggedIn)

@@ -12,7 +12,7 @@ global.customCommands.dump_recipes = function (player, cmdParts, event) {
 	event.cancel()
 }
 
-events.listen("command.run",function(e){
+onEvent("command.run", function(e){
 	if (!e.parseResults
 	|| !e.parseResults.reader
 	|| !e.parseResults.context
@@ -32,7 +32,7 @@ events.listen("command.run",function(e){
 });
 
 /*
-events.listen("command.registry",function (e) {
+onEvent("command.registry",function (e) {
 	e.create("dump_recipes").execute(function(sender,args){
 		sender.tell([ Text.lightPurple("[LaughPack]"), " Dumping recipes." ])
 		json.write("config/recipes.json", global.recipes_dump)

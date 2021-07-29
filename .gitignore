@@ -40,3 +40,4 @@ kubejs/README.txt
 *.cache
 *.zip
 config/worldedit/worldedit.properties
+config/jei/bookmarks.ini
