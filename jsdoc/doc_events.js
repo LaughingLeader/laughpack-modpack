@@ -40,8 +40,6 @@
  * @property {function} getAllIngredients
  * @property {function} hide
  * @property {function} hideAll
- * @property {function} notify
- * @property {function} notifyAll
  **/
 
 /**
@@ -50,8 +48,6 @@
  * @type {Object}
  * @property {function} get
  * @property {function} getClass
- * @property {function} notify
- * @property {function} notifyAll
  **/
 
 /**
@@ -62,8 +58,6 @@
  * @property {Object} categoryIds
  * @property {function} getCategories
  * @property {function} getCategoryIds
- * @property {function} notify
- * @property {function} notifyAll
  * @property {function} yeet
  * @property {function} yeetIf
  **/
@@ -73,8 +67,6 @@
  * @typedef AddJEIEventJS
  * @type {Object}
  * @property {function} add
- * @property {function} notify
- * @property {function} notifyAll
  **/
 
 /**
@@ -88,8 +80,6 @@
  * @property {function} getException
  * @property {function} getParseResults
  * @property {function} getServer
- * @property {function} notify
- * @property {function} notifyAll
  * @property {function} setException
  * @property {function} setParseResults
  * 

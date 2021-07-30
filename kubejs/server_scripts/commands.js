@@ -13,13 +13,13 @@ global.customCommands.dump_recipes = function (e, player, cmdParts) {
 }
 
 /** @param {CommandEventJS} e */
-global.customCommands.reloadall = function (e, player, cmdParts) {
-	e.server.runCommand(`/kubejs reload startup_scripts`)
-	e.server.runCommand(`/kubejs reload server_scripts`)
-	e.server.runCommand(`/kubejs reload client_scripts`)
-	e.server.runCommand(`/reload`)
-	e.cancel()
-}
+// global.customCommands.reloadalldebug = function (e, player, cmdParts) {
+// 	e.server.runCommand(`/kubejs reload startup_scripts`)
+// 	e.server.runCommand(`/kubejs reload server_scripts`)
+// 	e.server.runCommand(`/kubejs reload client_scripts`)
+// 	e.server.runCommand(`/reload`)
+// 	e.cancel()
+// }
 
 onEvent("command.run", function(e){
 	if (!e.parseResults
@@ -35,9 +35,15 @@ onEvent("command.run", function(e){
 	var cmdParts = command.substr(1).split(" ")
 	// console.info(player)
 	// printObject(player)
-	if (global.customCommands[cmdParts[0]]) 
+	if (global.customCommands[cmdParts[0]]) {
 		//customCommands[cmdParts[0]](e.server.getPlayer(player),cmdParts,e)
-		global.customCommands[cmdParts[0]](e,player,cmdParts)
+		try {
+			global.customCommands[cmdParts[0]](e,player,cmdParts)
+		} catch (ex) {
+			console.error("[LaughPack] Error invoking custom command:")
+			console.error(err)
+		}
+	}
 });
 
 /*

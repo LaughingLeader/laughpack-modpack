@@ -174,8 +174,11 @@ global.EVENT = {
 let car_removals = [
 	"car:backmix_reactor",
 	"car:blastfurnace",
+	"car:bio_diesel_bucket",
+	"car:methanol_bucket",
 	"car:cable_insulator",
 	"car:cable",
+	"car:canola",
 	"car:canola_cake",
 	"car:canola_methanol_mix_bucket",
 	"car:canola_oil_bucket",
@@ -191,6 +194,9 @@ let car_removals = [
 	"car:split_tank",
 	Item.of("ceramics:clay_bucket", {fluid:"car:canola_oil"}),
 	Item.of("ceramics:clay_bucket", {fluid:"car:canola_methanol_mix"}),
+	Item.of("ceramics:clay_bucket", {fluid:"car:bio_diesel"}),
+	Item.of("ceramics:clay_bucket", {fluid:"car:glycerin"}),
+	Item.of("ceramics:clay_bucket", {fluid:"car:methanol"}),
 	//"car:tank",
 ]
 

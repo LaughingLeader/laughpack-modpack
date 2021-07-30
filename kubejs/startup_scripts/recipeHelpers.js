@@ -126,6 +126,42 @@ global.recipeHelpers = function(e) {
 				aspects: aspects
 			})
 		},
+		/**
+		 * Tries to return an Item.of(id).ignoreNBT(). Falls back to the id if that doesn't pan out.
+		 * @param {id} id Ingredient id
+		 * @return {IgnoreNBTIngredientJS|ItemStackJS|string}
+		 */
+		getIgnoredItem: function(id) {
+			let item = id
+			if (typeof(id) == "string") {
+				item = Item.of(id)
+			}
+			if (item !== null && typeof(fluid) === "object") {
+				if (item.ignoreNBT !== null) {
+					return item.ignoreNBT()
+				}
+				return item
+			}
+			return id
+		},
+		/**
+		 * Tries to return an Fluid.of(id).ignoreNBT(). Falls back to the id if that doesn't pan out.
+		 * @param {id} id Ingredient id
+		 * @return {IgnoreNBTIngredientJS|FluidStackJS|string}
+		 */
+		getIgnoredFluid: function(id) {
+			let fluid = id
+			if (typeof(id) == "string") {
+				item = Fluid.of(id)
+			}
+			if (fluid !== null && typeof(fluid) === "object") {
+				if (fluid.ignoreNBT !== null) {
+					return fluid.ignoreNBT()
+				}
+				return fluid
+			}
+			return id
+		}
 	}
 	return helperTable
 }

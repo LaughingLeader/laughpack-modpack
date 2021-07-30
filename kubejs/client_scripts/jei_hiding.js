@@ -29,7 +29,8 @@ function tryTag(tag) {
 **/
 let hideItems = function(e){
 	try {
-		blacklist_ids.forEach(id => e.hide(id))
+		let helper = global.recipeHelpers(e)
+		blacklist_ids.forEach(id => e.hide(helper.getIgnoredItem(id)))
 		/* for (let tag of blacklist_wood_tags) {
 			let ingr = tryTag(tag)
 			if (ingr) {
@@ -44,11 +45,11 @@ let hideItems = function(e){
 		for(let mod in global.removals) {
 			if (Platform.isLoaded(mod)) {
 				let data = global.removals[mod]
-				data.input.forEach(item => {
-					e.hide(item)
+				data.input.forEach(id => {
+					e.hide(helper.getIgnoredItem(id))
 				})
-				data.output.forEach(item => {
-					e.hide(item)
+				data.output.forEach(id => {
+					e.hide(helper.getIgnoredItem(id))
 				})
 			} else {
 				console.info(`Mod ${mod} is not loaded.`)
@@ -65,15 +66,17 @@ let hideItems = function(e){
 **/
 let hideFluids = function(e){
 	try {
-		global.inspect(e, true)
+		let helper = global.recipeHelpers(e)
+		//global.inspect(e, true)
 		for(let mod in global.removals) {
 			let data = global.removals[mod]
 			if (data.fluids && Platform.isLoaded(mod)) {
 				data.fluids.forEach(id => {
-					e.hide(id)
+					e.hide(helper.getIgnoredFluid(id))
 				})
 			}
 		}
+		e.hide("@car")
 	} catch (err) {
 		console.error("[LaughPack] Failed to hide items in JEI. Press F3+T to reload client and retry.")
 		console.error(err)
