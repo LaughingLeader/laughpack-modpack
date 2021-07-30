@@ -22,7 +22,7 @@
 		# How long the text displays, in ticks.
 		# 20 ticks = 1 second.
 		# Default: 50
-		"Text Display Time" = 50
+		"Text Display Time" = 60
 		# How long the fade-out text effect lasts, in ticks.
 		# 20 ticks = 1 second.
 		# Default: 10
@@ -35,10 +35,10 @@
 		"Text Cooldown Time" = 80
 		# The text's default RGB color.
 		# Default: "ffffff"
-		"Default Text Color" = "ffffff"
+		"Default Text Color" = "00ffed"
 		# The text's scale.
 		# Default: 2.1
-		"Text Size" = 1.0
+		"Text Size" = 1.4
 		# If enabled, will render a shadow below the text making it easier to read.
 		# Default: true
 		"Display Text Shadow" = true
@@ -92,7 +92,7 @@
 		"Text Fade-Out Time" = 20
 		# The text's default RGB color.
 		# Default: "ffffff"
-		"Default Text Color" = "ffffff"
+		"Default Text Color" = "b16eff"
 		# The text's scale.
 		# Default: 3.0
 		"Text Size" = 3.0

@@ -1,7 +1,11 @@
 {
+	"laughpack.grinding_tool": "Mortar and Pestle",
+	"travelerstitles.laughpack.void": "Sigil, Nexus to the Overworld",
+	"travelerstitles.laughpack.overworld": "Parallel Overworld",
+	"travelerstitles.laughpack.void.color": "00ff79",
+	"travelerstitles.laughpack.overworld.color": "6eff71",
 	"tetra.statstool.sweeping": "Sweeping",
 	"block.druidcraft.hemp_crop": "Hemp Seeds",
-	"laughpack.grinding_tool": "Mortar and Pestle",
 	"tetra.variant.belt/rope": "Rope Belt",
 	"tetra.variant.belt/rope.name": "Rope Belt",
 	"tetra.variant.belt/rope.item_name": "Rope Belt",
