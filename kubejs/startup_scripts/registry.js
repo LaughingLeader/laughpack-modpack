@@ -11,7 +11,7 @@ onEvent("item.registry", event => {
     ];
 
 	items.forEach((item) => {
-        event.create(item).group("kubejs").texture(`kubejs:item/${item}`)
+        event.create(item).group("laughpack").texture(`kubejs:item/${item}`)
     });
 })
 
