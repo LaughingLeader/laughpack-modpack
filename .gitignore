@@ -9,6 +9,7 @@ config/tellme
 !defaultconfigs
 !defaultconfigs/*
 !defaultconfigs/**/*
+defaultconfigs/journeymap-server.toml
 !kubejs
 !kubejs/*
 !kubejs/**/*
