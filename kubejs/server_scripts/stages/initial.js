@@ -24,6 +24,7 @@ let onLoggedIn = function(e)
 	let startingItems = [
 		"minecraft:stone_sword",
 		"minecraft:stone_pickaxe",
+		"botania:flower_bag",
 		{ item: "minecraft:apple", count: 6 },
 	]
 
@@ -36,11 +37,14 @@ let onLoggedIn = function(e)
 
 	if (!e.hasGameStage("void_guest") && !e.player.OP && !e.player.creativeMode) {
 		e.addGameStage("void_guest")
-		e.server.runCommandSilent(teleportCommand(e.player.getName()))
-		// let spawnDimension = e.player.minecraftEntity.func_241141_L_()
-		// if (spawnDimension != null && spawnDimension.path == "overworld") {
-			
-		// }
+	}
+
+	if (!e.hasGameStage("void_spawn")) {
+		e.addGameStage("void_spawn")
+		let spawnDimension = e.player.minecraftEntity.func_241141_L_()
+		if (spawnDimension != null && spawnDimension.path == "overworld") {
+			e.server.runCommandSilent(teleportCommand(e.player.getName()))
+		}
 	}
 }
 
