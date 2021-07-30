@@ -2,14 +2,12 @@ onEvent(global.EVENT.SERVER.BLOCK_TAGS, e => {
 	if (Platform.isLoaded("car")) {
 		let road_blocks = []
 		if (Platform.isLoaded("immersivepetroleum")) {
-			road_blocks.push([
-				"immersivepetroleum:asphalt",
-				"immersivepetroleum:asphalt_slab",
-				"immersivepetroleum:asphalt_stairs",
-			])
+			road_blocks.push("immersivepetroleum:asphalt")
+			road_blocks.push("immersivepetroleum:asphalt_slab")
+			road_blocks.push("immersivepetroleum:asphalt_stairs")
 		}
 		if (Platform.isLoaded("chisel")) {
-			road_blocks.push([
+			road_blocks.push.apply(road_blocks, [
 				"chisel:andesite/road",
 				"chisel:basalt/road",
 				"chisel:bricks/road",
@@ -50,7 +48,7 @@ onEvent(global.EVENT.SERVER.BLOCK_TAGS, e => {
 			])
 		}
 		if (road_blocks.length > 0) {
-			e.add("car:drivable_blocks", road_blocks)
+			e.get("car:drivable_blocks").add(road_blocks)
 		}
 	}
 })
@@ -62,7 +60,7 @@ onEvent(global.EVENT.SERVER.FLUID_TAGS, e => {
 			"minecraft:lava",
 		]
 		if (Platform.isLoaded("immersivepetroleum")) {
-			fuel.push([
+			fuel.push.apply(fuel, [
 				"immersivepetroleum:diesel",
 				"immersivepetroleum:diesel_sulfur",
 				"immersivepetroleum:oil",
@@ -73,7 +71,7 @@ onEvent(global.EVENT.SERVER.FLUID_TAGS, e => {
 			fuel.push("immersiveengineering:biodiesel")
 			fuel.push("immersiveengineering:creosote")
 		}
-		e.add("car:gas_station", fuel)
-		e.add("car:generator", fuel)
+		e.get("car:gas_station").add(fuel)
+		e.get("car:generator").add(fuel)
 	}
 })
