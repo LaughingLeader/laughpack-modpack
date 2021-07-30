@@ -41,3 +41,6 @@ kubejs/README.txt
 *.zip
 config/worldedit/worldedit.properties
 config/jei/bookmarks.ini
+config/defaultoptions/servers.dat
+config/itlt/servers.json
+config/itlt/icon.ico
