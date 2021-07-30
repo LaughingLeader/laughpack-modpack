@@ -3,12 +3,11 @@ onEvent("player.chat", e => {
 	global.printObject(e.player)
 })
 
-let test = true
-/** @param {LoggedInEventJS} e */
-onEvent("player.tick", e => {
+let onTick = function(e){
 	if (test) {
 		test = false
 		console.info("player.tick")
+		//global.inspect(Platform.mods, true)
 		//console.info(`spawnLocation: ${e.player.spawnLocation}`)
 		//console.info(`Dimension(func_241141_L_): ${e.player.minecraftEntity.func_241141_L_()}`)
 		//console.info(`Position(func_241140_K_ ): ${e.player.minecraftEntity.func_241140_K_()}`)
@@ -28,4 +27,8 @@ onEvent("player.tick", e => {
 		//console.info(`getWorld: ${world}`)
 		//global.printObject(world)
 	}
-})
+}
+
+let test = true
+/** @param {LoggedInEventJS} e */
+//onEvent("player.tick", onTick)

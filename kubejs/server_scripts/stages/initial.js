@@ -49,10 +49,10 @@ let onLoggedIn = function(e)
 }
 
 /** 
- * @param {ServerPlayerEntityJS} player
  * @param {CommandEventJS} e 
+ * @param {ServerPlayerEntityJS} player
 */
-global.customCommands.spawntest = function (player, cmdParts, e) {
+global.customCommands.spawntest = function (e, player, cmd) {
 	let username = e.parseResults.context.source.func_197011_j()[0]
 	e.server.runCommandSilent(teleportCommand(username))
 	e.cancel()

@@ -1,7 +1,7 @@
 //priority: 100
 
-/** @param {CommandEventJS} event */
-global.customCommands.dump_recipes = function (player, cmdParts, event) {
+/** @param {CommandEventJS} e */
+global.customCommands.dump_recipes = function (e, player, cmdParts) {
 	const filter = global.recipes.customFilter(r => { console.info(r); return true; })
 	let recipes_dump = utils.newList()
 	global.recipes.forEachRecipe(filter, r => {
@@ -9,7 +9,16 @@ global.customCommands.dump_recipes = function (player, cmdParts, event) {
 	})
 	json.write("dumps/recipes.json", global.recipes_dump)
 	console.info("Wrote dumps/recipes.json")
-	event.cancel()
+	e.cancel()
+}
+
+/** @param {CommandEventJS} e */
+global.customCommands.reloadall = function (e, player, cmdParts) {
+	e.server.runCommand(`/kubejs reload startup_scripts`)
+	e.server.runCommand(`/kubejs reload server_scripts`)
+	e.server.runCommand(`/kubejs reload client_scripts`)
+	e.server.runCommand(`/reload`)
+	e.cancel()
 }
 
 onEvent("command.run", function(e){
@@ -28,7 +37,7 @@ onEvent("command.run", function(e){
 	// printObject(player)
 	if (global.customCommands[cmdParts[0]]) 
 		//customCommands[cmdParts[0]](e.server.getPlayer(player),cmdParts,e)
-		global.customCommands[cmdParts[0]](player,cmdParts,e)
+		global.customCommands[cmdParts[0]](e,player,cmdParts)
 });
 
 /*

@@ -41,16 +41,39 @@ let hideItems = function(e){
 				}
 			}
 		} */
-		global.removals.forEach(mod => {
+		for(let mod in global.removals) {
 			if (Platform.isLoaded(mod)) {
-				mod.input.forEach(item => {
+				let data = global.removals[mod]
+				data.input.forEach(item => {
 					e.hide(item)
 				})
-				mod.output.forEach(item => {
+				data.output.forEach(item => {
 					e.hide(item)
+				})
+			} else {
+				console.info(`Mod ${mod} is not loaded.`)
+			}
+		}
+	} catch (err) {
+		console.error("[LaughPack] Failed to hide items in JEI. Press F3+T to reload client and retry.")
+		console.error(err)
+	}
+}
+
+/**
+ * @param {HideJEIEventJS & EventJS} e
+**/
+let hideFluids = function(e){
+	try {
+		global.inspect(e, true)
+		for(let mod in global.removals) {
+			let data = global.removals[mod]
+			if (data.fluids && Platform.isLoaded(mod)) {
+				data.fluids.forEach(id => {
+					e.hide(id)
 				})
 			}
-		})
+		}
 	} catch (err) {
 		console.error("[LaughPack] Failed to hide items in JEI. Press F3+T to reload client and retry.")
 		console.error(err)
@@ -58,3 +81,4 @@ let hideItems = function(e){
 }
 
 onEvent(global.EVENT.CLIENT.JEI_HIDE_ITEMS, hideItems)
+onEvent(global.EVENT.CLIENT.JEI_HIDE_FLUIDS, hideFluids)

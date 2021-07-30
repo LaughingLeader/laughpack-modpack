@@ -171,29 +171,45 @@ global.EVENT = {
 	},
 }
 
+let car_removals = [
+	"car:backmix_reactor",
+	"car:blastfurnace",
+	"car:cable_insulator",
+	"car:cable",
+	"car:canola_cake",
+	"car:canola_methanol_mix_bucket",
+	"car:canola_oil_bucket",
+	"car:canola_oil",
+	"car:canola_seeds",
+	"car:crank",
+	"car:dynamo",
+	"car:fluid_extractor",
+	"car:fluid_pipe",
+	"car:generator",
+	"car:glycerin_bucket",
+	"car:oilmill",
+	"car:split_tank",
+	Item.of("ceramics:clay_bucket", {fluid:"car:canola_oil"}),
+	Item.of("ceramics:clay_bucket", {fluid:"car:canola_methanol_mix"}),
+	//"car:tank",
+]
+
 /**@global */
 global.removals = {
 	car: {
-		input: [
-			"car:canola_seeds"
-		],
-		output: [
-			"car:canola",
-			"car:canola_cake",
-			"car:canola_seeds",
-			"car:canola_oil_bucket",
-			"car:backmix_reactor",
-			"car:blastfurnace",
-			"car:cable_insulator",
-			"car:cable",
-			"car:crank",
-			"car:dynamo",
-			"car:fluid_extractor",
-			"car:fluid_pipe",
-			"car:generator",
-			"car:oilmill",
-			"car:split_tank",
-			//"car:tank",
-		],
+		input: car_removals,
+		output: car_removals,
+		fluids: [
+			"car:bio_diesel",
+			"car:bio_diesel_flowing",
+			"car:canola_methanol_mix",
+			"car:canola_methanol_mix_flowing",
+			"car:canola_oil",
+			"car:canola_oil_flowing",
+			"car:glycerin",
+			"car:glycerin_flowing",
+			"car:methanol",
+			"car:methanol_flowing",
+		]
 	}
 }
