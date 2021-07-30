@@ -100,7 +100,7 @@
 
 	[car.road_blocks]
 		#If it starts with '#' it is a tag
-		blocks = ["#car:drivable_blocks"]
+		blocks = ["#car:drivable_blocks", "#forge:asphalt"]
 
 	[car.parts]
 
