@@ -2,6 +2,6 @@
 	{
 		"dimension": "laughpack:void",
 		"timeout": 599,
-		"potion": ["minecraft:speed,600,3", "minecraft:jump_boost,600,3"]
+		"potion": ["minecraft:speed,600,3", "minecraft:jump_boost,600,3", "minecraft:regeneration,600,3", "minecraft:saturation,600,3"]
 	}
 ]
