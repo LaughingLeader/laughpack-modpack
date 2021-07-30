@@ -6,6 +6,7 @@
 	"travelerstitles.laughpack.overworld.color": "6eff71",
 	"tetra.statstool.sweeping": "Sweeping",
 	"block.druidcraft.hemp_crop": "Hemp Seeds",
+	"block.druidcraft.elder_fruit": "Elder Fruit",
 	"tetra.variant.belt/rope": "Rope Belt",
 	"tetra.variant.belt/rope.name": "Rope Belt",
 	"tetra.variant.belt/rope.item_name": "Rope Belt",
@@ -14,7 +15,7 @@
 	"key.categories.create_stuff_additions": "Create Crafts & Additions",
 	"itemGroup.furnacemk2": "Furnace Mk2",
 	"itemGroup.lootr": "Lootr",
-	"itemGroup.kubejs.laughpack": "LaughPack",
+	"itemGroup.kubejs.kubejs": "LaughPack",
 	"desc.immersiveengineering.info.multiblock.immersiveengineering.multiblocks/blastfurnace": "Crude Blast Furnace",
 	"entity.minecraft.villager.carpenter": "Carpenter",
 	"entity.minecraft.villager.immersiveengineering:machinist": "Machinist"
