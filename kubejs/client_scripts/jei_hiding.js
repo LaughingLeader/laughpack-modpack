@@ -41,6 +41,16 @@ let hideItems = function(e){
 				}
 			}
 		} */
+		global.removals.forEach(mod => {
+			if (Platform.isLoaded(mod)) {
+				mod.input.forEach(item => {
+					e.hide(item)
+				})
+				mod.output.forEach(item => {
+					e.hide(item)
+				})
+			}
+		})
 	} catch (err) {
 		console.error("[LaughPack] Failed to hide items in JEI. Press F3+T to reload client and retry.")
 		console.error(err)

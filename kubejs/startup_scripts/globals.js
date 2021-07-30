@@ -170,3 +170,30 @@ global.EVENT = {
 		JEI_INFORMATION: "jei.information",
 	},
 }
+
+/**@global */
+global.removals = {
+	car: {
+		input: [
+			"car:canola_seeds"
+		],
+		output: [
+			"car:canola",
+			"car:canola_cake",
+			"car:canola_seeds",
+			"car:canola_oil_bucket",
+			"car:backmix_reactor",
+			"car:blastfurnace",
+			"car:cable_insulator",
+			"car:cable",
+			"car:crank",
+			"car:dynamo",
+			"car:fluid_extractor",
+			"car:fluid_pipe",
+			"car:generator",
+			"car:oilmill",
+			"car:split_tank",
+			//"car:tank",
+		],
+	}
+}
