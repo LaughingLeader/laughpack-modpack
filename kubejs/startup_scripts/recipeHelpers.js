@@ -5,19 +5,19 @@
  *
  * @callback WithChanceFunction
  * @param {number} chance
- * @returns {RecipeFunction}
+ * @returns {RecipeJS}
  */
 
 /**
- * @typedef RecipeFunction
+ * @typedef RecipeJS
  * @type {Object}
- * @property {function(number):RecipeFunction} withChance Make the recipe output affected by random chance.
- * @property {function(string):RecipeFunction} id Set the id for the resulting recipe.
+ * @property {function(number):RecipeJS} withChance Make the recipe output affected by random chance.
+ * @property {function(string):RecipeJS} id Set the id for the resulting recipe.
  * 
- * @typedef MixingRecipeFunction
+ * @typedef MixingRecipeJS
  * @type {Object}
- * @property {function():RecipeFunction} heated Requires a Blaze Burner to melt the ingredients.
- * @property {function():RecipeFunction} superHeated Requires a Blaze Burner empowered with a Blaze Cake to melt the ingredients.
+ * @property {function():RecipeJS} heated Requires a Blaze Burner to melt the ingredients.
+ * @property {function():RecipeJS} superHeated Requires a Blaze Burner empowered with a Blaze Cake to melt the ingredients.
  */
 
 /**
@@ -31,7 +31,7 @@ global.recipeHelpers = function(e) {
 		 * Mixing recipe for the Create mod Mixer.
 		 * @param {string} output The item the recipe creates.
 		 * @param {string[]} input Array of ingredients.
-		 * @return {MixingRecipeFunction & RecipeFunction}
+		 * @return {MixingRecipeJS & RecipeJS}
 		 */
 		mixing: function(output, input) {
 			return e.recipes.create.mixing(output, input)
@@ -40,7 +40,7 @@ global.recipeHelpers = function(e) {
 		 * Milling recipe for the Create mod Millstone.
 		 * @param {string|string[]} output The item the recipe creates.
 		 * @param {string} input Item ingredient.
-		 * @return {RecipeFunction}
+		 * @return {RecipeJS}
 		 */
 		milling: function(output, input) {
 			return e.recipes.create.milling(output, input)
@@ -49,7 +49,7 @@ global.recipeHelpers = function(e) {
 		 * Crushing recipe for the Create mod Crushing Wheel.
 		 * @param {string[]} output The item(s) the recipe creates.
 		 * @param {string} input Item ingredient.
-		 * @return {RecipeFunction}
+		 * @return {RecipeJS}
 		 */
 		crushing: function(output, input) {
 			return e.recipes.create.crushing(output, input)
@@ -58,7 +58,7 @@ global.recipeHelpers = function(e) {
 		 * Washing recipe for the Create mod Encased Fan + Water.
 		 * @param {string[]} output The item the recipe creates.
 		 * @param {string} input Item ingredient.
-		 * @return {RecipeFunction}
+		 * @return {RecipeJS}
 		 */
 		splashing: function(output, input) {
 			//event.recipes.create.splashing([Item.of("mekanism:nugget_copper", 10), Item.of("mekanism:nugget_copper", 5).withChance(0.5)], "create:crushed_copper_ore")
@@ -68,7 +68,7 @@ global.recipeHelpers = function(e) {
 		 * Washing recipe for the Create mod Encased Fan + Water, but with bonus outputs at 35% and 10% chances.
 		 * @param {string} output The item the recipe creates.
 		 * @param {string} input Item ingredient.
-		 * @return {RecipeFunction}
+		 * @return {RecipeJS}
 		 */
 		splashingWithBonus: function(output, input) {
 			//event.recipes.create.splashing([Item.of("mekanism:nugget_copper", 10), Item.of("mekanism:nugget_copper", 5).withChance(0.5)], "create:crushed_copper_ore")
@@ -80,7 +80,7 @@ global.recipeHelpers = function(e) {
 		 * @param {string} input Item ingredient.
 		 * @param {string} name Recipe name when creating the output id.
 		 * @param {string} xp Optional amount of experience this recipe should grant.
-		 * @return {RecipeFunction}
+		 * @return {RecipeJS}
 		 */
 		smelting: function(output, input, name, xp) {
 			if (xp != undefined && xp > 0) {
@@ -96,7 +96,7 @@ global.recipeHelpers = function(e) {
 		 * @param {string} output The item the recipe creates.
 		 * @param {string[]} pattern 3-rowed pattern, such as ["A A", " B ", "AAA"]. Use a space for an empty square.
 		 * @param {Object.<string,string>} patternMap Item definitions for pattern entries, such as A: "#forge:ingots/iron"
-		 * @return {RecipeFunction}
+		 * @return {RecipeJS}
 		 */
 		shaped: function(output, pattern, patternMap) {
 			e.shaped(output, pattern, patternMap)
@@ -106,7 +106,7 @@ global.recipeHelpers = function(e) {
 		 * Minecraft shapeless crafting recipe.
 		 * @param {string} output The item the recipe creates.
 		 * @param {string|string[]} input Single item, or an array of input items.
-		 * @return {RecipeFunction}
+		 * @return {RecipeJS}
 		 */
 		shapeless: function(output, input) {
 			e.shapeless(output, input)
@@ -116,7 +116,7 @@ global.recipeHelpers = function(e) {
 		 * @param {Object} output Resulting item.
 		 * @param {Object[]} ingredients Array of objects to use for ingredients.
 		 * @param {Object} aspects Damage to a tool.
-		 * @return {RecipeFunction}
+		 * @return {RecipeJS}
 		 */
 		crafting_extended_shapeless: function(output, ingredients, aspects) {
 			e.custom({
