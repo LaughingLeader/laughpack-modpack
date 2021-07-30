@@ -165,7 +165,6 @@ let updateWood = function(e){
 
 onEvent("recipes", e => {
 	updateWood(e)
-
 	
 	let recipe = global.recipeHelpers(e)
 	recipe.shaped("1x kubejs:wood_converter", ["E  ", " I ", "  I"],

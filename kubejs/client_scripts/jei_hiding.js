@@ -8,6 +8,7 @@ let blacklist_ids = [
 	"immersiveengineering:wheel_segment",
 	"immersiveengineering:bannerpattern_windmill",
 	"engineerstools:crushing_hammer",
+	"quark:backpack",
 ]
 
 let blacklist_wood_tags = [
@@ -23,16 +24,19 @@ function tryTag(tag) {
     }
 }
 
-onEvent("jei.hide.items", event => {
+/**
+ * @param {HideJEIEventJS & EventJS} e
+**/
+let hideItems = function(e){
 	try {
-		blacklist_ids.forEach(id => event.hide(id))
+		blacklist_ids.forEach(id => e.hide(id))
 		/* for (let tag of blacklist_wood_tags) {
 			let ingr = tryTag(tag)
 			if (ingr) {
 				for (let stack of ingr.getStacks().toArray()) {
 					let id = stack.getId()
 					if (stack.getMod() !== "minecraft" && !id.includes("oak")) {
-						event.hide(id)
+						e.hide(id)
 					}
 				}
 			}
@@ -41,4 +45,6 @@ onEvent("jei.hide.items", event => {
 		console.error("[LaughPack] Failed to hide items in JEI. Press F3+T to reload client and retry.")
 		console.error(err)
 	}
-})
+}
+
+onEvent(global.EVENT.CLIENT.JEI_HIDE_ITEMS, hideItems)
