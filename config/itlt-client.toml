@@ -22,7 +22,7 @@
 			# Turn this on to help prevent and/or reduce GC-related lag spikes, turn it off for
 			# Vanilla behaviour (only rely on the pressure-based automatic GC). This is off by
 			# default as it may actually hurt performance if Xms and Xmx aren't the same!
-			enableExplicitGC = false
+			enableExplicitGC = true
 			# 
 			# Whether or not to run explicit GC when the player pauses the game.
 			# 
@@ -279,7 +279,7 @@
 				# The minimum recommended amount of allocated RAM in GB needed to skip the warning
 				# message when launching the modpack.
 				#Range: 0.1 ~ 1024.0
-				warnMinMemoryAmountInGB = 1.0
+				warnMinMemoryAmountInGB = 6.0
 
 		[Java.Memory.Max]
 
@@ -354,7 +354,7 @@
 			# - "ModpackName v2 based on %mc" = "ModpackName v2 based on Minecraft* 1.16.5"
 			# 
 			# Note: enableCustomWindowTitle must be enabled for this to take effect.
-			customWindowTitleText = "%autoName - %mc"
+			customWindowTitleText = "%autoDetect (%mc)"
 			# 
 			# Whether or not to automatically replace "%autoName" in customWindowTitleText with
 			# your modpack's display name when launching from a supported launcher.
@@ -367,7 +367,7 @@
 			# 
 			# Note: This value will always be used for %autoName if enableUsingAutodetectedDisplayName
 			# is disabled, regardless of whether or not the pack is launched from a supported launcher.
-			autoDetectedDisplayNameFallback = "ModpackName"
+			autoDetectedDisplayNameFallback = "LaughPack"
 
 		[Java.Display.Icon]
 			# 
@@ -406,7 +406,7 @@
 		# to this feature clear. If there's no mention of this feature in the changelog, rest assured
 		# you can update without needing to make any changes to your servers.json.
 		# 
-		enableCustomServerListEntries = false
+		enableCustomServerListEntries = true
 
 	[Java.Internal]
 		# 

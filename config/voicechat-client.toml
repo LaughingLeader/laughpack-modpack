@@ -1,6 +1,6 @@
 #Microphone activation type
 #Allowed Values: PTT, VOICE
-microphone_activation_type = "PTT"
+microphone_activation_type = "VOICE"
 #The threshold for voice activation in dB
 #Range: -127.0 ~ 0.0
 voice_activation_threshold = -50.0
@@ -35,7 +35,7 @@ microphone = ""
 #Empty for default device
 speaker = ""
 #If the microphone is muted (only when using voice activation)
-muted = false
+muted = true
 #If the voice chat is disabled (sound and microphone off)
 disabled = false
 #If the voice chat should use semi 3D stereo sound

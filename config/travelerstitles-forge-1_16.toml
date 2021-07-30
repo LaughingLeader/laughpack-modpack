@@ -61,7 +61,7 @@
 		# This is the size of that list.
 		# For example, if this value is 5, then your 5 most recent biomes will be saved.
 		# Default: 5
-		"Number of Most Recent Biomes Saved" = 8
+		"Number of Most Recent Biomes Saved" = 12
 		# Whether or not the biome text should be centered on the screen.
 		# The Text X Offset and Text Y Offset options are relative to the center of the screen if this is enabled.
 		# Default: true
@@ -71,7 +71,7 @@
 		# This option determines whether or not that list should be cleared every time
 		# the player changes dimensions.
 		# Default: true
-		"Reset Biome Cache When Changing Dimensions" = true
+		"Reset Biome Cache When Changing Dimensions" = false
 
 	###########################################################################################################
 	## Dimension Title settings.

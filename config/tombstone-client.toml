@@ -23,13 +23,13 @@
 	enable_halloween_effect = true
 	#Decimal value for the color of the grave text <Death Date> [0..16777215|default:2962496]
 	#Range: 0 ~ 16777215
-	text_color_death_date = 2962496
+	text_color_death_date = 2993984
 	#Decimal value for the color of the grave text <R.I.P.> [0..16777215|default:2962496]
 	#Range: 0 ~ 16777215
-	text_color_rip = 2962496
+	text_color_rip = 12402752
 	#Decimal value for the color of the grave text <Owner Name> [0..16777215|default:5991302]
 	#Range: 0 ~ 16777215
-	text_color_owner = 5991302
+	text_color_owner = 6014854
 	#Shows only the elapsed minecraft days since the death on graves [false/true|default:false]
 	date_in_mc_time = false
 	#Display or not the messages of gain of points in knowledge of death [false/true|default:true]
@@ -38,10 +38,10 @@
 	equip_elytra_in_priority = false
 	#Favorite grave
 	#Allowed Values: GRAVE_SIMPLE, GRAVE_NORMAL, GRAVE_CROSS, TOMBSTONE, SUBARAKI_GRAVE, GRAVE_ORIGINAL
-	favorite_grave = "GRAVE_SIMPLE"
+	favorite_grave = "GRAVE_NORMAL"
 	#Favorite grave marble
 	#Allowed Values: DARK, WHITE
-	favorite_grave_marble = "DARK"
+	favorite_grave_marble = "WHITE"
 	#Shows the use of the Tombstone's enchantments in tooltip [false/true|default:true]
 	show_info_on_enchantment = true
 	#Defines the rule to use for grave's skin [DEFAULT/FORCE_NORMAL/FORCE_HALLOWEEN|default:DEFAULT]
