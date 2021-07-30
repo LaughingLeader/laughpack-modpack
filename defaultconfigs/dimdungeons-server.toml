@@ -2,7 +2,7 @@
 #Options for general mod behavior.
 [general]
 	#You shouldn't manually change the version number.
-	configVersion = 3
+	configVersion = 4
 	#If set to FALSE the block protection on the dungeon dimension will be disabled, making the options in the next section useless.
 	globalBlockProtection = true
 	#If set to TRUE then dungeon keys are consumed whenever a player enters a dungeon portal.
@@ -19,6 +19,12 @@
 	keyEnscriberDowngradeChanceDamaged = 100
 	#Can be used to limit log spam. Can be set to 'all', 'warn', or 'error'.
 	logLevel = "error"
+	#Which dimension's worldborder to consider when activating keys. Using dimdungeons:dungeon_dimension may not work for everyone.
+	worldborderToRespect = "minecraft:overworld"
+	#The number of themes to expect in the common config.
+	numberOfThemes = 1
+	#The chance for an enemy in a basic dungeon to be carrying a theme key.
+	chanceForThemeKeys = 4
 
 #Options for block behavior in the dungeon dimension.
 [blocks]

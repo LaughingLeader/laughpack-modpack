@@ -1,0 +1,99 @@
+
+#No comment
+[Features]
+	enableRealityForger = true
+	enableStatueWorkbench = true
+	enableAbstractiumPedestal = true
+	enableRecipeRegistry = true
+	enableEnchantingAutomataCore = true
+	enableSmithingAutomataCore = true
+	enableBrewingAutomataCore = true
+	#Defines is scientific automata core is enabled. Do not disable it without understanding of mod progression logic!
+	enableScientificAutomataCore = true
+	enableCuttingAxe = true
+	enableExtractingPickaxe = true
+	enableCorrectingShovel = true
+
+#No comment
+[Restrictions]
+	#Range: 1 ~ 64
+	realityForgerRadius = 8
+	#Range: > 5
+	abstractiumXPPointsCost = 20
+	#Range: > 1
+	xpToFuelRate = 10
+	#Range: 0.0 ~ 64.0
+	brewingXPReward = 0.8
+	#Range: > 1
+	enchantLevelCost = 30
+	#Range: 0.1 ~ 1.5
+	smeltFuelCostRate = 0.8
+	#Define max block count, that could be cut at once via Cutting axe. Don't set big numbers, it can cause server crashes
+	#Range: > 256
+	cuttingAxeMaxBlockCount = 1024
+	#Spawn chance per 10000 calls
+	#Range: 1 ~ 10000
+	breakthroughPointSpawnChance = 20
+
+#No comment
+[Operations]
+	#Range: > 1000
+	smeltCooldown = 1000
+	#Range: > 0
+	smeltCost = 80
+	#Range: > 1000
+	xpTransferCooldown = 1000
+	#Range: > 0
+	xpTransferCost = 1
+	#Range: > 1000
+	enchantmentCooldown = 5000
+	#Range: > 0
+	enchantmentCost = 10
+	#Range: > 1000
+	smithCooldown = 1000
+	#Range: > 0
+	smithCost = 1
+	#Range: > 1000
+	brewCooldown = 1000
+	#Range: > 0
+	brewCost = 5
+	#Range: > 1000
+	throwPotionCooldown = 1000
+	#Range: > 0
+	throwPotionCost = 10
+	#Range: > 1000
+	extractCooldown = 5000
+	#Range: > 1000
+	queryRegistryCooldown = 5000
+
+#No comment
+[Machinery]
+	#Defines is reality breakthrough point is enable. Do not disable it without understanding of mod progression logic!
+	enableExtractor = true
+	#Defines amount of power that consumed from RBT point by one operation
+	#Range: 1 ~ 64
+	extractorConsumeAmount = 1
+	#Defines amount of product that produced by extractor by one operation
+	#Range: 1 ~ 64
+	extractorProduceAmount = 1
+	#Range: > 1
+	commonPointTierMinPower = 200
+	#Range: > 1
+	commonPointTierMaxPower = 400
+	#Range: > 1
+	commonPointTierEncryptLevels = 4
+
+#No comment
+[Puzzled]
+	#Range: 1 ~ 120
+	linearSystemTimeLimit = 2
+
+#No comment
+["Automata cores"]
+	#Range: 1 ~ 64
+	tier3AutomataCoreInteractionRadius = 4
+	#Range: 1 ~ 32
+	tier3AutomataCoreMaxFuelConsumptionRate = 4
+	#Range: 0.1 ~ 1.0
+	enchantingAutomataCoreDisappearChance = 0.1
+
