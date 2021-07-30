@@ -22,6 +22,20 @@ let stripNamespace = function(input) {
 let ignoredKeys = [
 	"func_",
 	"field_",
+	//base class stuff
+	"cancelled",
+	"class",
+	"canCancel",
+	"cancel",
+	"equals",
+	"getClass",
+	"hashCode",
+	"isCancelled",
+	"toString",
+	"wait",
+	"post",
+	"notify",
+	"notifyAll",
 ]
 
 let tryGetFunctionValue = function(obj, key) {
@@ -58,8 +72,11 @@ global.inspect = function(obj, forJSDoc) {
 						propertiesArray.push("  " + key + ": " + obj[key])
 					}
 				} else if (keyType === "function") {
-					if (obj[key] == null) return;
-					let rawString = obj[key].toString().match(/\/\*\n(.*) .*\((.*)\)/)
+					if (obj[key] == null) return
+					let rawString = undefined
+					if (obj[key].toString !== undefined) {
+						rawString = obj[key].toString().match(/\/\*\n(.*) .*\((.*)\)/)
+					} 
 					//console.info(`rawString: ${rawString} ${String(obj[key])}`)
 					if (rawString == null || rawString == undefined) {
 						if(forJSDoc == true) {
