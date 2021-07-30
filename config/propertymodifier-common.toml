@@ -76,7 +76,7 @@
 	#The max durability an item has. Can only be set on damageable items. Default value: 0
 	max_damage = []
 	#The max stack size an item has. Cannot be set on damageable items. Default value: 64 (1 for damageable items)
-	max_stack_size = ["minecraft:ender_pearl"]
+	max_stack_size = ["minecraft:ender_pearl;64"]
 	#The item group (= creative tab) of an item. Use "none" to remove the item from any item group. Default value: none
 	group = []
 	#Whether the item should have the fire and lava shielding properties of netherite or not. Default value: false

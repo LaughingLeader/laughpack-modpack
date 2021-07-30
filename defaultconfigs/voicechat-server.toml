@@ -31,5 +31,5 @@
 	#Don't change this value if you don't know what you are doing
 	voice_host = ""
 	#If players are allowed to record the voice chat
-	allow_recording = true
+	allow_recording = false
 

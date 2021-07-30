@@ -1,0 +1,15 @@
+
+["car:bio_diesel"]
+	efficiency = 100
+["immersivepetroleum:diesel"]
+	efficiency = 100
+["immersiveengineering:biodiesel"]
+	efficiency = 100
+["immersivepetroleum:oil"]
+	efficiency = 50
+["immersivepetroleum:gasoline"]
+	efficiency = 100
+["minecraft:lava"]
+	efficiency = 10
+["immersiveengineering:creosote"]
+	efficiency = 60
