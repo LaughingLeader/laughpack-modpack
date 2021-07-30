@@ -59,17 +59,18 @@ onEvent(global.EVENT.SERVER.FLUID_TAGS, e => {
 	if (Platform.isLoaded("car")) {
 		// Immersive Petroleum support for Ultimate Cars
 		let fuel = [
-			"minecraft:lava"
+			"minecraft:lava",
 		]
 		if (Platform.isLoaded("immersivepetroleum")) {
 			fuel.push([
 				"immersivepetroleum:diesel",
-				"immersivepetroleum:biodiesel",
+				"immersivepetroleum:diesel_sulfur",
 				"immersivepetroleum:oil",
 				"immersivepetroleum:gasoline",
 			])
 		}
 		if (Platform.isLoaded("immersiveengineering")) {
+			fuel.push("immersiveengineering:biodiesel")
 			fuel.push("immersiveengineering:creosote")
 		}
 		e.add("car:gas_station", fuel)
