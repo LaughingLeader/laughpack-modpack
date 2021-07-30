@@ -27,7 +27,7 @@
  * @property {object} name
  * @property {undefined} info
  * @property {undefined} loaded
- * @property {PlatformIsLoadedFunction} isLoaded
+ * @property {PlatformIsLoadedFunction} isLoaded Check if a mod is loaded.
  * @property {function} getInfo
  * @property {function} getList
  * @property {function} getMcVersion
@@ -41,7 +41,6 @@
 **/
 
 /**
- * KubeJS Platform.
  * @global
  * @type {PlatformWrapper}
 **/
