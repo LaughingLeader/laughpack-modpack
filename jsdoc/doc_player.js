@@ -81,7 +81,7 @@
  * @property {object} lastDamageSource
  * @property {object} legsArmorItem
  * @property {object} mainHandItem
- * @property {ServerPlayerEntityJS} minecraftEntity
+ * @property {ServerPlayerEntity} minecraftEntity
  * @property {object} minecraftLivingEntity
  * @property {object} minecraftPlayer
  * @property {object} mouseItem
@@ -310,8 +310,16 @@
  * @property {function} toString
  * @property {function} unlockAdvancement
  * @property {function} wait
+ **/
 
- * @typedef ServerPlayerEntityJS
+/**
+ * @typedef Entity
+ * @type {Object}
+ * @property {string} func_110124_au UUID
+ */
+
+/**
+ * @typedef ServerPlayerEntity
  * @type {Object}
  * @property {boolean} addedToWorld
  * @property {boolean} culledFast
@@ -328,7 +336,7 @@
  * @property {object} class
  * @property {object} dataMap
  * @property {object} dirtyEntries
- * @property {ServerPlayerEntityJS} entity
+ * @property {Entity} entity
  * @property {object} forcedPose
  * @property {object} language
  * @property {object} parts

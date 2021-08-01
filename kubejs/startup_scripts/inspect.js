@@ -49,9 +49,11 @@ let tryGetFunctionValue = function(obj, key) {
 
 /**
  * Print out an object and it"s properties/functions.
- * @param {obj} output
+ * @param {object} obj
+ * @param {boolean} forJSDoc
+ * @param {boolean} getAll
  */
-global.inspect = function(obj, forJSDoc) {
+global.inspect = function(obj, forJSDoc, getAll) {
 	if (typeof obj !== "undefined") {
 		let resultArray = []
 		resultArray.push("Inspecting: " + obj)
@@ -59,7 +61,7 @@ global.inspect = function(obj, forJSDoc) {
 		let propertiesArray = []
 		let functionsArray = []
 		Object.keys(obj).forEach(key => {
-			if(forJSDoc != true || !ignoredKeys.some((x) => key.startsWith(x)))
+			if(forJSDoc != true || (getAll == true || !ignoredKeys.some((x) => key.startsWith(x))))
 			{
 				let keyType = typeof obj[key]
 				if (keyType !== "undefined" && keyType !== "function") {

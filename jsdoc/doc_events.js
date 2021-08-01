@@ -74,7 +74,7 @@
  * @typedef CommandEventJS
  * @type {Object}
  * @property {Object} exception
- * @property {Object} parseResults
+ * @property {ParseResults<CommandSourceStack>} parseResults
  * @property {ServerJS} server
  * @property {function} getClass
  * @property {function} getException
