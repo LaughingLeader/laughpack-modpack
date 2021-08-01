@@ -9,8 +9,12 @@
 
 let serverSpawn = {
 	pos: [0.5, 104.0, -127.0],
-	facing: [0.0, 8.6]
+	facing: [1.0, 2.0]
 }
+
+let actualWorldSpawn = [
+	-3857.5, 74.0, 1603.5
+]
 
 let teleportCommand = function(player) {
 	return `/execute in laughpack:void run teleport ${player} ${serverSpawn.pos.join(" ")} ${serverSpawn.facing.join(" ")}`
@@ -39,7 +43,7 @@ let onLoggedIn = function(e)
 		e.addGameStage("void_guest")
 	}
 
-	if (!e.hasGameStage("void_spawn")) {
+	if (!e.hasGameStage("void_spawn") && !e.server.singlePlayer) {
 		e.addGameStage("void_spawn")
 		let spawnDimension = e.player.minecraftEntity.func_241141_L_()
 		if (spawnDimension != null && spawnDimension.path == "overworld") {
@@ -48,14 +52,10 @@ let onLoggedIn = function(e)
 	}
 }
 
-/** 
- * @param {CommandEventJS} e 
- * @param {ServerPlayerEntityJS} player
-*/
-global.customCommands.spawntest = function (e, player, cmd) {
-	let username = e.parseResults.context.source.func_197011_j()[0]
-	e.server.runCommandSilent(teleportCommand(username))
-	e.cancel()
+global.customCommands.spawntest = function(server,player) {
+	console.info(`Server: name(${server.name}) dedicated(${server.dedicated}) singlePlayer(${server.singlePlayer})`)
+	//let username = e.parseResults.context.source.func_197011_j()[0]
+	//server.runCommandSilent(teleportCommand(username))
 }
 
 onEvent("player.logged_in", onLoggedIn)

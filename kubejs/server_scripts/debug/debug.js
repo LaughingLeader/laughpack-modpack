@@ -23,8 +23,8 @@ let onTick = function(e){
 		// 		i++
 		// 	}
 		// })
-		//let world = e.server.getWorld()
-		//console.info(`getWorld: ${world}`)
+		//let world = e.server.getLevel()
+		//console.info(`getLevel: ${world}`)
 		//global.printObject(world)
 	}
 }

@@ -1,5 +1,15 @@
 //priority: 1000
 
+/** 
+ * @callback CustomCommandCallback
+ * @this {CommandSource}
+ * @param {ServerJS} server
+ * @param {ServerPlayerEntity} player
+ * @param {...string} args
+ * @return {boolean|undefined}
+**/
+
+/** @type {Object.<string, CustomCommandCallback>} **/
 global.customCommands = {}
 
 /**
