@@ -354,7 +354,7 @@
 			# - "ModpackName v2 based on %mc" = "ModpackName v2 based on Minecraft* 1.16.5"
 			# 
 			# Note: enableCustomWindowTitle must be enabled for this to take effect.
-			customWindowTitleText = "%autoDetect (%mc)"
+			customWindowTitleText = "%autoName (%mc)"
 			# 
 			# Whether or not to automatically replace "%autoName" in customWindowTitleText with
 			# your modpack's display name when launching from a supported launcher.

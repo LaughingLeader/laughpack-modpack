@@ -92,7 +92,7 @@
 		"Text Fade-Out Time" = 20
 		# The text's default RGB color.
 		# Default: "ffffff"
-		"Default Text Color" = "b16eff"
+		"Default Text Color" = "ffffff"
 		# The text's scale.
 		# Default: 3.0
 		"Text Size" = 3.0
