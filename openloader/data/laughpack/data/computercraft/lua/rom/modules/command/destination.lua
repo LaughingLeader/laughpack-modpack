@@ -20,10 +20,12 @@ function Destination:New(name, position, rotation, dimension)
 end
 
 function Destination:GetTeleportCommand(username)
+	local x,y,z = table.unpack(self.Position)
 	if #self.Rotation > 0 then
-		return string.format("/execute in %s run tp %s %s %s %s %s %s", self.Dimension, username, table.unpack(self.Position), table.unpack(self.Rotation))
+		local rx,rz = table.unpack(self.Rotation)
+		return string.format("/execute in %s run tp %s %s %s %s %s %s", self.Dimension, username, x,y,z, rx or 0, rz or 0)
 	else
-		return string.format("/execute in %s run tp %s %s %s %s", self.Dimension, username, table.unpack(self.Position))
+		return string.format("/execute in %s run tp %s %s %s %s", self.Dimension, username, x,y,z)
 	end
 end
 
