@@ -78,7 +78,7 @@ onEvent("recipes", e => {
 
 	plates_support.forEach(function(plate, ingot) {
 		e.recipes.create.pressing(plate, ingot)
-		e.recipes.immersiveengineering.metal_press(plate, ingot)
+		e.recipes.immersiveengineering.metal_press(plate, ingot, "immersiveengineering:mold_plate")
 	})
 
 	let recipe = global.recipeHelpers(e)

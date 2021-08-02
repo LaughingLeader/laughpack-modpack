@@ -89,7 +89,7 @@ uuid_locking = false
 	glacierPackedIce = false
 	#If the dimension has per-block skylight values. Disabling this will significantly improve world generation performance, at the cost of flat lighting everywhere.
 	#WARNING: Once chunks are loaded without skylight, that data is lost and cannot easily be regenerated. Be careful!
-	enableSkylight = true
+	enableSkylight = false
 
 #We recommend downloading the Shield Parry mod for parrying, but these controls remain for without.
 ["Shield Parrying"]

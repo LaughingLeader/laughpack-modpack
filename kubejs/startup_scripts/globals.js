@@ -6,7 +6,7 @@
  * @param {ServerJS} server
  * @param {ServerPlayerEntity} player
  * @param {...string} args
- * @return {boolean|undefined}
+ * @returns {boolean|undefined}
 **/
 
 /** @type {Object.<string, CustomCommandCallback>} **/
