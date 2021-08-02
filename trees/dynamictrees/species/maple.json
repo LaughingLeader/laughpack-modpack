@@ -1,0 +1,21 @@
+{
+  "family": "dynamictrees:maple",
+  "tapering": 0.5,
+  "signal_energy": 7.0,
+  "lowest_branch_height": 3,
+  "up_probability": 10,
+  "leaves_properties": "dynamictrees:maple",
+  "environment_factors": {
+    "cold": 1.1,
+    "hot": 0.2,
+    "dry": 0.4,
+    "forest": 0.9
+  },
+  "perfect_biomes": {
+    "name": [ "autumnity:.*" ]
+  },
+  "primitive_sapling": "autumnity:maple_sapling",
+  "features" : [
+    "bee_nest"
+  ]
+}

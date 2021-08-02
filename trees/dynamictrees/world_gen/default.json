@@ -1,0 +1,92 @@
+[
+  {
+    "select": { "name": "autumnity:.*" },
+    "cancellers": {
+      "type": "tree",
+      "namespace": "autumnity"
+    }
+  },
+  {
+    "select": { "name": "autumnity:maple.*" },
+    "apply": {
+      "species" : {
+        "random" : {
+          "maple" : 5,
+          "orange_maple" : 5,
+          "red_maple" : 5,
+          "yellow_maple" : 5,
+          "red_mushroom" : 2,
+          "brown_mushroom" : 1
+        }
+      },
+      "density": [ 0.9 ],
+      "chance": 1.0,
+      "forestness" : 1.0
+      }
+  },
+  {
+    "select": { "name": "autumnity:orange_spotted_dark_forest" },
+    "apply": {
+      "species" : {
+        "random" : {
+          "dark_oak" : 10,
+          "oak" : 2,
+          "red_mushroom" : 2,
+          "brown_mushroom" : 2,
+          "orange_maple" : 3
+        }
+      },
+      "density" : { "math": { "div" : [ "noise", 3.0 ] } },
+      "chance": 1.0,
+      "forestness" : 1.0,
+      "multipass" : true
+      }
+  },
+  {
+    "select": { "name": "autumnity:pumpkin_fields" },
+    "apply": {
+      "species" : {
+        "random" : {
+          "maple" : 5,
+          "orange_maple" : 5,
+          "red_maple" : 5,
+          "yellow_maple" : 5,
+          "red_mushroom" : 2,
+          "brown_mushroom" : 1
+        }
+      },
+      "density": [ 0.2 ],
+      "chance": 0.4,
+      "forestness" : 1.0
+      }
+  },
+  {
+    "select": { "name": "autumnity:red_spotted_taiga" },
+    "apply": {
+      "species" : {
+        "random" : {
+          "spruce" : 5,
+          "red_maple" : 1
+        }
+      },
+      "density": [ 1.0 ],
+      "chance": 1.0,
+      "forestness" : 1.0
+      }
+  },
+  {
+    "select": { "name": "autumnity:yellow_spotted_forest" },
+    "apply": {
+      "species" : {
+        "random" : {
+          "oak" : 4,
+          "birch" : 1,
+          "yellow_maple" : 1
+        }
+      },
+      "density": [ 0.9 ],
+      "chance": 1.0,
+      "forestness" : 1.0
+      }
+  }
+]
