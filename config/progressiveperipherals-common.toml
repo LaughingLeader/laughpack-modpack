@@ -34,6 +34,8 @@
 	#Spawn chance per 10000 calls
 	#Range: 1 ~ 10000
 	breakthroughPointSpawnChance = 20
+	#Range: 1 ~ 256
+	realityForgerMK2Radius = 64
 
 #No comment
 [Operations]
@@ -65,6 +67,8 @@
 	extractCooldown = 5000
 	#Range: > 1000
 	queryRegistryCooldown = 5000
+	#Range: > 1000
+	duplicateItemCooldown = 1000
 
 #No comment
 [Machinery]
@@ -96,4 +100,8 @@
 	tier3AutomataCoreMaxFuelConsumptionRate = 4
 	#Range: 0.1 ~ 1.0
 	enchantingAutomataCoreDisappearChance = 0.1
+
+#No comment
+["Creative features"]
+	enableCreativeItemDuplicator = true
 

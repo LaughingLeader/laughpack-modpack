@@ -43,6 +43,15 @@ command_require_creative = true
 	#Range: > 1
 	max_websockets = 4
 
+	#Limits bandwidth used by computers
+	[http.bandwidth]
+		#The number of bytes which can be downloaded in a second. This is shared across all computers. (bytes/s)
+		#Range: > 1
+		global_download = 33554432
+		#The number of bytes which can be uploaded in a second. This is shared across all computers. (bytes/s)
+		#Range: > 1
+		global_upload = 33554432
+
 	#A list of rules which control behaviour of the "http" API for specific domains or IPs.
 	#Each rule is an item with a 'host' to match against, and a series of properties. The host may be a domain name ("pastebin.com"),
 	#wildcard ("*.pastebin.com") or CIDR notation ("127.0.0.0/8"). If no rules, the domain is blocked.
