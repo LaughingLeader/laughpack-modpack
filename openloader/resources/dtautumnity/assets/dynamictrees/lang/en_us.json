@@ -1,0 +1,14 @@
+{
+  "item.dynamictrees.maple_seed": "Maple Sapling",
+  "item.dynamictrees.orange_maple_seed": "Orange Maple Sapling",
+  "item.dynamictrees.red_maple_seed": "Red Maple Sapling",
+  "item.dynamictrees.yellow_maple_seed": "Yellow Maple Sapling",
+
+
+  "block.dynamictrees.maple_branch": "Maple Tree",
+
+  "species.dynamictrees.maple": "Maple",
+  "species.dynamictrees.orange_maple": "Orange Maple",
+  "species.dynamictrees.red_maple": "Red Maple",
+  "species.dynamictrees.yellow_maple": "Yellow Maple"
+}

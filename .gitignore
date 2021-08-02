@@ -21,6 +21,9 @@ kubejs/README.txt
 !jsdoc
 !jsdoc/*
 !jsdoc/**/*
+!trees
+!trees/*
+!trees/**/*
 
 ###############################
 # Datapacks/resources
@@ -36,9 +39,9 @@ kubejs/README.txt
 !**/data/laughpack/
 !**/resources/laughpack/
 !/openloader/data/cc_scripts/**
-!/openloader/resources/cc_scripts/**
 !**/data/cc_scripts/
-!**/resources/cc_scripts/
+!/openloader/resources/dtautumnity/**
+!**/resources/dtautumnity/
 ###############################
 
 *.bak
