@@ -76,7 +76,7 @@ let hideFluids = function(e){
 				})
 			}
 		}
-		e.hide("@car")
+		//e.hide("@car")
 	} catch (err) {
 		console.error("[LaughPack] Failed to hide items in JEI. Press F3+T to reload client and retry.")
 		console.error(err)
