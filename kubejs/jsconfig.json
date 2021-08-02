@@ -1,11 +1,11 @@
 {
 	"compilerOptions": {
-		"module": "es6",
-		"target": "es6"
+		"module": "commonJS",
+		"target": "es5"
 	},
 	"include": [
 		"**/*.js",
 		"../jsdoc/*.js"
 	],
-	"checkJs": true
+	"checkJs": false
 }

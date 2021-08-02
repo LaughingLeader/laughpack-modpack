@@ -116,6 +116,15 @@ global.customCommands.reloadalldebug = function (server, player) {
 	// server.runCommand(`/reload`)
 }
 
+let tryGetPlayer = function(commandSource) {
+	try {
+		return commandSource.func_197035_h()
+	} catch(err) {
+		//console.error(err)
+		return null
+	}
+}
+
 /** @param {CommandEventJS} e **/
 onEvent("command.run", function(e){
 	if (!e.parseResults
@@ -127,7 +136,10 @@ onEvent("command.run", function(e){
 	//getPlayerOrException()
 	/** @type {CommandSource} */
 	let commandSource = e.parseResults.context.source
-	let player = commandSource.func_197035_h()
+	let player = tryGetPlayer(commandSource)
+	if (player == null) {
+		return
+	}
 	
 	let rawCommand = e.parseResults.reader.getString()
 	/** @type {string[]} **/

@@ -29,6 +29,6 @@ let onTick = function(e){
 	}
 }
 
-let test = true
+//let test = true
 /** @param {LoggedInEventJS} e */
 //onEvent("player.tick", onTick)
