@@ -3,7 +3,7 @@
 local PeripheralWrapper = {}
 
 ---@return PeripheralWrapper
-function PeripheralWrapper:New(peripheralType)
+function PeripheralWrapper:new(peripheralType)
 	local wrapper = {}
 	setmetatable(wrapper, {
 		__index = function(tbl,k)
@@ -19,7 +19,7 @@ function PeripheralWrapper:New(peripheralType)
 						local result = {pcall(func, table.unpack(params))}
 						if not result[1] then
 							printError("Error calling function", k, result[2])
-						else
+						elseif result[2] ~= nil then
 							table.remove(result, 1)
 							return table.unpack(result)
 						end

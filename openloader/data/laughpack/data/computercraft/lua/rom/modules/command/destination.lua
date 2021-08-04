@@ -6,7 +6,7 @@
 local Destination = {}
 
 ---@return Destination
-function Destination:New(name, position, rotation, dimension)
+function Destination:new(name, position, rotation, dimension)
 	local data = {
 		Name = name,
 		Position = position or {},
@@ -26,6 +26,13 @@ function Destination:GetTeleportCommand(username)
 		return string.format("/execute in %s run tp %s %s %s %s %s %s", self.Dimension, username, x,y,z, rx or 0, rz or 0)
 	else
 		return string.format("/execute in %s run tp %s %s %s %s", self.Dimension, username, x,y,z)
+	end
+end
+
+function Destination:Teleport(username)
+	if commands then
+		local command = self:GetTeleportCommand(username)
+		commands.exec(command)
 	end
 end
 

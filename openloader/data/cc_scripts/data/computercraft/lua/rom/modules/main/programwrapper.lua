@@ -6,7 +6,7 @@ local ProgramWrapper = {
 }
 
 ---@param mainLoopCallbacks function[] Functions to call during the main loop function.
-function ProgramWrapper:New(mainLoopCallbacks, tickrate)
+function ProgramWrapper:new(mainLoopCallbacks, tickrate)
 	local wrapper = {
 		Active = true,
 		TickRate = tickrate or 10,
