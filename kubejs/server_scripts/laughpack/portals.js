@@ -51,3 +51,50 @@ global.customCommands.tpbiome = function (server, player, id) {
 		}
 	}
 }
+
+/** @type {Object.<number,Object.<number, Object.<number, PortalDestination>>>} */
+let portalButtons = {}
+/**
+ * Links up a physical button with a portal destination.
+ * @param {number} x 
+ * @param {number} y 
+ * @param {number} z 
+ * @param {PortalDestination} portal 
+ */
+let addButton = function(x,y,z, portal)
+{
+	if (portalButtons[y] === undefined) {
+		portalButtons[y] = {}
+	}
+	if (portalButtons[y][x] === undefined) {
+		portalButtons[y][x] = {}
+	}
+	portalButtons[y][x][z] = portal
+}
+addButton(4,104,-117, plains)
+addButton(3,104,-117, desert)
+addButton(2,104,-117, bryce)
+
+onEvent("block.right_click", e => {
+	if (e.player.OP && e.block.id.indexOf("button") > -1) {
+		let server = utils.getServer()
+		let positionText = `${e.block.x},${e.block.y},${e.block.z}`
+		let commandText = Text.of([
+			Text.yellow("Position: "), 
+			Text.green(`[${positionText}]`).click(`copy:${positionText}`).hover(Text.translate("chat.copy.click")),
+		])
+		server.tell(commandText)
+	}
+	let ylayer = portalButtons[e.block.y]
+	if (ylayer && e.block.id.indexOf("button") > -1) {
+		let xlayer = ylayer[e.block.x]
+		if (xlayer) {
+			let portal = xlayer[e.block.z]
+			if (portal) {
+				let username = e.player.name
+				let server = utils.getServer()
+				server.runCommandSilent(portal.getTeleportCommand(username))
+			}
+		}
+	}
+})
