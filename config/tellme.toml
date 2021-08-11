@@ -6,7 +6,7 @@
 	# from the item next to the right of it on the hotbar
 	enableDebugItemForItems = true
 	# The debug item to right click on blocks and entities with.
-	debugItemNameBlocks = "minecraft:gold_nugget"
+	debugItemNameBlocks = "kubejs:block_analyzer"
 	# The debug item to right click with to dump item NBT from the item to the right of it on the hotbar
-	debugItemNameItems = "minecraft:blaze_rod"
+	debugItemNameItems = "kubejs:item_analyzer"
 
