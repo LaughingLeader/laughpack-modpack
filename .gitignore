@@ -40,6 +40,8 @@ kubejs/README.txt
 !**/resources/laughpack/
 !/openloader/data/cc_scripts/**
 !**/data/cc_scripts/
+!/openloader/data/laughpack_worldgen/**
+!**/data/laughpack_worldgen/
 !/openloader/resources/dtautumnity/**
 !**/resources/dtautumnity/
 ###############################
