@@ -13,6 +13,7 @@
 	enableCuttingAxe = true
 	enableExtractingPickaxe = true
 	enableCorrectingShovel = true
+	enableEventDistributor = true
 
 #No comment
 [Restrictions]
@@ -36,6 +37,8 @@
 	breakthroughPointSpawnChance = 20
 	#Range: 1 ~ 256
 	realityForgerMK2Radius = 64
+	#Any block, that has tweak somehow it own model logic, should be here.
+	realityForgerBlacklist = ["progressiveperipherals:flexible_statue", "progressiveperipherals:flexible_reality_anchor", "progressiveperipherals:reality_breakthrough_point"]
 
 #No comment
 [Operations]
@@ -69,6 +72,8 @@
 	queryRegistryCooldown = 5000
 	#Range: > 1000
 	duplicateItemCooldown = 1000
+	#Range: > 1000
+	queueEventCooldown = 1000
 
 #No comment
 [Machinery]
