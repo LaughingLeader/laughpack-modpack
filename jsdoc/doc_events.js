@@ -25,8 +25,8 @@
  * @prop {function} getConfiguredFeatureKey
  * @prop {function} isInBiomes
  * @prop {function} isNotInBiomes
- * @prop {function} printFeatures
- * @prop {function} printSpawns
+ * @prop {(decorationType: string = null) => Void} printFeatures Print biome features to the console.
+ * @prop {(mobCategory: string = null) => Void} printSpawns Print biome mob spawns to the console.
  * @prop {function} removeAllFeatures
  * @prop {function} removeAllSpawns
  * @prop {(decorationType: string, resourceIds:string[]) => Void} removeFeatureById Remove configured feature types with specific ids.
@@ -106,6 +106,13 @@
  * @prop {function} getServer
  * @prop {function} setException
  * @prop {function} setParseResults
+ * 
+ **/
+
+/**
+ * 
+ * @typedef BlockPlaceEventJS
+ * @type {Object}
  * 
  **/
 
