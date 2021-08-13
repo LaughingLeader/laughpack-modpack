@@ -294,6 +294,12 @@
         "separation": 10,
         "salt": 431041536,
         "disabled": false
+      },
+      "progressiveperipherals:breakthrough_point": {
+        "spacing": 19,
+        "separation": 10,
+        "salt": 431041536,
+        "disabled": true
       }
     }
   },
