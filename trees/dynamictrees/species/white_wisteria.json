@@ -1,0 +1,18 @@
+{
+  "family": "dynamictrees:wisteria",
+  "tapering": 0.3,
+  "signal_energy": 16,
+  "up_probability": 2,
+  "lowest_branch_height": 3,
+  "leaves_properties": "dynamictrees:white_wisteria",
+  "always_show_on_waila": true,
+  "generate_seed": true,
+  "generate_sapling": true,
+  "environment_factors": {
+    "cold": 1,
+    "dry": 1,
+    "hot": 1,
+    "wet": 1
+  },
+  "primitive_sapling": "environmental:white_wisteria_sapling"
+}

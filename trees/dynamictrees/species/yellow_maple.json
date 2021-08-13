@@ -4,9 +4,10 @@
   "signal_energy": 7.0,
   "lowest_branch_height": 3,
   "up_probability": 7,
-  "seed_drop_rarity": 1.0,
-  "stick_drop_rarity": 1.0,
   "leaves_properties": "dynamictrees:yellow_maple",
+  "always_show_on_waila": true,
+  "generate_seed": true,
+  "generate_sapling": true,
   "environment_factors": {
     "cold": 1.1,
     "hot": 0.2,
@@ -16,7 +17,7 @@
   "perfect_biomes": {
     "name": [ "autumnity:.*" ]
   },
-  "primitive_sapling": "autumnity:maple_sapling",
+  "primitive_sapling": "autumnity:yellow_maple_sapling",
   "features" : [
     "bee_nest"
   ]
