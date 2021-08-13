@@ -9,10 +9,10 @@
     "naturalSnowDecorator": true,
     "customBiomeFeatures": true,
     "vanillaLakes": false,
-    "vanillaSprings": true,
-    "vanillaLavaLakes": true,
+    "vanillaSprings": false,
+    "vanillaLavaLakes": false,
     "vanillaLavaSprings": false,
-    "mountainBiomeUsage": 0.851,
+    "mountainBiomeUsage": 0.852,
     "volcanoBiomeUsage": 0.855
   },
   "dimensions": {
@@ -38,7 +38,7 @@
     },
     "structures": {
       "atmospheric:arid_shrine": {
-        "spacing": 32,
+        "spacing": 60,
         "separation": 8,
         "salt": 304972544,
         "disabled": false
@@ -92,8 +92,8 @@
         "disabled": false
       },
       "bettermineshafts:mineshaft": {
-        "spacing": 8,
-        "separation": 4,
+        "spacing": 4,
+        "separation": 0,
         "salt": 593751808,
         "disabled": false
       },
@@ -337,8 +337,8 @@
     "biomeShape": {
       "biomeSize": 200,
       "macroNoiseSize": 15,
-      "biomeWarpScale": 266,
-      "biomeWarpStrength": 259
+      "biomeWarpScale": 70,
+      "biomeWarpStrength": 150
     },
     "biomeEdgeShape": {
       "type": "SIMPLEX",
@@ -346,7 +346,7 @@
       "octaves": 3,
       "gain": 0.5,
       "lacunarity": 2.65,
-      "strength": 45
+      "strength": 15
     }
   },
   "terrain": {

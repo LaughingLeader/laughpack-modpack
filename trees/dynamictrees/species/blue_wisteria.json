@@ -1,0 +1,19 @@
+{
+  "family": "dynamictrees:wisteria",
+  "tapering": 0.3,
+  "signal_energy": 11,
+  "up_probability": 8,
+  "lowest_branch_height": 5,
+  "leaves_properties": "dynamictrees:blue_wisteria",
+  "always_show_on_waila": true,
+  "environment_factors": {
+    "cold": 1,
+    "dry": 1,
+    "hot": 1,
+    "wet": 1
+  },
+  "primitive_sapling": "environmental:blue_wisteria_sapling",
+  "features" : [
+    "bee_nest"
+  ]
+}

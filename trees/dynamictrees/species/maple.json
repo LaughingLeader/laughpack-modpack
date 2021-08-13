@@ -5,6 +5,7 @@
   "lowest_branch_height": 3,
   "up_probability": 10,
   "leaves_properties": "dynamictrees:maple",
+  "always_show_on_waila": true,
   "environment_factors": {
     "cold": 1.1,
     "hot": 0.2,

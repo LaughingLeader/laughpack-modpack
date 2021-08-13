@@ -1,0 +1,8 @@
+{
+  "common_leaves": "dynamictrees:blue_wisteria",
+  "common_species": "dynamictrees:blue_wisteria",
+  "primitive_log": "environmental:wisteria_log",
+  "primitive_stripped_log": "environmental:wisteria_log",
+  "stick": "stick",
+  "max_branch_radius": 8
+}
