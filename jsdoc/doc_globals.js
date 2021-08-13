@@ -1,9 +1,9 @@
 
 /**
  * @typedef {Object} ModInfo
- * @property {function():string} getId
- * @property {function():string} getName
- * @property {function():string} getVersion
+ * @prop {function():string} getId
+ * @prop {function():string} getName
+ * @prop {function():string} getVersion
 **/
 
 /**
@@ -16,28 +16,28 @@
 /**
  * Wrapper around recipe type accessors. May have mod integration keys like create.
  * @typedef {Object} PlatformWrapper
- * @property {boolean} clientEnvironment
- * @property {boolean} developmentEnvironment
- * @property {boolean} fabric
- * @property {boolean} forge
- * @property {object} list
- * @property {object} mcVersion
- * @property {object} modVersion
- * @property {Object.<string, ModInfo>} mods Dictionary of all loaded mods.
- * @property {object} name
- * @property {undefined} info
- * @property {undefined} loaded
- * @property {PlatformIsLoadedFunction} isLoaded Check if a mod is loaded.
- * @property {function} getInfo
- * @property {function} getList
- * @property {function} getMcVersion
- * @property {function} getModVersion
- * @property {function} getMods
- * @property {function} getName
- * @property {function():boolean} isClientEnvironment
- * @property {function():boolean} isDevelopmentEnvironment
- * @property {function():boolean} isFabric
- * @property {function():boolean} isForge
+ * @prop {boolean} clientEnvironment
+ * @prop {boolean} developmentEnvironment
+ * @prop {boolean} fabric
+ * @prop {boolean} forge
+ * @prop {object} list
+ * @prop {object} mcVersion
+ * @prop {object} modVersion
+ * @prop {Object.<string, ModInfo>} mods Dictionary of all loaded mods.
+ * @prop {object} name
+ * @prop {undefined} info
+ * @prop {undefined} loaded
+ * @prop {PlatformIsLoadedFunction} isLoaded Check if a mod is loaded.
+ * @prop {function} getInfo
+ * @prop {function} getList
+ * @prop {function} getMcVersion
+ * @prop {function} getModVersion
+ * @prop {function} getMods
+ * @prop {function} getName
+ * @prop {function():boolean} isClientEnvironment
+ * @prop {function():boolean} isDevelopmentEnvironment
+ * @prop {function():boolean} isFabric
+ * @prop {function():boolean} isForge
 **/
 
 /**

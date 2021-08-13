@@ -1,121 +1,121 @@
 /**
  * @typedef ServerJS
  * @type {Object}
- * @property {boolean} dedicated
- * @property {boolean} hardcore
- * @property {boolean} running
- * @property {boolean} singlePlayer
- * @property {object} class
- * @property {object} data
- * @property {object} displayName
- * @property {object} entities
- * @property {MinecraftServerJS} minecraftServer
- * @property {object} motd
- * @property {object} name
- * @property {WorldJS} overworld
- * @property {ServerPlayerJS[]} players
- * @property {WorldJS[]} worlds
- * @property {undefined} advancement
- * @property {undefined|ServerPlayerJS} player
- * @property {undefined} statusMessage
- * @property {undefined|WorldJS} world
- * @property {function} equals
- * @property {function} getAdvancement
- * @property {function} getClass
- * @property {function} getData
- * @property {function} getDisplayName
- * @property {function} getEntities
- * @property {function} getHardcore
- * @property {function():MinecraftServerJS} getMinecraftServer
- * @property {function} getMotd
- * @property {function} getName
- * @property {function} getOverworld
- * @property {function} getPlayer
- * @property {function} getPlayers
- * @property {function} getLevel
- * @property {function} getWorlds
- * @property {function} hashCode
- * @property {function} isDedicated
- * @property {function} isRunning
- * @property {function} isSinglePlayer
- * @property {function} notify
- * @property {function} notifyAll
- * @property {function} release
- * @property {function(string|string[])} runCommand
- * @property {function} runCommandSilent
- * @property {function} schedule
- * @property {function} scheduleInTicks
- * @property {function} sendDataToAll
- * @property {function} setMotd
- * @property {function} setStatusMessage
- * @property {function} stop
- * @property {function} tell
- * @property {function} toString
- * @property {function} updateWorldList
- * @property {function} wait
+ * @prop {boolean} dedicated
+ * @prop {boolean} hardcore
+ * @prop {boolean} running
+ * @prop {boolean} singlePlayer
+ * @prop {object} class
+ * @prop {object} data
+ * @prop {object} displayName
+ * @prop {object} entities
+ * @prop {MinecraftServerJS} minecraftServer
+ * @prop {object} motd
+ * @prop {object} name
+ * @prop {WorldJS} overworld
+ * @prop {ServerPlayerJS[]} players
+ * @prop {WorldJS[]} worlds
+ * @prop {undefined} advancement
+ * @prop {undefined|ServerPlayerJS} player
+ * @prop {undefined} statusMessage
+ * @prop {undefined|WorldJS} world
+ * @prop {function} equals
+ * @prop {function} getAdvancement
+ * @prop {function} getClass
+ * @prop {function} getData
+ * @prop {function} getDisplayName
+ * @prop {function} getEntities
+ * @prop {function} getHardcore
+ * @prop {function():MinecraftServerJS} getMinecraftServer
+ * @prop {function} getMotd
+ * @prop {function} getName
+ * @prop {function} getOverworld
+ * @prop {function} getPlayer
+ * @prop {function} getPlayers
+ * @prop {function} getLevel
+ * @prop {function} getWorlds
+ * @prop {function} hashCode
+ * @prop {function} isDedicated
+ * @prop {function} isRunning
+ * @prop {function} isSinglePlayer
+ * @prop {function} notify
+ * @prop {function} notifyAll
+ * @prop {function} release
+ * @prop {function(string|string[])} runCommand
+ * @prop {function} runCommandSilent
+ * @prop {function} schedule
+ * @prop {function} scheduleInTicks
+ * @prop {function} sendDataToAll
+ * @prop {function} setMotd
+ * @prop {function} setStatusMessage
+ * @prop {function} stop
+ * @prop {function} tell
+ * @prop {function} toString
+ * @prop {function} updateWorldList
+ * @prop {function} wait
 **/
 
 /**
  * @typedef MinecraftServerJS
  * @type {Object}
- * @property {object} class
- * @property {object} dataPackRegistries
- * @property {object} difficultyLast
- * @property {object} difficultyUpdatePos
- * @property {object} difficultyUpdateWorld
- * @property {object} serverModName
- * @property {object} serverResourcesKJS
- * @property {undefined} crashNextTick
- * @property {undefined} difficultyAsync
- * @property {undefined} tickTime
- * @property {function} close
- * @property {function} equals
- * @property {function} execute
- * @property {function} forgeGetWorldMap
- * @property {function} getClass
- * @property {function} getDataPackRegistries
- * @property {function} getDifficultyAsync
- * @property {function} getServerModName
- * @property {function} getServerResourcesKJS
- * @property {function} getTickTime
- * @property {function} hashCode
- * @property {function} markWorldsDirty
- * @property {function} notify
- * @property {function} notifyAll
- * @property {function} setCrashNextTick
- * @property {function} toString
- * @property {function} wait
+ * @prop {object} class
+ * @prop {object} dataPackRegistries
+ * @prop {object} difficultyLast
+ * @prop {object} difficultyUpdatePos
+ * @prop {object} difficultyUpdateWorld
+ * @prop {object} serverModName
+ * @prop {object} serverResourcesKJS
+ * @prop {undefined} crashNextTick
+ * @prop {undefined} difficultyAsync
+ * @prop {undefined} tickTime
+ * @prop {function} close
+ * @prop {function} equals
+ * @prop {function} execute
+ * @prop {function} forgeGetWorldMap
+ * @prop {function} getClass
+ * @prop {function} getDataPackRegistries
+ * @prop {function} getDifficultyAsync
+ * @prop {function} getServerModName
+ * @prop {function} getServerResourcesKJS
+ * @prop {function} getTickTime
+ * @prop {function} hashCode
+ * @prop {function} markWorldsDirty
+ * @prop {function} notify
+ * @prop {function} notifyAll
+ * @prop {function} setCrashNextTick
+ * @prop {function} toString
+ * @prop {function} wait
 **/
 
 /**
  * @typedef CommandSource
  * @type {Object}
- * @property {function():Entity[]} func_197010_l
- * @property {function():string[]} func_197011_j getOnlinePlayerNames()
- * @property {function():Array} func_197012_k levels()
- * @property {function():TextComponent} func_197019_b getDisplayName()
- * @property {function():string} func_197037_c getTextName()
- * @property {function(TextComponent,boolean):Void} func_197030_a sendSuccess​(ITextComponent p_197030_1_, boolean p_197030_2_)
- * @property {function(TextComponent,boolean):Void} func_197033_a sendFailure​(ITextComponent p_197021_1_)
- * @property {function():ServerPlayerEntity} func_197022_f getEntity()
- * @property {function():ServerPlayerEntity} func_197027_g getEntityOrException()
- * @property {function():ServerPlayerEntity} func_197035_h getPlayerOrException()
- * @property {function():Vector3D} func_197036_d getPosition()
- * @property {function():IntegratedServer} func_197028_i
- * @property {function():CommandSource} func_197031_a
- * @property {function():ServerLevel} func_197023_e
- * @property {function():java.util.stream.ReferencePipeline} func_199612_m
- * @property {function():ISuggestionProvider.Coordinates} func_217293_r
- * @property {function():ISuggestionProvider.Coordinates} func_217294_q
- * @property {function():Vector2f} func_201004_i getRotation()
- * @property {function():Dimension[]} func_230390_p_
- * @property {function():DynamicRegistries} func_241861_q
- * @property {function():unknown} func_197009_a
- * @property {function():unknown} func_197021_a
- * @property {function():unknown} func_197024_a
- * @property {function():unknown} func_197026_b
- * @property {function():unknown} func_197029_a
- * @property {function():unknown} func_197030_a
- * @property {function():object} func_201008_k getAnchor() FEET?
- * @property {function():EmptyList} func_211270_p getAllTeams()?
+ * @prop {function():Entity[]} func_197010_l
+ * @prop {function():string[]} func_197011_j getOnlinePlayerNames()
+ * @prop {function():Array} func_197012_k levels()
+ * @prop {function():TextComponent} func_197019_b getDisplayName()
+ * @prop {function():string} func_197037_c getTextName()
+ * @prop {function(TextComponent,boolean):Void} func_197030_a sendSuccess​(ITextComponent p_197030_1_, boolean p_197030_2_)
+ * @prop {function(TextComponent,boolean):Void} func_197033_a sendFailure​(ITextComponent p_197021_1_)
+ * @prop {function():ServerPlayerEntity} func_197022_f getEntity()
+ * @prop {function():ServerPlayerEntity} func_197027_g getEntityOrException()
+ * @prop {function():ServerPlayerEntity} func_197035_h getPlayerOrException()
+ * @prop {function():Vector3D} func_197036_d getPosition()
+ * @prop {function():IntegratedServer} func_197028_i
+ * @prop {function():CommandSource} func_197031_a
+ * @prop {function():ServerLevel} func_197023_e
+ * @prop {function():java.util.stream.ReferencePipeline} func_199612_m
+ * @prop {function():ISuggestionProvider.Coordinates} func_217293_r
+ * @prop {function():ISuggestionProvider.Coordinates} func_217294_q
+ * @prop {function():Vector2f} func_201004_i getRotation()
+ * @prop {function():Dimension[]} func_230390_p_
+ * @prop {function():DynamicRegistries} func_241861_q
+ * @prop {function():unknown} func_197009_a
+ * @prop {function():unknown} func_197021_a
+ * @prop {function():unknown} func_197024_a
+ * @prop {function():unknown} func_197026_b
+ * @prop {function():unknown} func_197029_a
+ * @prop {function():unknown} func_197030_a
+ * @prop {function():object} func_201008_k getAnchor() FEET?
+ * @prop {function():EmptyList} func_211270_p getAllTeams()?
 **/
