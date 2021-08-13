@@ -14,13 +14,13 @@ global.customCommands = {}
 
 /**
  * All KubeJS event values.
- * @global
+ * @readonly
  */
 global.EVENT = {
 	/**
 	 * Startup script event values.
-	 * @readonly
 	 * @enum {string}
+	 * @readonly
 	 */
 	STARTUP: {
 		/** Cancellable: No */
@@ -42,8 +42,8 @@ global.EVENT = {
 	},
 	/**
 	 * Server script event values.
-	 * @readonly
 	 * @enum {string}
+	 * @readonly
 	 */
 	SERVER: {
 		/** Scope: Server Startup | Cancellable: No */
@@ -149,8 +149,8 @@ global.EVENT = {
 	},
 	/**
 	 * Client script event values.
-	 * @readonly
 	 * @enum {string}
+	 * @readonly
 	 */
 	CLIENT: {
 		/** Scope: Client Startup | Cancellable: No */

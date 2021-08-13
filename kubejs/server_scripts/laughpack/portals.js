@@ -41,6 +41,7 @@ let voidSpawn = new PortalDestination("minecraft:void", [0.5, 104.0, -127.0], [1
  * @this {CommandSource}
  * @param {ServerJS} server
  * @param {ServerPlayerEntity} player
+ * @param {string} id
 **/
 global.customCommands.tpbiome = function (server, player, id) {
 	if (id !== undefined) {
