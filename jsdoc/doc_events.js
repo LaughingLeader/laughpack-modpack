@@ -17,11 +17,35 @@
 
 /**
  * 
- * @typedef AddJEISubtypesEventJS
+ * @typedef WorldgenRemoveEventJSForge
  * @type {Object}
- * @property {function} registerInterpreter
- * @property {function} useNBT
- * @property {function} useNBTKey
+ * @property {undefined} configuredFeatureKey
+ * @property {undefined} inBiomes
+ * @property {undefined} notInBiomes
+ * @property {function} getConfiguredFeatureKey
+ * @property {function} isInBiomes
+ * @property {function} isNotInBiomes
+ * @property {function} printFeatures
+ * @property {function} printSpawns
+ * @property {function} removeAllFeatures
+ * @property {function} removeAllSpawns
+ * @property {function} removeFeatureById
+ * @property {function} removeOres
+ * @property {function} removeSpawnsByCategory
+ * @property {function} removeSpawnsByID
+ **/
+
+/**
+ * 
+ * @typedef WorldgenAddEventJSForge
+ * @type {Object}
+ * @property {undefined} inBiomes
+ * @property {undefined} notInBiomes
+ * @property {function} addLake
+ * @property {function} addOre
+ * @property {function} addSpawn
+ * @property {function} isInBiomes
+ * @property {function} isNotInBiomes
  **/
 
 /**
