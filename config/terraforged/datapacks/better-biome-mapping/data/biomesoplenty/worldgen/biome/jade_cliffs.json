@@ -6,14 +6,14 @@
       "block_search_extent": 8,
       "offset": 2
     },
-    "sky_color": 6733055,
-    "fog_color": 11726335,
-    "water_color": 4445678,
-    "water_fog_color": 270131,
-    "foliage_color": -14435065,
-    "grass_color": -11613383
+    "sky_color": 12045485,
+    "fog_color": 12308949,
+    "water_color": 4159204,
+    "water_fog_color": 329011,
+    "foliage_color": 9156462,
+    "grass_color": 8168808
   },
-  "surface_builder": "biomesoplenty:tropics",
+  "surface_builder": "biomesoplenty:deep_grass",
   "carvers": {
     "air": [
       "minecraft:cave",
@@ -45,19 +45,14 @@
       "minecraft:ore_lapis",
       "minecraft:disk_sand",
       "minecraft:disk_clay",
-      "minecraft:disk_gravel",
-      "biomesoplenty:white_sand_disk_extra"
+      "minecraft:disk_gravel"
     ],
     [],
     [
-      "biomesoplenty:tropics_trees",
-      "biomesoplenty:tropic_flowers",
-      "biomesoplenty:blue_hydrangea_4",
-      "biomesoplenty:rose_bush_1",
-      "biomesoplenty:short_bamboo_10",
-      "biomesoplenty:standard_grass_12",
+      "biomesoplenty:jade_cliffs_trees",
+      "biomesoplenty:standard_grass_6",
       "minecraft:patch_sugar_cane",
-      "minecraft:patch_melon"
+      "minecraft:spring_water"
     ],
     [
       "minecraft:freeze_top_layer"
@@ -66,7 +61,7 @@
   "starts": [
     "minecraft:mineshaft",
     "minecraft:stronghold",
-    "minecraft:ruined_portal_jungle"
+    "minecraft:ruined_portal_mountain"
   ],
   "spawners": {
     "monster": [
@@ -133,12 +128,12 @@
     "misc": []
   },
   "spawn_costs": {},
-  "player_spawn_friendly": false,
-  "forge:registry_name": "biomesoplenty:tropics",
+  "player_spawn_friendly": true,
+  "forge:registry_name": "biomesoplenty:jade_cliffs",
   "precipitation": "rain",
-  "temperature": 0.95,
-  "downfall": 1.0,
-  "category": "none",
-  "depth": 0.25,
-  "scale": 0.4
+  "temperature": 0.7,
+  "downfall": 0.85,
+  "category": "extreme_hills",
+  "depth": 1.8,
+  "scale": 1
 }

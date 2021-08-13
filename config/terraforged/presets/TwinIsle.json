@@ -9,7 +9,7 @@
     "naturalSnowDecorator": true,
     "customBiomeFeatures": true,
     "vanillaLakes": false,
-    "vanillaSprings": false,
+    "vanillaSprings": true,
     "vanillaLavaLakes": false,
     "vanillaLavaSprings": false,
     "mountainBiomeUsage": 0.852,

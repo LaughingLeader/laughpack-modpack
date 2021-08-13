@@ -6,14 +6,14 @@
       "block_search_extent": 8,
       "offset": 2
     },
-    "sky_color": 6733055,
-    "fog_color": 11726335,
-    "water_color": 4445678,
-    "water_fog_color": 270131,
-    "foliage_color": -14435065,
-    "grass_color": -11613383
+    "sky_color": 7711487,
+    "foliage_color": 8970560,
+    "grass_color": 11002176,
+    "fog_color": 12638463,
+    "water_color": 4186009,
+    "water_fog_color": 274214
   },
-  "surface_builder": "biomesoplenty:tropics",
+  "surface_builder": "minecraft:grass",
   "carvers": {
     "air": [
       "minecraft:cave",
@@ -42,28 +42,16 @@
       "minecraft:ore_gold",
       "minecraft:ore_redstone",
       "minecraft:ore_diamond",
-      "minecraft:ore_lapis",
-      "minecraft:disk_sand",
-      "minecraft:disk_clay",
-      "minecraft:disk_gravel",
-      "biomesoplenty:white_sand_disk_extra"
+      "minecraft:ore_lapis"
     ],
     [],
-    [
-      "biomesoplenty:tropics_trees",
-      "biomesoplenty:tropic_flowers",
-      "biomesoplenty:blue_hydrangea_4",
-      "biomesoplenty:rose_bush_1",
-      "biomesoplenty:short_bamboo_10",
-      "biomesoplenty:standard_grass_12",
-      "minecraft:patch_sugar_cane",
-      "minecraft:patch_melon"
-    ],
+    [],
     [
       "minecraft:freeze_top_layer"
     ]
   ],
   "starts": [
+    "minecraft:jungle_pyramid",
     "minecraft:mineshaft",
     "minecraft:stronghold",
     "minecraft:ruined_portal_jungle"
@@ -117,9 +105,22 @@
         "weight": 5,
         "minCount": 1,
         "maxCount": 1
+      },
+      {
+        "type": "minecraft:ocelot",
+        "weight": 2,
+        "minCount": 1,
+        "maxCount": 1
       }
     ],
-    "creature": [],
+    "creature": [
+      {
+        "type": "minecraft:parrot",
+        "weight": 40,
+        "minCount": 1,
+        "maxCount": 2
+      }
+    ],
     "ambient": [
       {
         "type": "minecraft:bat",
@@ -133,12 +134,12 @@
     "misc": []
   },
   "spawn_costs": {},
-  "player_spawn_friendly": false,
-  "forge:registry_name": "biomesoplenty:tropics",
+  "player_spawn_friendly": true,
+  "forge:registry_name": "atmospheric:rainforest",
   "precipitation": "rain",
-  "temperature": 0.95,
-  "downfall": 1.0,
-  "category": "none",
-  "depth": 0.25,
-  "scale": 0.4
+  "temperature": 0.9,
+  "downfall": 0.95,
+  "category": "jungle",
+  "depth": 0.1,
+  "scale": 0.2
 }

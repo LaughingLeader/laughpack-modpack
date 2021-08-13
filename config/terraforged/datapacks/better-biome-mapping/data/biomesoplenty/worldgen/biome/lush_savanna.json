@@ -6,14 +6,14 @@
       "block_search_extent": 8,
       "offset": 2
     },
-    "sky_color": 12045485,
-    "fog_color": 12308949,
-    "water_color": 4159204,
-    "water_fog_color": 329011,
-    "foliage_color": 9156462,
-    "grass_color": 8168808
+    "sky_color": 7842047,
+    "fog_color": 12638463,
+    "water_color": 4566514,
+    "water_fog_color": 267827,
+    "foliage_color": 13881686,
+    "grass_color": 15720834
   },
-  "surface_builder": "biomesoplenty:deep_grass",
+  "surface_builder": "biomesoplenty:lush_savanna",
   "carvers": {
     "air": [
       "minecraft:cave",
@@ -22,9 +22,7 @@
   },
   "features": [
     [],
-    [
-      "minecraft:lake_water"
-    ],
+    [],
     [],
     [
       "minecraft:monster_room"
@@ -43,19 +41,17 @@
       "minecraft:ore_redstone",
       "minecraft:ore_diamond",
       "minecraft:ore_lapis",
-      "minecraft:disk_sand",
-      "minecraft:disk_clay",
-      "minecraft:disk_gravel",
-      "minecraft:ore_emerald"
+      "minecraft:disk_clay"
     ],
+    [],
     [
-      "minecraft:ore_infested"
-    ],
-    [
-      "biomesoplenty:jade_cliffs_trees",
-      "biomesoplenty:standard_grass_6",
+      "biomesoplenty:poppy_flowers",
+      "biomesoplenty:rose_bush_15",
+      "biomesoplenty:sprouts_50",
+      "biomesoplenty:standard_grass_24",
+      "biomesoplenty:tall_grass_24",
       "minecraft:patch_sugar_cane",
-      "minecraft:spring_water"
+      "biomesoplenty:water_spring_extra"
     ],
     [
       "minecraft:freeze_top_layer"
@@ -63,8 +59,7 @@
   ],
   "starts": [
     "minecraft:mineshaft",
-    "minecraft:stronghold",
-    "minecraft:ruined_portal_mountain"
+    "minecraft:stronghold"
   ],
   "spawners": {
     "monster": [
@@ -115,15 +110,34 @@
         "weight": 5,
         "minCount": 1,
         "maxCount": 1
+      },
+      {
+        "type": "minecraft:husk",
+        "weight": 80,
+        "minCount": 4,
+        "maxCount": 4
       }
     ],
-    "creature": [],
-    "ambient": [
+    "creature": [
       {
         "type": "minecraft:bat",
         "weight": 10,
         "minCount": 8,
         "maxCount": 8
+      }
+    ],
+    "ambient": [
+      {
+        "type": "minecraft:rabbit",
+        "weight": 4,
+        "minCount": 2,
+        "maxCount": 3
+      },
+      {
+        "type": "minecraft:donkey",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 3
       }
     ],
     "water_creature": [],
@@ -132,11 +146,11 @@
   },
   "spawn_costs": {},
   "player_spawn_friendly": true,
-  "forge:registry_name": "biomesoplenty:jade_cliffs",
+  "forge:registry_name": "biomesoplenty:lush_savanna",
   "precipitation": "rain",
-  "temperature": 0.7,
-  "downfall": 0.85,
-  "category": "extreme_hills",
-  "depth": 1.8,
-  "scale": 1
+  "temperature": 0.9,
+  "downfall": 0.5,
+  "category": "savanna",
+  "depth": 0.25,
+  "scale": 0.1
 }
