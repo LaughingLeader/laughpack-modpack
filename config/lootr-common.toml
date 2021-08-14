@@ -17,7 +17,10 @@ additional_trapped_chests = []
 #list of dimensions (to the exclusion of all others) that loot chest should be replaced in [default: blank, allowing all dimensions, e.g., minecraft:overworld]
 dimension_whitelist = []
 #list of dimensions that loot chests should not be replaced in [default: blank, allowing all dimensions, format e.g., minecraft:overworld]
-dimension_blacklist = []
+dimension_blacklist = [
+	"laughpack:void",
+	"dimdungeons:dungeon_dimension"
+]
 #list of loot tables which shouldn't be converted [in the format of modid:loot_table]
 loot_table_blacklist = []
 
