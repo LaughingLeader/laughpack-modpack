@@ -1,3 +1,5 @@
+//priority: 999
+
 global.printObject = function(obj)
 {
 	let names = []
