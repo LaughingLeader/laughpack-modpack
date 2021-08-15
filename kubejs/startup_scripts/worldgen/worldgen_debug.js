@@ -24,4 +24,9 @@ onEvent(global.EVENT.STARTUP.WORLDGEN_REMOVE, e => {
 		inspected.remove = true
 	}
 })
+
+onEvent("worldgen.remove", e => {
+	console.info("=====FEATURES======")
+	e.printFeatures()
+})
  */

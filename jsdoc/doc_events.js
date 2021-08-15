@@ -19,16 +19,13 @@
  * 
  * @typedef WorldgenRemoveEventJSForge
  * @type {Object}
- * @prop {undefined} configuredFeatureKey
- * @prop {undefined} inBiomes
- * @prop {undefined} notInBiomes
- * @prop {function} getConfiguredFeatureKey
- * @prop {function} isInBiomes
- * @prop {function} isNotInBiomes
+ * @prop {(ConfiguredFeature<?, ?> feature) => ResourceLocation} getConfiguredFeatureKey
+ * @prop {(filter:string[]) => boolean} isInBiomes Checks if the event contains any biomes in the list.
+ * @prop {(filter:string[]) => boolean} isNotInBiomes Checks if the event does not contain any biomes in the list.
  * @prop {(decorationType: string = null) => Void} printFeatures Print biome features to the console.
  * @prop {(mobCategory: string = null) => Void} printSpawns Print biome mob spawns to the console.
- * @prop {function} removeAllFeatures
- * @prop {function} removeAllSpawns
+ * @prop {(decorationType: string = null) => Void} removeAllFeatures
+ * @prop {() => Void} removeAllSpawns
  * @prop {(decorationType: string, resourceIds:string[]) => Void} removeFeatureById Remove configured feature types with specific ids.
  * @prop {function} removeOres
  * @prop {function} removeSpawnsByCategory
