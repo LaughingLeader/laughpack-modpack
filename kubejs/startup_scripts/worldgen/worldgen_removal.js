@@ -43,7 +43,9 @@ onEvent(global.EVENT.STARTUP.WORLDGEN_REMOVE, /** @param {WorldgenRemoveEventJSF
 
 	biome_feature_removal.forEach(data => {
 		if (e.isInBiomes(data.biomes)) {
+			console.info(`"Removing features in biomes ${data.biomes.join(";")}"`)
 			data.features.forEach(f => {
+				console.info(`"${f.decoration} ${f.ids.join(";")}"`)
 				e.removeFeatureById(f.decoration, f.ids)
 			})
 			//console.info("=====FEATURES======")
