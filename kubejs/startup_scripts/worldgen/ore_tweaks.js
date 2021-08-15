@@ -1,3 +1,5 @@
+// priority: 1
+
 /** @param {WorldGenAddEventJS} e **/
 onEvent("worldgen.add", function(e){
 	e.addOre(ore => {

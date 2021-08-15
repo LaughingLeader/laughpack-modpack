@@ -10,7 +10,7 @@
     "customBiomeFeatures": true,
     "vanillaLakes": false,
     "vanillaSprings": true,
-    "vanillaLavaLakes": true,
+    "vanillaLavaLakes": false,
     "vanillaLavaSprings": false,
     "mountainBiomeUsage": 0.851,
     "volcanoBiomeUsage": 0.855
@@ -22,7 +22,7 @@
       "variance": 0
     },
     "dimensions": {
-      "nether": "minecraft:biomesoplenty",
+      "nether": "infernalexp:compat_world_type",
       "end": "betterendforge:world_type",
       "includeExtraDimensions": true
     }
@@ -38,7 +38,7 @@
     },
     "structures": {
       "atmospheric:arid_shrine": {
-        "spacing": 32,
+        "spacing": 60,
         "separation": 8,
         "salt": 304972544,
         "disabled": false
@@ -47,6 +47,30 @@
         "spacing": 32,
         "separation": 8,
         "salt": 56181420,
+        "disabled": false
+      },
+      "betterdungeons:skeleton_dungeon": {
+        "spacing": 46,
+        "separation": 23,
+        "salt": 732581696,
+        "disabled": false
+      },
+      "betterdungeons:small_dungeon": {
+        "spacing": 10,
+        "separation": 6,
+        "salt": 34239824,
+        "disabled": false
+      },
+      "betterdungeons:spider_dungeon": {
+        "spacing": 44,
+        "separation": 22,
+        "salt": 596523136,
+        "disabled": false
+      },
+      "betterdungeons:zombie_dungeon": {
+        "spacing": 48,
+        "separation": 24,
+        "salt": 280667680,
         "disabled": false
       },
       "betterendforge:eternal_portal_structure": {
@@ -101,6 +125,30 @@
         "spacing": 85,
         "separation": 50,
         "salt": 596441280,
+        "disabled": false
+      },
+      "infernalexp:bastion_outpost": {
+        "spacing": 3,
+        "separation": 1,
+        "salt": 720435968,
+        "disabled": false
+      },
+      "infernalexp:glowstone_canyon_ruin": {
+        "spacing": 1,
+        "separation": 0,
+        "salt": 20394856,
+        "disabled": false
+      },
+      "infernalexp:soul_sand_valley_ruin": {
+        "spacing": 4,
+        "separation": 2,
+        "salt": 29456392,
+        "disabled": false
+      },
+      "infernalexp:strider_altar": {
+        "spacing": 10,
+        "separation": 5,
+        "salt": 80837592,
         "disabled": false
       },
       "inventorypets:nether_dungeon": {
@@ -283,6 +331,12 @@
         "salt": 49788928,
         "disabled": false
       },
+      "progressiveperipherals:breakthrough_point": {
+        "spacing": 19,
+        "separation": 10,
+        "salt": 431041536,
+        "disabled": true
+      },
       "quark:big_dungeon": {
         "spacing": 20,
         "separation": 11,
@@ -301,8 +355,8 @@
     "continent": {
       "continentType": "MULTI",
       "continentShape": "MANHATTAN",
-      "continentScale": 3672,
-      "continentJitter": 0.9
+      "continentScale": 3009,
+      "continentJitter": 0.898
     },
     "controlPoints": {
       "deepOcean": 0.1,
@@ -319,15 +373,15 @@
   },
   "climate": {
     "temperature": {
-      "seedOffset": 1769021234,
+      "seedOffset": 1506069820,
       "scale": 8,
       "falloff": 2,
       "min": 0.0,
       "max": 1.0,
-      "bias": 0.036
+      "bias": 0.067
     },
     "moisture": {
-      "seedOffset": 1731347674,
+      "seedOffset": -2125889678,
       "scale": 9,
       "falloff": 2,
       "min": 0.0,

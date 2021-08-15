@@ -49,6 +49,30 @@
         "salt": 56181420,
         "disabled": false
       },
+      "betterdungeons:skeleton_dungeon": {
+        "spacing": 46,
+        "separation": 23,
+        "salt": 732581696,
+        "disabled": false
+      },
+      "betterdungeons:small_dungeon": {
+        "spacing": 10,
+        "separation": 6,
+        "salt": 34239824,
+        "disabled": false
+      },
+      "betterdungeons:spider_dungeon": {
+        "spacing": 44,
+        "separation": 22,
+        "salt": 596523136,
+        "disabled": false
+      },
+      "betterdungeons:zombie_dungeon": {
+        "spacing": 48,
+        "separation": 24,
+        "salt": 280667680,
+        "disabled": false
+      },
       "betterendforge:eternal_portal_structure": {
         "spacing": 16,
         "separation": 6,
@@ -101,6 +125,30 @@
         "spacing": 85,
         "separation": 50,
         "salt": 596441280,
+        "disabled": false
+      },
+      "infernalexp:bastion_outpost": {
+        "spacing": 3,
+        "separation": 1,
+        "salt": 720435968,
+        "disabled": false
+      },
+      "infernalexp:glowstone_canyon_ruin": {
+        "spacing": 1,
+        "separation": 0,
+        "salt": 20394856,
+        "disabled": false
+      },
+      "infernalexp:soul_sand_valley_ruin": {
+        "spacing": 4,
+        "separation": 2,
+        "salt": 29456392,
+        "disabled": false
+      },
+      "infernalexp:strider_altar": {
+        "spacing": 10,
+        "separation": 5,
+        "salt": 80837592,
         "disabled": false
       },
       "inventorypets:nether_dungeon": {
@@ -294,6 +342,12 @@
         "separation": 10,
         "salt": 431041536,
         "disabled": false
+      },
+      "progressiveperipherals:breakthrough_point": {
+        "spacing": 19,
+        "separation": 10,
+        "salt": 431041536,
+        "disabled": true
       }
     }
   },

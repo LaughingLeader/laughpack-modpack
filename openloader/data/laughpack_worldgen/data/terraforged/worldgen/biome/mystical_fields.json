@@ -10,7 +10,8 @@
     "sky_color": 7907327,
     "fog_color": 12638463,
     "water_color": 4159204,
-    "water_fog_color": 329011
+    "water_fog_color": 329011,
+    "grass_color": 5224597
   },
   "surface_builder": "minecraft:grass",
   "carvers": {
@@ -51,8 +52,7 @@
     [],
     [
       "botania:mystical_flowers",
-      "minecraft:patch_tall_grass_2",
-      "minecraft:patch_grass_plain",
+      "minecraft:flower_plain_decorated",
       "minecraft:spring_water"
     ],
     [
@@ -60,11 +60,9 @@
     ]
   ],
   "starts": [
-    "minecraft:village_plains",
-    "minecraft:pillager_outpost",
-    "minecraft:mineshaft",
-    "minecraft:stronghold",
-    "minecraft:ruined_portal"
+    "minecraft:buried_treasure",
+    "minecraft:monument",
+    "paraglider:underground_horned_statue"
   ],
   "spawners": {
     "monster": [
@@ -93,36 +91,6 @@
         "weight": 12,
         "minCount": 4,
         "maxCount": 4
-      },
-      {
-        "type": "minecraft:pig",
-        "weight": 10,
-        "minCount": 4,
-        "maxCount": 4
-      },
-      {
-        "type": "minecraft:chicken",
-        "weight": 10,
-        "minCount": 4,
-        "maxCount": 4
-      },
-      {
-        "type": "minecraft:cow",
-        "weight": 8,
-        "minCount": 4,
-        "maxCount": 4
-      },
-      {
-        "type": "minecraft:horse",
-        "weight": 5,
-        "minCount": 2,
-        "maxCount": 6
-      },
-      {
-        "type": "minecraft:donkey",
-        "weight": 1,
-        "minCount": 1,
-        "maxCount": 3
       }
     ],
     "ambient": [
