@@ -15,7 +15,7 @@
 		  "Properties": {
 			"axis": "y"
 		  },
-		  "Name": "ars_nouveau:blue_archwood_log"
+		  "Name": "ars_nouveau:red_archwood_log"
 		},
 		"type": "minecraft:simple_state_provider"
 	  },
@@ -25,7 +25,7 @@
 			"persistent": "false",
 			"distance": "7"
 		  },
-		  "Name": "ars_nouveau:blue_archwood_leaves"
+		  "Name": "ars_nouveau:red_archwood_leaves"
 		},
 		"type": "minecraft:simple_state_provider"
 	  },

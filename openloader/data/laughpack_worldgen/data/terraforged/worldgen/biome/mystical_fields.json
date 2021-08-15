@@ -52,9 +52,8 @@
     [],
     [
       "botania:mystical_flowers",
-      "laughpack:tree_ars_cascading",
-      "laughpack:tree_ars_flourishing",
-      "laughpack:tree_ars_vexing"
+      "minecraft:flower_plain_decorated",
+      "minecraft:spring_water"
     ],
     [
       "minecraft:freeze_top_layer"

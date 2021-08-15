@@ -32,7 +32,8 @@
 	  "foliage_placer": {
 		"radius": 0,
 		"offset": 0,
-		"type": "minecraft:dark_oak_foliage_placer"
+		"height": 0,
+		"type": "minecraft:blob_foliage_placer"
 	  },
 	  "trunk_placer": {
 		"base_height": 9,
