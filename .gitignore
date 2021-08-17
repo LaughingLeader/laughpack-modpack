@@ -56,3 +56,6 @@ config/itlt/servers.json
 config/itlt/icon.ico
 config/itlt/icon.png
 openloader/data/cc_scripts/data/computercraft/lua/rom/modules/main/txui.lua
+config/startupQoL/startup_times.json
+config/worldgenerationprofiler-common.toml
+config/betterf3.toml

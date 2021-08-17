@@ -36,13 +36,20 @@
  * 
  * @typedef WorldgenAddEventJSForge
  * @type {Object}
- * @prop {undefined} inBiomes
- * @prop {undefined} notInBiomes
+ * @prop {(filter:string[]) => boolean} isInBiomes Checks if the event contains any biomes in the list.
+ * @prop {(filter:string[]) => boolean} isNotInBiomes Checks if the event does not contain any biomes in the list.
  * @prop {function} addLake
  * @prop {function} addOre
  * @prop {function} addSpawn
- * @prop {function} isInBiomes
- * @prop {function} isNotInBiomes
+ **/
+
+/**
+ * 
+ * @typedef SimpleWorldEventJS
+ * @type {Object}
+ * @prop {() => WorldJS} getWorld
+ * @prop {() => ServerJS} getServer
+ * @prop {(id:string, sub:string = null) => boolean} post
  **/
 
 /**

@@ -1,4 +1,9 @@
 /**
+ * @typedef net.minecraft.world.World
+ * @type {Object}
+ */
+
+/**
  * @typedef WorldJS
  * @type {Object}
  * @prop {boolean} daytime
@@ -13,7 +18,7 @@
  * @prop {object} dimension
  * @prop {object} entities
  * @prop {object} gameRules
- * @prop {object} minecraftWorld
+ * @prop {net.minecraft.world.World} minecraftWorld
  * @prop {ServerPlayerJS[]} players
  * @prop {ServerJS} server
  * @prop {object} side

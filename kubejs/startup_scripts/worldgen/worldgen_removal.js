@@ -25,6 +25,18 @@ let biome_feature_removal = [
 	}
 ]
 
+let dimension_feature_removal = [
+	{
+		dimension: "minecraft:overworld",
+		features: [
+			{
+				decoration: "surface_structures",
+				ids: ["progressiveperipherals:reality_breakthrough_point"]
+			}
+		]
+	}
+]
+
 onEvent(global.EVENT.STARTUP.WORLDGEN_REMOVE, /** @param {WorldgenRemoveEventJSForge} e **/ e => {
 	/* try {
 		let t = e.getConfiguredFeatureKey("lavender")
@@ -40,6 +52,16 @@ onEvent(global.EVENT.STARTUP.WORLDGEN_REMOVE, /** @param {WorldgenRemoveEventJSF
 	e.removeFeatureById("vegetal_decoration", lavender)
 	//Blueberries don't work
 	e.removeFeatureById("vegetal_decoration", druidcraft_broken)
+
+	//TODO Figure out how to check what dimension a biome is in.
+	let dimension = "minecraft:overworld"
+	dimension_feature_removal.forEach(data => {
+		if (data.dimension == dimension) {
+			data.features.forEach(f => {
+				e.removeFeatureById(f.decoration, f.ids)
+			})
+		}
+	})
 
 	biome_feature_removal.forEach(data => {
 		if (e.isInBiomes(data.biomes)) {
