@@ -2,7 +2,7 @@
   "miscellaneous": {
     "smoothLayerDecorator": true,
     "strataRegionSize": 684,
-    "strataDecorator": false,
+    "strataDecorator": true,
     "oreCompatibleStoneOnly": true,
     "erosionDecorator": true,
     "plainStoneErosion": false,
@@ -22,7 +22,7 @@
       "variance": 0
     },
     "dimensions": {
-      "nether": "minecraft:biomesoplenty",
+      "nether": "infernalexp:compat_world_type",
       "end": "betterendforge:world_type",
       "includeExtraDimensions": true
     }
@@ -296,19 +296,19 @@
         "disabled": false
       },
       "mowziesmobs:barakoa_village": {
-        "spacing": 25,
+        "spacing": 40,
         "separation": 8,
         "salt": 123444792,
         "disabled": false
       },
       "mowziesmobs:frostmaw_spawn": {
-        "spacing": 25,
+        "spacing": 40,
         "separation": 8,
         "salt": 1237654784,
         "disabled": false
       },
       "mowziesmobs:wrought_chamber": {
-        "spacing": 15,
+        "spacing": 25,
         "separation": 5,
         "salt": 123555792,
         "disabled": false
@@ -355,7 +355,7 @@
     "continent": {
       "continentType": "MULTI",
       "continentShape": "MANHATTAN",
-      "continentScale": 3562,
+      "continentScale": 3500,
       "continentJitter": 1.0
     },
     "controlPoints": {
@@ -467,7 +467,7 @@
     }
   },
   "rivers": {
-    "seedOffset": 397704109,
+    "seedOffset": 1589696855,
     "riverCount": 6,
     "mainRivers": {
       "bedDepth": 8,
@@ -475,7 +475,7 @@
       "maxBankHeight": 4,
       "bedWidth": 15,
       "bankWidth": 49,
-      "fade": 0.504
+      "fade": 0.3
     },
     "branchRivers": {
       "bedDepth": 4,
@@ -486,9 +486,9 @@
       "fade": 0.5
     },
     "lakes": {
-      "chance": 0.722,
+      "chance": 0.72,
       "minStartDistance": 0.0,
-      "maxStartDistance": 0.028,
+      "maxStartDistance": 1.0,
       "depth": 16,
       "sizeMin": 75,
       "sizeMax": 215,
@@ -497,8 +497,8 @@
     },
     "wetlands": {
       "chance": 0.865,
-      "sizeMin": 134,
-      "sizeMax": 201
+      "sizeMin": 200,
+      "sizeMax": 350
     }
   },
   "filters": {
