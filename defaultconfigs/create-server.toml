@@ -64,6 +64,7 @@
 	# 
 	#[in Revolutions per Minute]
 	#Maximum allowed speed of a configurable motor.
+	#[@cui:RequiresReload:both]
 	#Range: > 64
 	maxMotorSpeed = 256
 	# 
@@ -334,6 +335,9 @@
 	#Amount of game ticks without new packets arriving until an active schematic upload process is discarded.
 	#Range: > 100
 	schematicIdleTimeout = 600
+	# 
+	#Whether placing a Schematic directly in Creative Mode should replace world blocks with Air
+	creativePrintIncludesAir = false
 
 	# 
 	#Schematicannon
