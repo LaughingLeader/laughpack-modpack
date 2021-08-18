@@ -18,7 +18,7 @@
   "dimensions": {
     "bedrockLayer": {
       "material": "minecraft:bedrock",
-      "minDepth": 1,
+      "minDepth": 0,
       "variance": 0
     },
     "dimensions": {
