@@ -1,6 +1,6 @@
 
 /**
- * @typedef {Object} ModInfo
+ * @typedef {object} ModInfo
  * @prop {function():string} getId
  * @prop {function():string} getName
  * @prop {function():string} getVersion
@@ -15,7 +15,7 @@
 
 /**
  * Wrapper around recipe type accessors. May have mod integration keys like create.
- * @typedef {Object} PlatformWrapper
+ * @typedef {object} PlatformWrapper
  * @prop {boolean} clientEnvironment
  * @prop {boolean} developmentEnvironment
  * @prop {boolean} fabric
@@ -23,7 +23,7 @@
  * @prop {object} list
  * @prop {object} mcVersion
  * @prop {object} modVersion
- * @prop {Object.<string, ModInfo>} mods Dictionary of all loaded mods.
+ * @prop {object.<string, ModInfo>} mods Dictionary of all loaded mods.
  * @prop {object} name
  * @prop {undefined} info
  * @prop {undefined} loaded

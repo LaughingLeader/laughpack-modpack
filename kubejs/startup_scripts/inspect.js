@@ -9,7 +9,7 @@ global.printObject = function(obj)
 	}
 	names.sort()
 	for (let name in names) {
-		console.info(`* @property {${typeof(obj[names[name]])}} ${names[name]}`)
+		console.info(`* @prop {${typeof(obj[names[name]])}} ${names[name]}`)
 	}
 }
 
@@ -71,7 +71,7 @@ global.inspect = function(obj, forJSDoc, getAll) {
 						keyType = "Array"
 					}
 					if(forJSDoc == true) {
-						propertiesArray.push(` * @property {${keyType}} ${key}`)
+						propertiesArray.push(` * @prop {${keyType}} ${key}`)
 					} else {
 						propertiesArray.push("  " + key + ": " + obj[key])
 					}
@@ -84,7 +84,7 @@ global.inspect = function(obj, forJSDoc, getAll) {
 					//console.info(`rawString: ${rawString} ${String(obj[key])}`)
 					if (rawString == null || rawString == undefined) {
 						if(forJSDoc == true) {
-							functionsArray.push(` * @property {function} ${key}`)
+							functionsArray.push(` * @prop {function} ${key}`)
 						} else {
 							functionsArray.push(`  ${key}: ${tryGetFunctionValue(obj, key)}`)
 						}
@@ -101,14 +101,14 @@ global.inspect = function(obj, forJSDoc, getAll) {
 						}
 						
 						if(forJSDoc == true) {
-							propertiesArray.push(` * @property {function(${parameterTypes.join(", ")}):${returnType}} ${key}`)
+							propertiesArray.push(` * @prop {function(${parameterTypes.join(", ")}):${returnType}} ${key}`)
 						} else {
 							functionsArray.push("  " + key + "(" + parameterTypes.join(", ") + ") : " + returnType)
 						}
 					}
 				} else if (keyType === "undefined") {
 					if(forJSDoc == true) {
-						propertiesArray.push(` * @property {undefined} ${key}`)
+						propertiesArray.push(` * @prop {undefined} ${key}`)
 					} else {
 						propertiesArray.push("  " + key + ": undefined")
 					}

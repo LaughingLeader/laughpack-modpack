@@ -1,11 +1,45 @@
+/** @typedef {object} ForgeWorldServer **/
+
+/** 
+ * @typedef {object} BlockPos
+ * @prop {number} x
+ * @prop {number} y
+ * @prop {number} z
+**/
+
+/** @typedef {object} BlockState **/
+
 /**
- * @typedef net.minecraft.world.World
- * @type {Object}
+ * @typedef ServerWorldForge
+ * @type {object}
+ * @prop {boolean} captureBlockSnapshots
+ * @prop {boolean} restoringBlockSnapshots
+ * @prop {number} maxEntityRadius
+ * @prop {object} capturedBlockSnapshots
+ * @prop {object} entities
+ * @prop {object} worldServer
+ * @prop {undefined} areaLoaded
+ * @prop {undefined} capability
+ * @prop {function} areCapsCompatible
+ * @prop {() => WorldJS} asKJS Returns the world as a KubeJS world.
+ * @prop {() => Void} close
+ * @prop {function} getCapability
+ * @prop {function} getEntities
+ * @prop {function} getMaxEntityRadius
+ * @prop {() => ForgeWorldServer} getWorldServer
+ * @prop {function} handler$zom000$addBlockEntity
+ * @prop {function} handler$zpo000$wireBlockCallback
+ * @prop {function} increaseMaxEntityRadius
+ * @prop {(center:BlockPos, range:number) => boolean} isAreaLoaded
+ * @prop {(blockPos:BlockPos, chunk:object, blockState:BlockState, blockState2:BlockState, a:number, b:number) => Void} markAndNotifyBlock
+ * @prop {(entity:Entity, keepData:boolean) => Void} removeEntity
+ * @prop {(entity:Entity, keepData:boolean) => Void} removeEntityComplete
+ * @prop {(player:ServerPlayerEntity, keepData:boolean) => Void} removePlayer
  */
 
 /**
  * @typedef WorldJS
- * @type {Object}
+ * @type {object}
  * @prop {boolean} daytime
  * @prop {boolean} overworld
  * @prop {boolean} raining
@@ -18,7 +52,7 @@
  * @prop {object} dimension
  * @prop {object} entities
  * @prop {object} gameRules
- * @prop {net.minecraft.world.World} minecraftWorld
+ * @prop {ServerWorldForge} minecraftWorld
  * @prop {ServerPlayerJS[]} players
  * @prop {ServerJS} server
  * @prop {object} side
@@ -41,9 +75,9 @@
  * @prop {function} getGameRules
  * @prop {function} getLivingEntity
  * @prop {function} getLocalTime
- * @prop {function} getPlayer
+ * @prop {()=>ServerPlayerJS} getPlayer
  * @prop {function} getPlayerData
- * @prop {function} getPlayers
+ * @prop {()=>ServerPlayerJS[]} getPlayers
  * @prop {function} getSeed
  * @prop {function} getServer
  * @prop {function} getSide

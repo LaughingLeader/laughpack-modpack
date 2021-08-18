@@ -1,6 +1,6 @@
 /**
  * @typedef ServerPlayerJS
- * @type {Object}
+ * @type {object}
  * @prop {boolean} OP
  * @prop {boolean} alive
  * @prop {boolean} ambientCreature
@@ -314,13 +314,13 @@
 
 /**
  * @typedef Entity
- * @type {Object}
+ * @type {object}
  * @prop {string} func_110124_au UUID
  */
 
 /**
  * @typedef ServerPlayerEntity
- * @type {Object}
+ * @type {object}
  * @prop {boolean} addedToWorld
  * @prop {boolean} culledFast
  * @prop {boolean} culledShadowPass
@@ -447,7 +447,7 @@
  * @prop {function(WorldJS,number,number,boolean,boolean):Vector3d} func_242374_a The player's bed position.
 
  * @typedef ResourceKeyJS
- * @type {Object}
+ * @type {object}
  * @prop {object} class
  * @prop {object} namespace
  * @prop {object} path

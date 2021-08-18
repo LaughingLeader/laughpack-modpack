@@ -1,9 +1,9 @@
 /**
  * 
  * @typedef EventJS
- * @type {Object}
+ * @type {object}
  * @prop {boolean} cancelled
- * @prop {Object} class
+ * @prop {object} class
  * @prop {function} canCancel
  * @prop {function} cancel
  * @prop {function} equals
@@ -18,7 +18,7 @@
 /**
  * 
  * @typedef WorldgenRemoveEventJSForge
- * @type {Object}
+ * @type {object}
  * @prop {(ConfiguredFeature<?, ?> feature) => ResourceLocation} getConfiguredFeatureKey
  * @prop {(filter:string[]) => boolean} isInBiomes Checks if the event contains any biomes in the list.
  * @prop {(filter:string[]) => boolean} isNotInBiomes Checks if the event does not contain any biomes in the list.
@@ -35,7 +35,7 @@
 /**
  * 
  * @typedef WorldgenAddEventJSForge
- * @type {Object}
+ * @type {object}
  * @prop {(filter:string[]) => boolean} isInBiomes Checks if the event contains any biomes in the list.
  * @prop {(filter:string[]) => boolean} isNotInBiomes Checks if the event does not contain any biomes in the list.
  * @prop {function} addLake
@@ -46,7 +46,7 @@
 /**
  * 
  * @typedef SimpleWorldEventJS
- * @type {Object}
+ * @type {object}
  * @prop {() => WorldJS} getWorld
  * @prop {() => ServerJS} getServer
  * @prop {(id:string, sub:string = null) => boolean} post
@@ -55,7 +55,7 @@
 /**
  * 
  * @typedef InformationJEIEventJS
- * @type {Object}
+ * @type {object}
  * @prop {function} add
  * @prop {function} addForType
  **/
@@ -63,8 +63,8 @@
 /**
  * 
  * @typedef HideJEIEventJS
- * @type {Object}
- * @prop {Object} allIngredients
+ * @type {object}
+ * @prop {object} allIngredients
  * @prop {function} getAllIngredients
  * @prop {function} hide
  * @prop {function} hideAll
@@ -73,7 +73,7 @@
 /**
  * 
  * @typedef HideCustomJEIEventJS
- * @type {Object}
+ * @type {object}
  * @prop {function} get
  * @prop {function} getClass
  **/
@@ -81,9 +81,9 @@
 /**
  * 
  * @typedef YeetJEICategoriesEvent
- * @type {Object}
- * @prop {Object} categories
- * @prop {Object} categoryIds
+ * @type {object}
+ * @prop {object} categories
+ * @prop {object} categoryIds
  * @prop {function} getCategories
  * @prop {function} getCategoryIds
  * @prop {function} yeet
@@ -93,15 +93,15 @@
 /**
  * 
  * @typedef AddJEIEventJS
- * @type {Object}
+ * @type {object}
  * @prop {function} add
  **/
 
 /**
  * 
  * @typedef CommandEventJS
- * @type {Object}
- * @prop {Object} exception
+ * @type {object}
+ * @prop {object} exception
  * @prop {ParseResults<CommandSourceStack>} parseResults
  * @prop {ServerJS} server
  * @prop {function} getClass
@@ -116,19 +116,19 @@
 /**
  * 
  * @typedef BlockPlaceEventJS
- * @type {Object}
+ * @type {object}
  * 
  **/
 
 /**
  * Recipe filter using a json-like structure.
- * @typedef {Object.<string, any>} RecipeFilter
+ * @typedef {object.<string, any>} RecipeFilter
  * 
 **/
 
 /**
  * Wrapper around recipe type accessors. May have mod integration keys like create.
- * @typedef {Object} RecipesAccessor
+ * @typedef {object} RecipesAccessor
  * @prop {function(...*):RecipeJS} blasting Recipe Type
  * @prop {function(...*):RecipeJS} campfireCooking Recipe Type
  * @prop {function(...*):RecipeJS} shaped Recipe Type
@@ -144,7 +144,7 @@
 
 /**
  * @typedef RecipeEventJS
- * @type {Object}
+ * @type {object}
  * @prop {RecipesAccessor} recipes
  * @prop {undefined} itemErrors
  * @prop {undefined} recipeFunction

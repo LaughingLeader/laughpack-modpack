@@ -1,6 +1,6 @@
 /**
  * @typedef ServerJS
- * @type {Object}
+ * @type {object}
  * @prop {boolean} dedicated
  * @prop {boolean} hardcore
  * @prop {boolean} running
@@ -41,8 +41,8 @@
  * @prop {function} notify
  * @prop {function} notifyAll
  * @prop {function} release
- * @prop {function(string|string[])} runCommand
- * @prop {function} runCommandSilent
+ * @prop {(command:string|string[]) => Void} runCommand
+ * @prop {(command:string|string[]) => Void} runCommandSilent Run a command without making it visible in the chat.
  * @prop {function} schedule
  * @prop {function} scheduleInTicks
  * @prop {function} sendDataToAll
@@ -57,7 +57,7 @@
 
 /**
  * @typedef MinecraftServerJS
- * @type {Object}
+ * @type {object}
  * @prop {object} class
  * @prop {object} dataPackRegistries
  * @prop {object} difficultyLast
@@ -89,7 +89,7 @@
 
 /**
  * @typedef CommandSource
- * @type {Object}
+ * @type {object}
  * @prop {function():Entity[]} func_197010_l
  * @prop {function():string[]} func_197011_j getOnlinePlayerNames()
  * @prop {function():Array} func_197012_k levels()
