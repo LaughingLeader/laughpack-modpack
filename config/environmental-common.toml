@@ -32,7 +32,7 @@
 	[world.generation]
 		"Giant Mushroom generation in Swamps" = true
 		"Giant Tall Grass generation" = true
-		"Wisteria Tree generation in Flower Forests" = true
+		"Wisteria Tree generation in Flower Forests" = false
 		"Delphinium generation in Flower Forests" = true
 		"Hibiscus generation in Jungles" = true
 

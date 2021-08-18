@@ -12,7 +12,7 @@
 	#Are pets required to eat food (default:true)
 	petsMustEat = true
 	#Pets eat rarer items (default:false)
-	petsEatWholeItems = false
+	petsEatWholeItems = true
 	#Turn off all dungeons (default:false)
 	disableAllDungeons = false
 	#Turn off Nether dungeons (default:false)
