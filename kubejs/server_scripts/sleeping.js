@@ -2,6 +2,7 @@ let printedStuff = false
 
 onEvent(global.EVENT.SERVER.WORLD_TICK, /** @param {SimpleWorldEventJS} e **/ e => {
 	let world = e.getWorld()
+	//Every 20 ticks
 	if (world.getTime() % 20 == 10)
 	{
 		let totalPlayers = world.players.length
