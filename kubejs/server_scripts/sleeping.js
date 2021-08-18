@@ -14,8 +14,8 @@ onEvent(global.EVENT.SERVER.WORLD_TICK, /** @param {SimpleWorldEventJS} e **/ e 
 				}
 			})
 			if (totalSleeping > 0) {
-				console.info(`Total sleeping: ${totalSleeping}/${totalPlayers}`)
 				if (totalSleeping >= totalPlayers / 2) {
+					console.info(`Total sleeping: ${totalSleeping}/${totalPlayers}`)
 					/** @type {ServerJS} */
 					let server = utils.getServer()
 					server.runCommandSilent("/time set 0")
