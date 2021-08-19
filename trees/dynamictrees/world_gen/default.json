@@ -1,10 +1,37 @@
 [
   {
+    "select": { "name": "abundance:.*" },
+    "cancellers": {
+      "type": "tree",
+      "namespace": "abundance"
+    }
+  },
+  {
     "select": { "name": "autumnity:.*" },
     "cancellers": {
       "type": "tree",
       "namespace": "autumnity"
     }
+  },
+  {
+    "select": { "name": "minecraft:flower_forest" },
+    "cancellers": {
+      "type": "tree",
+      "namespace": "environmental"
+    }
+  },
+  {
+    "select": { "name": "abundance:nemophila_fields" },
+    "apply": {
+      "species" : {
+        "random" : {
+          "dtbop:jacaranda" : 7,
+          "dtbop:flowering_oak" : 1
+        }
+      },
+      "density": [ 0.1 ],
+      "chance": 0.2
+      }
   },
   {
     "select": { "name": "autumnity:maple.*" },
@@ -87,5 +114,22 @@
       "chance": 1.0,
       "forestness" : 1.0
       }
+  },
+  {
+    "select": { "name": "minecraft:flower_forest" },
+    "apply": {
+      "species" : {
+        "random" : {
+          "oak" : 7,
+          "birch" : 2,
+          "blue_wisteria": 1,
+          "pink_wisteria": 1,
+          "purple_wisteria": 1,
+          "white_wisteria": 1,
+          "dtbop:flowering_oak" : 1
+        }
+      },
+      "density": [ 0.6 ]
+    }
   }
 ]

@@ -137,8 +137,8 @@
   "forge:registry_name": "biomesoplenty:tropics",
   "precipitation": "rain",
   "temperature": 0.95,
-  "downfall": 1.0,
-  "category": "none",
+  "downfall": 1,
+  "category": "mushroom",
   "depth": 0.25,
   "scale": 0.4
 }
