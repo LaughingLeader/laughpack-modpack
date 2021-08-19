@@ -4,7 +4,7 @@
 	#This only adjusts the internal length of a day used by the season cycle.
 	#It is intended to be used in conjunction with another mod which adjusts the actual length of a Minecraft day.
 	#Range: > 20
-	day_duration = 24000
+	day_duration = 36000
 	#The duration of a sub season in days
 	#Range: > 1
 	sub_season_duration = 8
