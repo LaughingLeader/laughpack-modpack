@@ -1,6 +1,8 @@
 let printedStuff = false
 
-onEvent(global.EVENT.SERVER.WORLD_TICK, /** @param {SimpleWorldEventJS} e **/ e => {
+/** @param {SimpleWorldEventJS} e **/ e
+let onWorldTick = function(e)
+{
 	let world = e.getWorld()
 	//Every 20 ticks
 	if (world.getTime() % 20 == 10)
@@ -27,4 +29,6 @@ onEvent(global.EVENT.SERVER.WORLD_TICK, /** @param {SimpleWorldEventJS} e **/ e 
 	// 	global.inspect(world, true, false)
 	// 	printedStuff = true
 	// }
-})
+}
+
+//onEvent(global.EVENT.SERVER.WORLD_TICK, onWorldTick)
