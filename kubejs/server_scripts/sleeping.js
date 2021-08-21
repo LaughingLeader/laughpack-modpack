@@ -1,6 +1,6 @@
 let printedStuff = false
 
-/** @param {SimpleWorldEventJS} e **/ e
+/** @param {SimpleWorldEventJS} e **/
 let onWorldTick = function(e)
 {
 	let world = e.getWorld()

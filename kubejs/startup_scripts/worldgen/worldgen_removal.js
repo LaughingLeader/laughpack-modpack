@@ -37,6 +37,8 @@ let dimension_feature_removal = [
 	}
 ]
 
+let inspected = {}
+
 onEvent(global.EVENT.STARTUP.WORLDGEN_REMOVE, /** @param {WorldgenRemoveEventJSForge} e **/ e => {
 	/* try {
 		let t = e.getConfiguredFeatureKey("lavender")
@@ -70,8 +72,11 @@ onEvent(global.EVENT.STARTUP.WORLDGEN_REMOVE, /** @param {WorldgenRemoveEventJSF
 				console.info(`"${f.decoration} ${f.ids.join(";")}"`)
 				e.removeFeatureById(f.decoration, f.ids)
 			})
-			//console.info("=====FEATURES======")
-			//e.printFeatures()
+			/* if (!inspected[data.biomes[1]]) {
+				console.info("=====FEATURES======")
+				e.printFeatures()
+				inspected[data.biomes[1]] = true
+			} */
 		}
 	})
 })
