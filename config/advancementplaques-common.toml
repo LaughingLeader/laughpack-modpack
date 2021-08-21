@@ -20,6 +20,12 @@
 	[client.functionality_options]
 		#Whitelist of advancements to show plaques for.  Leave empty to display for all.
 		whitelist = []
+		#If task sounds should be muted.
+		mute_tasks = false
+		#If goal sounds should be muted.
+		mute_goals = false
+		#If challenge sounds should be muted.
+		mute_challenges = false
 
 	[client.duration_options]
 		#Duration of the shiny effect fade in for tasks.
