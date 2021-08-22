@@ -1,0 +1,52 @@
+{
+	"effects": {
+		"mood_sound": {
+			"sound": "minecraft:ambient.cave",
+			"tick_delay": 6000,
+			"block_search_extent": 8,
+			"offset": 2
+		},
+		"sky_color": 13395612,
+		"fog_color": 9527183,
+		"water_color": 15094522,
+		"water_fog_color": 13977809,
+		"foliage_color": 11414937,
+		"grass_color": 6603731
+	},
+	"carvers": {
+		"air": [
+			"minecraft:cave",
+			"minecraft:canyon"
+		]
+	},
+	"starts": [],
+	"features": [
+		[],
+		[],
+		[],
+		[],
+		[],
+		[],
+		[],
+		[],
+		[],
+		[]
+	],
+	"spawners": {
+		"ambient": [],
+		"creature": [],
+		"misc": [],
+		"monster": [],
+		"water_ambient": [],
+		"water_creature": []
+	},
+	"category": "plains",
+	"precipitation": "none",
+	"surface_builder": "laughpack:sky_surface",
+	"scale": 0.05,
+	"downfall": 0.4,
+	"depth": 0.12,
+	"temperature": 0.8,
+	"player_spawn_friendly": true,
+	"spawn_costs": {}
+}
