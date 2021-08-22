@@ -12,46 +12,88 @@ onEvent("item.tags", (e) => {
 		"kubejs:dust_zinc"
 	]);
 
-	//Credit to Valhelsia again for mmost of these
+	//Credit to Valhelsia again for most of these
 	//https://github.com/ValhelsiaTeam/Valhelsia/blob/master/kubejs/server_scripts/tags/block_tags.js
 
-	// Allows Autumnity snail slime to be used in a few more recipes.
-	e.add("forge:slime", "autumnity:snail_slime")
-	e.add("forge:slimeballs", "autumnity:snail_slime")
-	e.add("forge:storageblocks/slime", "autumnity:snail_slime_block")
+	if (Platform.isLoaded("autumnity")) {
+		// Allows Autumnity snail slime to be used in a few more recipes.
+		e.add("forge:slime", "autumnity:snail_slime")
+		e.add("forge:slimeballs", "autumnity:snail_slime")
+		e.add("forge:storageblocks/slime", "autumnity:snail_slime_block")
+
+		e.get("forge:fruits").add(["autumnity:foul_berries"])
+	}
 	
-	// Missing #forge:seed item tags.
-	e.get("forge:seeds").add([
-		"environmental:cattail_seeds"
-	])
+	if (Platform.isLoaded("atmospheric")) {
+		e.get("forge:fruits").add(["atmospheric:passionfruit"])
+
+		// Sandstone Tags
+		let aridSandstones = [
+			"atmospheric:arid_sandstone",
+			"atmospheric:smooth_arid_sandstone",
+			"atmospheric:cut_arid_sandstone",
+			"atmospheric:chiseled_arid_sandstone",
+			"atmospheric:arid_sandstone_bricks"
+		]
+		
+		e.get("forge:sandstone/arid").add(aridSandstones)
+		
+		let redAridSandstones = [
+			"atmospheric:red_arid_sandstone",
+			"atmospheric:smooth_red_arid_sandstone",
+			"atmospheric:cut_red_arid_sandstone",
+			"atmospheric:chiseled_red_arid_sandstone",
+			"atmospheric:red_arid_sandstone_bricks"
+		]
+		
+		e.get("forge:sandstone/red_arid").add(redAridSandstones)
+	}
+	
+	if (Platform.isLoaded("environmental")) {
+		// Missing #forge:seed item tags.
+		e.get("forge:seeds").add([
+			"environmental:cattail_seeds"
+		])
+	}
 	
 	// Missing #forge:fruits item tags.
-	e.get("forge:fruits").add([
-		"atmospheric:passionfruit",
-		"autumnity:foul_berries",
-		"minecraft:sweet_berries",
-		//"neapolitan:white_strawberries"
-	])
+	e.get("forge:fruits").add(["minecraft:sweet_berries"])
+
+	let addModTags = function(targetTag, modId, tags) {
+		if (Platform.isLoaded(modId)) {
+			targetTag.add(tags)
+		}
+	}
 	
-	// Missing #forge:sapling item tags.
-	let saplings = [
+	let saplingTag = e.get("forge:sapling")
+
+	addModTags(saplingTag, "quark", [
 		"quark:yellow_blossom_sapling",
 		"quark:lavender_blossom_sapling",
 		"quark:pink_blossom_sapling",
 		"quark:blue_blossom_sapling",
 		"quark:orange_blossom_sapling",
 		"quark:red_blossom_sapling",
+	])
+	addModTags(saplingTag, "autumnity", [
 		"autumnity:red_maple_sapling",
 		"autumnity:orange_maple_sapling",
 		"autumnity:yellow_maple_sapling",
 		"autumnity:maple_sapling",
+	])
+	addModTags(saplingTag, "upgrade_aquatic", [
 		"upgrade_aquatic:river_sapling",
+	])
+	addModTags(saplingTag, "atmospheric", [
 		"atmospheric:rosewood_sapling",
 		"atmospheric:morado_sapling",
 		"atmospheric:yucca_sapling",
 		"atmospheric:kousa_sapling",
 		"atmospheric:aspen_sapling",
 		"atmospheric:grimwood_sapling",
+	])
+
+	addModTags(saplingTag, "biomesoplenty", [
 		"biomesoplenty:origin_sapling",
 		"biomesoplenty:flowering_oak_sapling",
 		"biomesoplenty:rainbow_birch_sapling",
@@ -70,8 +112,14 @@ onEvent("item.tags", (e) => {
 		"biomesoplenty:magic_sapling",
 		"biomesoplenty:umbran_sapling",
 		"biomesoplenty:hellbark_sapling",
+	])
+
+	addModTags(saplingTag, "druidcraft", [
 		"druidcraft:darkwood_sapling",
 		"druidcraft:elder_sapling",
+	])
+
+	addModTags(saplingTag, "twilightforest", [
 		"twilightforest:rainboak_sapling",
 		"twilightforest:twilight_oak_sapling",
 		"twilightforest:canopy_sapling",
@@ -82,21 +130,21 @@ onEvent("item.tags", (e) => {
 		"twilightforest:transformation_sapling",
 		"twilightforest:mining_sapling",
 		"twilightforest:sorting_sapling"
-	]
-	
-	e.get("forge:sapling").add(saplings)
-	
-	// Missing #minecraft:logs_that_burn item tags.
-	e.get("minecraft:logs_that_burn").add([
-		"druidcraft:darkwood_log",
-		"druidcraft:stripped_darkwood_log",
-		"druidcraft:darkwood_wood",
-		"druidcraft:stripped_darkwood_wood",
-		"druidcraft:elder_log",
-		"druidcraft:stripped_elder_log",
-		"druidcraft:elder_wood",
-		"druidcraft:stripped_elder_wood"
 	])
+	
+	if(Platform.isLoaded("druidcraft")) {
+		// Missing #minecraft:logs_that_burn item tags.
+		e.get("minecraft:logs_that_burn").add([
+			"druidcraft:darkwood_log",
+			"druidcraft:stripped_darkwood_log",
+			"druidcraft:darkwood_wood",
+			"druidcraft:stripped_darkwood_wood",
+			"druidcraft:elder_log",
+			"druidcraft:stripped_elder_log",
+			"druidcraft:elder_wood",
+			"druidcraft:stripped_elder_wood"
+		])
+	}
 	
 	e.get("minecraft:walls").add([
 		"bloodmagic:dungeon_brick_wall",
@@ -142,27 +190,7 @@ onEvent("item.tags", (e) => {
 	]).add(woodenSlabs)
 	
 	e.get("minecraft:wooden_slabs").add(woodenSlabs)
-	
-	// Sandstone Tags
-	let aridSandstones = [
-		"atmospheric:arid_sandstone",
-		"atmospheric:smooth_arid_sandstone",
-		"atmospheric:cut_arid_sandstone",
-		"atmospheric:chiseled_arid_sandstone",
-		"atmospheric:arid_sandstone_bricks"
-	]
-	
-	e.get("forge:sandstone/arid").add(aridSandstones)
-	
-	let redAridSandstones = [
-		"atmospheric:red_arid_sandstone",
-		"atmospheric:smooth_red_arid_sandstone",
-		"atmospheric:cut_red_arid_sandstone",
-		"atmospheric:chiseled_red_arid_sandstone",
-		"atmospheric:red_arid_sandstone_bricks"
-	]
-	
-	e.get("forge:sandstone/red_arid").add(redAridSandstones)
+
 	
 	let orangeSandstones = [
 		"biomesoplenty:orange_sandstone",
@@ -309,21 +337,21 @@ onEvent("item.tags", (e) => {
 		"immersiveengineering:ingot_nickel",
 		"immersiveengineering:ingot_constantan",
 		"immersiveengineering:ingot_electrum",
-		"twilightforest:ironwood_ingot",
-		"twilightforest:fiery_ingot",
-		"twilightforest:knightmetal_ingot"
+		// "twilightforest:ironwood_ingot",
+		// "twilightforest:fiery_ingot",
+		// "twilightforest:knightmetal_ingot"
 	]
 	
 	e.get("minecraft:beacon_payment_items").add(beaconPaymentItems)
 
 	// Curios Charms
-	e.get("curios:charm").add([
+	/* e.get("curios:charm").add([
 		"twilightforest:charm_of_life_1",
 		"twilightforest:charm_of_life_2",
 		"twilightforest:charm_of_keeping_1",
 		"twilightforest:charm_of_keeping_2",
 		"twilightforest:charm_of_keeping_3"
-	]);
+	]); */
 	
 	// Misc Missing Item Tags
 	e.add("forge:seeds/cattail", "environmental:cattail_seeds")
