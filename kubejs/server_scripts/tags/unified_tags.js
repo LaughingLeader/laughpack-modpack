@@ -123,26 +123,7 @@ let tags = [
 	}
 ]
 
-onEvent("block.tags", e => {
-	//Most of these come from Valhelsia.
-	//https://github.com/ValhelsiaTeam/Valhelsia/blob/master/kubejs/server_scripts/tags/block_tags.js
-
-	/**
-	 * 
-	 * @param {string} targetTag 
-	 * @param {string} modId 
-	 * @param {string[]} modTags 
-	 */
-	 let addTagsFromMod = function(targetTag, modId, modTags) {
-		if (modId == "minecraft" || Platform.isLoaded(modId)) {
-			let tag = loadedTags[targetTag] || e.get(targetTag)
-			if (tag !== undefined) {
-				loadedTags[targetTag] = tag
-				tag.add(modTags)
-			}
-		}
-	}
-
+let addTags = function(e) {
 	tags.forEach(data => {
 		let tag = e.get(data.Tag)
 		if (tag !== undefined) {
@@ -153,7 +134,23 @@ onEvent("block.tags", e => {
 			}
 		}
 	})
-	
+
+	/**
+	 * 
+	 * @param {string} targetTag 
+	 * @param {string} modId 
+	 * @param {string[]} modTags 
+	 */
+	let addTagsFromMod = function(targetTag, modId, modTags) {
+		if (modId == "minecraft" || Platform.isLoaded(modId)) {
+			let tag = loadedTags[targetTag] || e.get(targetTag)
+			if (tag !== undefined) {
+				loadedTags[targetTag] = tag
+				tag.add(modTags)
+			}
+		}
+	}
+
 	// Sandstone Tags
 
 	addTagsFromMod("forge:sandstone/arid", "atmospheric", [
@@ -170,7 +167,7 @@ onEvent("block.tags", e => {
 		"atmospheric:chiseled_red_arid_sandstone",
 		"atmospheric:red_arid_sandstone_bricks"
 	])
-	
+
 	if (Platform.isLoaded("biomesoplenty")) {
 		let orangeSandstones = [
 			"biomesoplenty:orange_sandstone",
@@ -214,21 +211,7 @@ onEvent("block.tags", e => {
 		e.add("forge:sandstone/colorless", "quark:sandstone_bricks")
 		e.add("forge:sandstone/red", "quark:red_sandstone_bricks")
 	}
-	
-	if (Platform.isLoaded("buzzier_bees")) {
-		let tag = e.get("buzzier_bees:flower_blacklist")
-		if (Platform.isLoaded("botania")) {
-			tag.add([
-				"#botania:special_flowers",
-				"#botania:special_floating_flowers",
-				"#botania:enchanter_flowers"
-			])
-		}
-		if (Platform.isLoaded("astralsorcery")) {
-			tag.add(["astralsorcery:glow_flower"])
-		}
-	}
-	
+
 	if (Platform.isLoaded("atum")) {
 		// Missing Glass Panes Tags
 		e.get("forge:glass_panes").add([
@@ -285,4 +268,7 @@ onEvent("block.tags", e => {
 			"atum:black_stained_deadwood_framed_crystal_glass_pane"
 		])
 	}
-})
+}
+
+onEvent(global.EVENT.SERVER.BLOCK_TAGS, addTags)
+onEvent(global.EVENT.SERVER.ITEM_TAGS, addTags)
